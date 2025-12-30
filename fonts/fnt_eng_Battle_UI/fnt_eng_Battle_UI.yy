@@ -126,6 +126,7 @@
   "ranges":[
     {"lower":32,"upper":127,},
     {"lower":9647,"upper":9647,},
+    {"lower":65292,"upper":65292,},
   ],
   "regenerateBitmap":false,
   "resourceType":"GMFont",

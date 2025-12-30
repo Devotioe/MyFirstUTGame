@@ -1,11 +1,3 @@
-MyID = 1;
-
-
-
-
-MyName = global.EnemyData[$ MyID].MyName;
-
-
 
 //MyName = "Roaring Knight"
 //MyMaxHp = 100;
