@@ -1,8 +1,8 @@
 //This starts the battle
 
 
-audio_pause_all();
-audio_play_sound(Battle_Alert, 20, false);
+audio_pause_all(); //pause music
+audio_play_sound(Battle_Alert, 20, false); //sound
 global.CurrentRoom = room; //memorize current room for re-locating
 	
 //spawn soul position
