@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"GetEnemyDialogue",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"GetEnemyDialogue",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
