@@ -1,0 +1,26 @@
+global.EnemyData = {
+	"1" : { //Test 1
+		MyName : "Test_Fighter_1",
+		MyMaxHp : 100,
+		MyAtk : 5,
+		MyDef : 5,
+		ShowBar : true,
+		CanSpare : false,
+		CanFlee : false,
+		StartX : 300,
+		StartY : 100,
+		ObjRef : obj_fighter_test,
+	},
+	"2" : { //Test 2
+		MyName : "Test_Fighter_2",
+		MyMaxHp : 100,
+		MyAtk : 5,
+		MyDef : 5,
+		ShowBar : true,
+		CanSpare : false,
+		CanFlee : false,
+		StartX : 300,
+		StartY : 300,
+		ObjRef : obj_fighter_test_1,
+	},	
+}

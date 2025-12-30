@@ -1,18 +1,9 @@
-MyID = 1;
-
-
-
-
-MyName = global.EnemyData[$ MyID].MyName;
-
-
-
-//MyName = "Roaring Knight"
-//MyMaxHp = 100;
-//MyHp = 100;
-//MyAtk = 5;
-//MyDef = 5;
-//ShowBar = true;
+MyName = "Roaring Knight"
+MyMaxHp = 100;
+MyHp = 100;
+MyAtk = 5;
+MyDef = 5;
+ShowBar = true;
 
 CanSpare = false;
 global.CanFlee = false;

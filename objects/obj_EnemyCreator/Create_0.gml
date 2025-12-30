@@ -1,18 +1,26 @@
 //
 
 enemy_depth = -2;
+EcID = obj_BattleStarter._ecID;
+
 for ( var i = 0 ; i <= (obj_BattleStarter.enemyCounts - 1) ; i++ ){
-	switch (obj_BattleStarter.enemyID[i]){
-		case 1: // TEST 1 
-		global.Enemy[i] = instance_create_depth(320, 80, enemy_depth, obj_fighter_test);
-		break;
-		case 2: // TEST 2
-		global.Enemy[i] = instance_create_depth(500, 150, enemy_depth, obj_fighter_test_2);
-		break;
-		case 999:
-		global.Enemy[i] = instance_create_depth(230, -5, enemy_depth, obj_fighter_roaringknight);
-	}
-	if ( i = obj_BattleStarter.enemyCounts - 1){
-		instance_destroy(self);
-	}
+	
+	EnemyID = string(global.encounterData[$ EcID].enemyID[i]);
+	ObjRef = global.EnemyData[$ EnemyID].ObjRef;
+	StartX = global.EnemyData[$ EnemyID].StartX
+	StartY = global.EnemyData[$ EnemyID].StartY
+	
+	var _inst = instance_create_depth(StartX, StartY, enemy_depth, ObjRef); //Create Enemy
+	global.Enemy[i] = _inst;
+	
+	_inst.MyName = global.EnemyData[$ EnemyID].MyName;
+	_inst.MyMaxHp = global.EnemyData[$ EnemyID].MyMaxHp;
+	_inst.MyAtk = global.EnemyData[$ EnemyID].MyAtk;
+	_inst.MyDef = global.EnemyData[$ EnemyID].MyDef;
+	_inst.ShowBar = global.EnemyData[$ EnemyID].ShowBar;
+	_inst.CanSpare = global.EnemyData[$ EnemyID].CanSpare;
+	_inst.CanFlee = global.EnemyData[$ EnemyID].CanFlee;
+	_inst.MyHp = global.Enemy[i].MyMaxHp;
 }
+
+instance_destroy(self);

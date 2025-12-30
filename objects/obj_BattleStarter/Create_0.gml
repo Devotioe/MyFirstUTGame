@@ -1,6 +1,8 @@
 global.encounterID = 1;
 
-enemyID[0] = 1;
+_ecID = string(global.encounterID); //String for searching ID
+
+enemyID = global.encounterData[$ _ecID].enemyID
 enemyCounts = array_length(enemyID);
 
 global.battle_fleeable = true;
