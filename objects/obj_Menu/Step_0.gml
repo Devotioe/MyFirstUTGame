@@ -86,13 +86,14 @@ if (global.BattleMenu = -1){
 	Page.TextLength = 6;
 	Page.CanAdvance = false;
 	ItemPage = 1;
+	
 	//Mercy////////////
 	Mercy.TextToDraw = "";
 	if (global.Enemy[0].CanSpare == true){
 		Mercy.TextToDraw += "~Y";
 	}
 	Mercy.TextToDraw += "* Spare~D&"
-	if (global.battle_fleeable == true){
+	if (global.battle_fleeable == true){ //can flee or not
 		Mercy.TextToDraw += "* Flee"
 	}
 	Mercy.CanAdvance = false;

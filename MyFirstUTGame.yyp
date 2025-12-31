@@ -100,6 +100,7 @@
     {"id":{"name":"GetEnemyDialogue","path":"scripts/GetEnemyDialogue/GetEnemyDialogue.yy",},},
     {"id":{"name":"scr_CutsceneConditionChange","path":"scripts/scr_CutsceneConditionChange/scr_CutsceneConditionChange.yy",},},
     {"id":{"name":"scr_GetCutsceneConditionValue","path":"scripts/scr_GetCutsceneConditionValue/scr_GetCutsceneConditionValue.yy",},},
+    {"id":{"name":"scr_searchEcounterData","path":"scripts/scr_searchEcounterData/scr_searchEcounterData.yy",},},
     {"id":{"name":"scr_SetBattleBox","path":"scripts/scr_SetBattleBox/scr_SetBattleBox.yy",},},
     {"id":{"name":"scr_SetDialogueBox","path":"scripts/scr_SetDialogueBox/scr_SetDialogueBox.yy",},},
     {"id":{"name":"scr_spareAndFlee","path":"scripts/scr_spareAndFlee/scr_spareAndFlee.yy",},},

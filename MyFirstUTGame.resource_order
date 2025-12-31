@@ -4,6 +4,7 @@
     {"name":"obj_fighter_test_1","order":1,"path":"objects/obj_fighter_test_1/obj_fighter_test_1.yy",},
     {"name":"EncounterData","order":1,"path":"scripts/EncounterData/EncounterData.yy",},
     {"name":"EnemyData","order":2,"path":"scripts/EnemyData/EnemyData.yy",},
+    {"name":"scr_searchEcounterData","order":3,"path":"scripts/scr_searchEcounterData/scr_searchEcounterData.yy",},
     {"name":"spr_loox_0","order":1,"path":"sprites/spr_loox_0/spr_loox_0.yy",},
   ],
 }
