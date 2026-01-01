@@ -12,6 +12,6 @@ function scr_spareAndFlee(){
 		}
 		
 	}else{ //Flee
-		global.Enemy[0].Dialogue.TextToDraw = "* Test 2";
+		global.Enemy[0].Dialogue.TextToDraw = "* I'm outta here";
 	}
 }

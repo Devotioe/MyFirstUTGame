@@ -214,7 +214,11 @@ if select_key && global.UISelection > -1 {
 		
 		case 4: //Mercy
 		global.BattleMenu = -2; //Spare and Flee dialogue
-		scr_spareAndFlee();
+		if (global.UISelection == 0){
+			scr_Spare();
+		}else{
+			scr_Flee();
+		}
 		break;
 	}
 }

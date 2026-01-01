@@ -25,6 +25,3 @@ dodge = true;
 ShakeEffect = 0;
 Siner = 0;
 DodgeAni = 0;
-
-
-sCD = 0;
