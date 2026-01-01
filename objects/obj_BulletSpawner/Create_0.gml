@@ -1,15 +1,8 @@
-cooldown = 30;
-dir = 0
-setup = false
+attackToSpawn = scr_chooseAttack();
 
-prev_x = 0
-prev_y = 0
-len = 0
+_attackInst = instance_create_depth(0, 0, -9, attackToSpawn);
 
-bullet = -1
-index = 0
+duration = _attackInst.duration
 
-timer = 120;
-
-alarm [0] = timer;
+alarm [0] = duration;
 
