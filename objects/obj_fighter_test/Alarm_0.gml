@@ -18,7 +18,7 @@ if (MyHp > 0){ //if alive, set to battle phase
 	event_user(15) // check for dialogue
 }
 else{//enemy dies
-	alarm[2] = 120; //kill the monster
+	alarm[2] = 120; //end battle
 }
 
 

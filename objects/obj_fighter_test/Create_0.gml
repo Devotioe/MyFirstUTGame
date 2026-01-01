@@ -10,7 +10,8 @@ CheckDescription[2] = "* Probably because you watched&  the Roaring Knight No Hi
 
 Dialogue = noone;
 ActionText = noone;
-
+SpareText = noone;
+FleeText = noone;
 
 ReadyForBattle = false;
 ReadyForDialogue = false;
