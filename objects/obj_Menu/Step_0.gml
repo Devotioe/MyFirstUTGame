@@ -133,7 +133,7 @@ if instance_exists(PlayerDialogue){
 }
 
 //make certain manu visible according to menu status
-switch (global.BattleMenu){ //init the size of box
+switch (global.BattleMenu){ 
 	case 0:
 	if (global.bulletboard.current_l < 40 || global.bulletboard.current_r > 600){
 	PlayerDialogue.visible = true;
