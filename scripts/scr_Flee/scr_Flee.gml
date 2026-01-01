@@ -8,5 +8,5 @@ function scr_Flee(){
 	global.Enemy[0].Dialogue.TextToDraw = "* Escaped...";
 	audio_play_sound(sound, 0, false);
 	instance_create_depth(_x, _y, -99, obj_SoulFlee);
-	global.Enemy[0].alarm[2] = 120; //This ends battle
+	global.Enemy[0].alarm[2] = 180; //This ends battle
 }

@@ -113,7 +113,6 @@
     {"id":{"name":"scr_SetBattleBox","path":"scripts/scr_SetBattleBox/scr_SetBattleBox.yy",},},
     {"id":{"name":"scr_SetDialogueBox","path":"scripts/scr_SetDialogueBox/scr_SetDialogueBox.yy",},},
     {"id":{"name":"scr_Spare","path":"scripts/scr_Spare/scr_Spare.yy",},},
-    {"id":{"name":"scr_spareAndFlee","path":"scripts/scr_spareAndFlee/scr_spareAndFlee.yy",},},
     {"id":{"name":"scr_useItem","path":"scripts/scr_useItem/scr_useItem.yy",},},
     {"id":{"name":"Battle_Alert","path":"sounds/Battle_Alert/Battle_Alert.yy",},},
     {"id":{"name":"Battle_Soul","path":"sounds/Battle_Soul/Battle_Soul.yy",},},

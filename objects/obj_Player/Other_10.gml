@@ -1,7 +1,7 @@
 //This starts the battle
 
 
-audio_pause_all(); //pause music
+audio_pause_all(); //pause room music
 audio_play_sound(Battle_Alert, 20, false); //sound
 global.CurrentRoom = room; //memorize current room for re-locating
 	

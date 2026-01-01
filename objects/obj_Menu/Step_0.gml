@@ -27,13 +27,13 @@ if (global.BattleMenu = -1){
 		Fight.TextToDraw += "* " + global.Enemy[i].MyName + "&";
 		Act.TextToDraw += "* " + global.Enemy[i].MyName + "&";
 		if (array_length(global.Enemy) > 1){ //Check if more than 1 enemy
-			if (global.Enemy[i+1].CanSpare == true){
-				Fight.TextToDraw += "~Y"; //add yellow to the next enemy
-				Act.TextToDraw += "~Y"; //add yellow to the next enemy
-			}else{
-				Fight.TextToDraw += "~D"; //set to normal
-				Act.TextToDraw += "~D"; //set to normal
-			}
+				if (global.Enemy[i+1].CanSpare == true){
+					Fight.TextToDraw += "~Y"; //add yellow to the next enemy
+					Act.TextToDraw += "~Y"; //add yellow to the next enemy
+				}else{
+					Fight.TextToDraw += "~D"; //set to normal
+					Act.TextToDraw += "~D"; //set to normal
+				}
 		}
 	}
 	Fight.TextLength = string_length(Fight.TextToDraw);

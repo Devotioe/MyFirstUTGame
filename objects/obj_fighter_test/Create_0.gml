@@ -10,8 +10,6 @@ CheckDescription[2] = "* Probably because you watched&  the Roaring Knight No Hi
 
 Dialogue = noone;
 ActionText = noone;
-SpareText = noone;
-FleeText = noone;
 
 ReadyForBattle = false;
 ReadyForDialogue = false;
@@ -26,3 +24,5 @@ dodge = true;
 ShakeEffect = 0;
 Siner = 0;
 DodgeAni = 0;
+
+spared = false;
