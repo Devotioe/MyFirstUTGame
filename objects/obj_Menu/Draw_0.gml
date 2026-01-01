@@ -165,7 +165,7 @@ if (global.UISelection > -1){ //-1 means can't select menu
 			global.UISelection += 1;
 		}
 
-		if (global.battle_fleeable == true){ // clamping
+		if (_CanFlee == true){ // clamping
 			global.UISelection = clamp(global.UISelection, 0, 1);
 		}
 		else{

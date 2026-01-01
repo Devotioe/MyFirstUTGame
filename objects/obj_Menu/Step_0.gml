@@ -93,7 +93,7 @@ if (global.BattleMenu = -1){
 		Mercy.TextToDraw += "~Y";
 	}
 	Mercy.TextToDraw += "* Spare~D&"
-	if (global.battle_fleeable == true){ //can flee or not
+	if (_CanFlee == true){ //can flee or not
 		Mercy.TextToDraw += "* Flee"
 	}
 	Mercy.CanAdvance = false;

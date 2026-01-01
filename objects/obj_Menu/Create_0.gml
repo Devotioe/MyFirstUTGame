@@ -40,3 +40,5 @@ ButtonSprite[3] = spr_button_mercy;
 item_total_1 = 0;
 item_total_2 = 0;
 
+EcData = scr_searchEcounterData()
+_CanFlee = EcData.CanFlee;

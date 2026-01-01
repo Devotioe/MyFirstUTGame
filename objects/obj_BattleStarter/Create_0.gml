@@ -1,8 +1,5 @@
 global.encounterID = 1;
 
-global.battle_fleeable = true;
-global.battle_opening = false;
-global.battle_ending = false;
 global.battle_playerfirst = true;
 
 #region //create UI
