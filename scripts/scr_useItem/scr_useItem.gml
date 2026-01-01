@@ -3,8 +3,8 @@ function scr_useItem(){
 	var StartingHp = global.PlayerHp;
 	var healed = false;
 	var ItemKeep = false
-	global.Enemy[0].Dialogue = instance_create_depth(obj_Menu.box_basicshift, 270, -1, obj_ActionTextElement);
-	global.Enemy[0].Dialogue.CanAdvance = true;
+	global.Enemy[0].ActionText = instance_create_depth(obj_Menu.box_basicshift, 270, -1, obj_TextElement);
+	global.Enemy[0].ActionText.CanAdvance = true;
 	
 	var ItemSelection; //selection based on page
 	
@@ -15,15 +15,15 @@ function scr_useItem(){
 	}
 	
 	if global.Item[ItemSelection] == "SnowPiece"{
-		global.Enemy[0].Dialogue.TextToDraw = "* You ate the Snowman Piece!&"
+		global.Enemy[0].ActionText.TextToDraw = "* You ate the Snowman Piece!&"
 		global.PlayerHp += 40;
 	}
 	if global.Item[ItemSelection] == "B.Pie"{
-		global.Enemy[0].Dialogue.TextToDraw = "* You ate the Butterscotch Pie!&"
+		global.Enemy[0].ActionText.TextToDraw = "* You ate the Butterscotch Pie!&"
 		global.PlayerHp += 99;
 	}
 	if global.Item[ItemSelection] == "L.Hero"{
-		global.Enemy[0].Dialogue.TextToDraw = "* You ate the Legendary Hero!&* Your attack increased by 4!&"
+		global.Enemy[0].ActionText.TextToDraw = "* You ate the Legendary Hero!&* Your attack increased by 4!&"
 		global.PlayerHp += 40;
 	}
 	
@@ -33,10 +33,10 @@ function scr_useItem(){
 	}
 	
 	if (global.PlayerHp > global.PlayerMaxHp) { // maxed out
-		global.Enemy[0].Dialogue.TextToDraw += "* Your HP was maxed out!";
+		global.Enemy[0].ActionText.TextToDraw += "* Your HP was maxed out!";
 		global.PlayerHp = global.PlayerMaxHp; // clamp the hp 
 	}else{
-		global.Enemy[0].Dialogue.TextToDraw += "* You recovered " + string(global.PlayerHp - StartingHp)+ " HP!";
+		global.Enemy[0].ActionText.TextToDraw += "* You recovered " + string(global.PlayerHp - StartingHp)+ " HP!";
 	}
 	global.UISelection = -1; // disable selection
 
@@ -54,4 +54,5 @@ function scr_useItem(){
 	}
 	array_resize(global.Item, array_length(global.Item)-1);
 
+	
 }

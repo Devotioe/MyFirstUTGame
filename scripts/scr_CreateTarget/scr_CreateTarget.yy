@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"GetEnemyDialogue",
+  "%Name":"scr_CreateTarget",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"GetEnemyDialogue",
+  "name":"scr_CreateTarget",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

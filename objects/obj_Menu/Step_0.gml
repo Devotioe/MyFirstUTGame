@@ -187,7 +187,7 @@ if select_key && global.UISelection > -1 {
 		case 1: //From selecting enemy to Target Field
 		EnemySelectionReference = global.UISelection; //remember the selection
 		global.EnemyRN = EnemySelectionReference; //target enemy with local variable
-		CreateTarget(global.PlayerWeapon);
+		scr_CreateTarget(global.PlayerWeapon);
 		global.BattleMenu = 1.5; // TARGET FIELD
 		global.UISelection = -1; // disable select
 		break;

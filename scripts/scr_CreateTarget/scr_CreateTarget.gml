@@ -1,4 +1,4 @@
-function CreateTarget(_Weapon){
+function scr_CreateTarget(_Weapon){
 	
 	Weapon = _Weapon;
 	var pr = 0;

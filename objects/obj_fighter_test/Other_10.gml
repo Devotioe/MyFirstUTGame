@@ -1,4 +1,4 @@
-ActionText = instance_create_depth(obj_Menu.box_basicshift, 270, -1, obj_ActionTextElement);
+ActionText = instance_create_depth(obj_Menu.box_basicshift, 270, -1, obj_TextElement);
 
 if checked {
 	ActionText.TextToDraw = "* You literally checked the guy."
