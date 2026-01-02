@@ -26,3 +26,4 @@ Siner = 0;
 DodgeAni = 0;
 
 spared = false;
+killed = false
