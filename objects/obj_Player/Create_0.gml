@@ -25,3 +25,4 @@ AlertMark = 0;
 Prev_X = 0;
 Prev_Y = 0;
 
+now_sprite = 0;

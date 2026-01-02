@@ -1,8 +1,7 @@
 function scr_EndBattle(){
-	audio_pause_all()
-	room_goto(global.CurrentRoom);
-	obj_Player.x = obj_Player.Prev_X;
-	obj_Player.y = obj_Player.Prev_Y;
-	obj_Player.visible = true;
-	obj_Player.frozen = false;
+	audio_stop_sound(global.BattleMusic);
+	global.PlayerGold += global.GoldToEarn;
+	global.PlayerExp += global.ExpToEarn;
+	global.GoldToEarn = 0;
+	global.ExpToEarn = 0;
 }

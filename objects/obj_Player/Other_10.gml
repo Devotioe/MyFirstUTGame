@@ -1,7 +1,9 @@
 //This starts the battle
 
 
-audio_pause_all(); //pause room music
+audio_pause_sound(global.OverworldMusic); //pause room music
+now_sprite = self.sprite_index;
+
 audio_play_sound(Battle_Alert, 20, false); //sound
 global.CurrentRoom = room; //memorize current room for re-locating
 	

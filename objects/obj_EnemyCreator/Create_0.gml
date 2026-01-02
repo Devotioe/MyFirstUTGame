@@ -23,6 +23,9 @@ for ( var i = 0 ; i < enemyCounts ; i++ ){
 	_inst.CanSpare = _EnemyData.CanSpare;
 	_inst.CanFlee = _EnemyData.CanFlee;
 	_inst.MyHp = _inst.MyMaxHp;
+	_inst.GOLD = _EnemyData.GOLD
+	_inst.EXP = _EnemyData.EXP
+	
 	
 }
 

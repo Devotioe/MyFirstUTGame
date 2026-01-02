@@ -10,6 +10,8 @@ global.EnemyData = {
 		StartX : 300,
 		StartY : 100,
 		ObjRef : obj_fighter_test,
+		EXP : 10,
+		GOLD : 20,
 	},
 	"2" : { //Test 2
 		MyName : "Test_Fighter_2",
