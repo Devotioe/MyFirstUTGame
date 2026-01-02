@@ -96,6 +96,7 @@
     {"id":{"name":"obj_TestBullet","path":"objects/obj_TestBullet/obj_TestBullet.yy",},},
     {"id":{"name":"obj_TestCutscene","path":"objects/obj_TestCutscene/obj_TestCutscene.yy",},},
     {"id":{"name":"obj_TextElement","path":"objects/obj_TextElement/obj_TextElement.yy",},},
+    {"id":{"name":"obj_WinHandler","path":"objects/obj_WinHandler/obj_WinHandler.yy",},},
     {"id":{"name":"room_battle","path":"rooms/room_battle/room_battle.yy",},},
     {"id":{"name":"room_beginning","path":"rooms/room_beginning/room_beginning.yy",},},
     {"id":{"name":"room_hallway_0","path":"rooms/room_hallway_0/room_hallway_0.yy",},},
