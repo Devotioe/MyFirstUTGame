@@ -27,7 +27,7 @@ if ShakeEffect > 0 {
 
 
 if killed {
-	image_alpha -= 0.05;	
+	image_alpha -= 0.05;
 }
 
 

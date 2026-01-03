@@ -1,19 +1,30 @@
-function scr_Spare(){
-	
+function scr_Spare(){ //spare once will spare all possible enemies
+	var _canspare = false; 
 	var allspared = true;
 	var sound = snd_vaporized;
-	EcData = scr_searchEcounterData();
-	_Enemy = global.Enemy[global.EnemyRN]
+	var enemyCounts = array_length(global.Enemy);
 	global.Enemy[0].ActionText = instance_create_depth(obj_Menu.box_basicshift, 270, -1, obj_TextElement);
 	global.Enemy[0].ActionText.CanAdvance = false;
 	
-	if _Enemy.CanSpare == true{
+	for (var i = 0 ; i < enemyCounts ; i ++){
+		if (global.Enemy[i].CanSpare == true){
+			_canspare = true;
+		}
+	}
+	
+	
+	if _canspare == true{
 		audio_play_sound(sound, 1, false);
-		_Enemy.image_alpha = 0.5
-		_Enemy.spared = true;
-		global.GoldToEarn += _Enemy.GOLD;
 		
-		for (var i = 0 ; i < array_length(EcData.enemyID) ; i ++){
+		for (var i = 0 ; i < enemyCounts ; i ++){
+			if (global.Enemy[i].CanSpare == true){
+				global.Enemy[i].spared = true;
+				global.Enemy[i].image_alpha = 0.5
+				global.GoldToEarn += global.Enemy[i].GOLD;
+			}
+		}
+		
+		for (var i = 0 ; i < enemyCounts ; i ++){
 			if (global.Enemy[i].spared == false){
 				allspared = false;
 				break;
@@ -28,14 +39,15 @@ function scr_Spare(){
 		
 		else{
 			global.Enemy[0].ActionText.CanAdvance = true;
-			global.Enemy[0].ActionText.TextToDraw = "* You spared " + _Enemy.MyName + "!";
+			global.Enemy[0].ReadyForDialogue = true;
+			global.Enemy[0].ActionText.TextToDraw = "";
 		}
 
 	
 	}else{
 		global.Enemy[0].ActionText.CanAdvance = true;
-		global.Enemy[0].ActionText.TextToDraw = "* You spared " + _Enemy.MyName + "!";
-		global.Enemy[0].ActionText.TextInQueue[0] = "* But its name isn't yellow!";
+		global.Enemy[0].ReadyForDialogue = true;
+		global.Enemy[0].ActionText.TextToDraw = "";
 	}
 
 }

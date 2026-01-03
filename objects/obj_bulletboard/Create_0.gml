@@ -8,7 +8,7 @@ global.bulletboard_border_r = 0;
 global.bulletboard_border_b = 0;
 global.bulletboard_border_u = 0;
 
-expand_spd = 6;
+expand_spd = 10;
 
 
 

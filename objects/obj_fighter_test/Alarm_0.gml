@@ -23,6 +23,8 @@ else{//enemy dies
 	killed = true;
 	global.ExpToEarn += EXP;
 	
+	array_push(global.EnemyGrave, self);
+	
 	for (var i = 0 ; i < array_length(global.Enemy) ; i ++){
 		if (global.Enemy[i].killed == false){
 			allkilled = false;

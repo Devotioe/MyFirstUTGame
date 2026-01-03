@@ -5,7 +5,7 @@ global.EnemyData = {
 		MyAtk : 5,
 		MyDef : 5,
 		ShowBar : true,
-		CanSpare : true,
+		CanSpare : false,
 		CanFlee : false,
 		StartX : 300,
 		StartY : 100,

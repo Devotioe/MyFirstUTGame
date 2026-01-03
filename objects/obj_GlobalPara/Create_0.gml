@@ -25,6 +25,9 @@ global.PlayerExp = 0;
 global.invframes = 0;
 global.inbattle = false;
 
+global.EnemyGrave = -1;
+//Grave for enemy that is waiting for destruction
+
 //Player Items
 global.Item = -1; //init
 global.Item[0] = ItemID[0];

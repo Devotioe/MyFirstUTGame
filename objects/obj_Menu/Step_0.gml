@@ -89,8 +89,11 @@ if (global.BattleMenu = -1){
 	
 	//Mercy////////////
 	Mercy.TextToDraw = "";
-	if (global.Enemy[0].CanSpare == true){
-		Mercy.TextToDraw += "~Y";
+	for (var i = 0 ; i < array_length(global.Enemy) ; i ++){
+		if (global.Enemy[i].CanSpare == true){
+			Mercy.TextToDraw += "~Y";
+			break;
+		}
 	}
 	Mercy.TextToDraw += "* Spare~D&"
 	if (_CanFlee == true){ //can flee or not
@@ -177,11 +180,12 @@ if select_key && global.UISelection > -1 {
 		global.BattleMenu = (global.UISelection + 1); //math
 		BelowUIReference = global.UISelection; //memorize the previous selection
 		global.UISelection = 0; //Can select enemy 
-		if (array_length(global.Item) < 1 && global.BattleMenu == 3){ // prevent entering item
+		
+		if (array_length(global.Item) < 1 && global.BattleMenu == 3){ 
 			global.BattleMenu = 0;
 			global.UISelection = 2;
 			exit;
-		}		
+		}// prevent entering item if don't hold items
 		break;
 		
 		case 1: //From selecting enemy to Target Field
