@@ -22,8 +22,6 @@ function scr_Spare(){
 		
 		if allspared {
 			global.Enemy[0].ActionText.TextToDraw = "* You won!&* You earned 0 EXP and " + string(global.GoldToEarn) + " GOLD!";
-			audio_stop_sound(global.BattleMusic);
-			global.BattleMusic = noone;
 			var handler = instance_create_depth(0, 0, 99, obj_WinHandler);
 			handler.allspared = true;
 		}

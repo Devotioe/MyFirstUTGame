@@ -1,4 +1,4 @@
-CanSpare = false;
+
 global.CanFlee = false;
 
 Act[0] = "Check";
