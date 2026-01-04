@@ -24,5 +24,7 @@ global.EnemyData = {
 		StartX : 300,
 		StartY : 300,
 		ObjRef : obj_fighter_test_1,
+		EXP : 10,
+		GOLD : 20,
 	},	
 }

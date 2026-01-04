@@ -1,4 +1,4 @@
-global.encounterID = 1;
+
 
 global.battle_playerfirst = true;
 
