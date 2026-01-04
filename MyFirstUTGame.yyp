@@ -103,6 +103,8 @@
     {"id":{"name":"room_hallway_final","path":"rooms/room_hallway_final/room_hallway_final.yy",},},
     {"id":{"name":"EncounterData","path":"scripts/EncounterData/EncounterData.yy",},},
     {"id":{"name":"EnemyData","path":"scripts/EnemyData/EnemyData.yy",},},
+    {"id":{"name":"scr_AllEnemyReadyForBattle","path":"scripts/scr_AllEnemyReadyForBattle/scr_AllEnemyReadyForBattle.yy",},},
+    {"id":{"name":"scr_AllEnemyReadyForDialogue","path":"scripts/scr_AllEnemyReadyForDialogue/scr_AllEnemyReadyForDialogue.yy",},},
     {"id":{"name":"scr_chooseAttack","path":"scripts/scr_chooseAttack/scr_chooseAttack.yy",},},
     {"id":{"name":"scr_CreateTarget","path":"scripts/scr_CreateTarget/scr_CreateTarget.yy",},},
     {"id":{"name":"scr_CutsceneConditionChange","path":"scripts/scr_CutsceneConditionChange/scr_CutsceneConditionChange.yy",},},

@@ -11,6 +11,9 @@ if (global.BattleMenu = -1){
 	var item_count_r_2 = 0;
 	// Fight and Act//
 	PlayerDialogue.TextToDraw = GetEnemyDialogue(); //For box texts
+	if (GetEnemyDialogue() == undefined){
+		PlayerDialogue.TextToDraw = "* Let's just get this over with.";
+	}
 	PlayerDialogue.CanAdvance = false;
 	PlayerDialogue.CanSkip = false;
 	PlayerDialogue.TextLength = 0;
@@ -24,17 +27,8 @@ if (global.BattleMenu = -1){
 			Fight.TextToDraw += "~Y";
 			Act.TextToDraw += "~Y";
 		}
-		Fight.TextToDraw += "* " + global.Enemy[i].MyName + "&";
-		Act.TextToDraw += "* " + global.Enemy[i].MyName + "&";
-		if (array_length(global.Enemy) > 1){ //Check if more than 1 enemy
-				if (global.Enemy[i+1].CanSpare == true){
-					Fight.TextToDraw += "~Y"; //add yellow to the next enemy
-					Act.TextToDraw += "~Y"; //add yellow to the next enemy
-				}else{
-					Fight.TextToDraw += "~D"; //set to normal
-					Act.TextToDraw += "~D"; //set to normal
-				}
-		}
+		Fight.TextToDraw += "* " + global.Enemy[i].MyName + "~D&";
+		Act.TextToDraw += "* " + global.Enemy[i].MyName + "~D&";
 	}
 	Fight.TextLength = string_length(Fight.TextToDraw);
 	Fight.CanAdvance = false;
