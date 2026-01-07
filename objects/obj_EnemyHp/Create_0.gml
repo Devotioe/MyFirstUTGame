@@ -10,4 +10,4 @@ Damage = 0;
 alarm[0] = 70;
 
 EcData = scr_searchEcounterData();
-EnemyCounts = array_length(EcData.enemyID)
+EnemyCounts = array_length(global.Enemy)

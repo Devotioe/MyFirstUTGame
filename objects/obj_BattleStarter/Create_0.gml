@@ -1,9 +1,9 @@
 
 
-global.battle_playerfirst = true;
+var playerfirst = true;
 
 #region //create UI
-if (global.battle_playerfirst == true){ //init box border and soul posi
+if (playerfirst == true){ //init box border and soul posi
 		bulletboard_init_border_l = 30; //init the size of box
 		bulletboard_init_border_r = 610;
 		bulletboard_init_border_u = 250;
