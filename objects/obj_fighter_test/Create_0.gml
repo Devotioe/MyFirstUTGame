@@ -27,3 +27,5 @@ DodgeAni = 0;
 
 spared = false;
 killed = false
+
+event = 0;

@@ -76,6 +76,7 @@
     {"id":{"name":"obj_CutsceneParent","path":"objects/obj_CutsceneParent/obj_CutsceneParent.yy",},},
     {"id":{"name":"obj_DEBUG","path":"objects/obj_DEBUG/obj_DEBUG.yy",},},
     {"id":{"name":"obj_DialogueElement","path":"objects/obj_DialogueElement/obj_DialogueElement.yy",},},
+    {"id":{"name":"obj_DialogueHandler","path":"objects/obj_DialogueHandler/obj_DialogueHandler.yy",},},
     {"id":{"name":"obj_EnemyCreator","path":"objects/obj_EnemyCreator/obj_EnemyCreator.yy",},},
     {"id":{"name":"obj_EnemyHp","path":"objects/obj_EnemyHp/obj_EnemyHp.yy",},},
     {"id":{"name":"obj_entryblock","path":"objects/obj_entryblock/obj_entryblock.yy",},},
