@@ -1,4 +1,11 @@
-
+enum MENU {
+	SELECTION, //0
+	FIGHT, //1
+	ACT, //2
+	ITEM, //3
+	MERCY, //4
+	HIDE, //5
+}
 
 global.BattleMenu = -1; // init Menu variable 
 global.UISelection = 0; //Selection for UI

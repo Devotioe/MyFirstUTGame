@@ -101,6 +101,7 @@ if (global.BattleMenu = -1){
 
 
 //For texts that change dynamically
+
 if (global.BattleMenu > 0){
 	Page.TextToDraw = "Page " + string(ItemPage);
 	for ( var i = 0 ; i < array_length(global.Enemy[global.EnemyRN].Act) ; i +=2){
@@ -115,7 +116,7 @@ if (global.BattleMenu > 0){
 
 
 //init every frame, make evey menu invisible
-if instance_exists(PlayerDialogue){
+if global.Manager.state == BATTLE_STATE.PLAYER {
 	PlayerDialogue.visible = false;
 	Fight.visible = false;
 	Act.visible = false;

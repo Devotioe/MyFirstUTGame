@@ -1,0 +1,9 @@
+enum BATTLE_STATE {
+	START,
+	PLAYER,
+	DIALOGUE,
+	OPPONENT,
+	END,
+}
+
+state = 0;

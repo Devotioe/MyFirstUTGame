@@ -29,3 +29,5 @@ spared = false;
 killed = false
 
 event = 0;
+
+global.Manager.state = BATTLE_STATE.PLAYER;
