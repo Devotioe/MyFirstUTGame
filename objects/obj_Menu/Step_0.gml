@@ -3,8 +3,10 @@ var quit_key = keyboard_check_pressed(vk_shift) || keyboard_check_pressed(ord("X
 
 
 //setup
-if (global.BattleMenu = -1){
+if (global.BattleMenu = MENU.SETUP){
 	global.PriorityBar = 0;
+	var enemyCounts = array_length(global.Enemy);
+	var item_count = array_length(global.Item)
 	var item_count_l_1 = 0;
 	var item_count_r_1 = 0;
 	var item_count_l_2 = 0;
@@ -22,7 +24,7 @@ if (global.BattleMenu = -1){
 	}
 	Fight.TextToDraw = "";
 	Act.TextToDraw = "";
-	for ( var i = 0; i < array_length(global.Enemy) ; i ++){
+	for ( var i = 0; i < enemyCounts ; i ++){
 		if (global.Enemy[i].CanSpare == true){
 			Fight.TextToDraw += "~Y";
 			Act.TextToDraw += "~Y";
@@ -41,13 +43,13 @@ if (global.BattleMenu = -1){
 	//Item//////////////
 	ItemL_1.TextToDraw = "";
 	ItemR_1.TextToDraw = "";
-	for ( var i = 0 ; i < array_length(global.Item) ; i += 2 ){
+	for ( var i = 0 ; i < item_count ; i += 2 ){
 		if (i <= 2 && global.Item[i] != ""){
 			ItemL_1.TextToDraw += "* " + global.Item[i] + "&"; 
 			item_count_l_1 ++;
 		}
 	}
-	for ( var i = 1 ; i < array_length(global.Item) ; i += 2 ){
+	for ( var i = 1 ; i < item_count ; i += 2 ){
 		if (i <= 3 && global.Item[i] != ""){
 			ItemR_1.TextToDraw += "* " + global.Item[i] + "&"; 
 			item_count_r_1++
@@ -83,7 +85,7 @@ if (global.BattleMenu = -1){
 	
 	//Mercy////////////
 	Mercy.TextToDraw = "";
-	for (var i = 0 ; i < array_length(global.Enemy) ; i ++){
+	for (var i = 0 ; i < enemyCounts ; i ++){
 		if (global.Enemy[i].CanSpare == true){
 			Mercy.TextToDraw += "~Y";
 			break;
@@ -96,13 +98,11 @@ if (global.BattleMenu = -1){
 	Mercy.CanAdvance = false;
 	Mercy.TextLength = string_length(Mercy.TextToDraw);
 	Page.CanAdvance = false;
-	global.BattleMenu = 0; //turn of the switch
+	global.BattleMenu = MENU.SELECTION; //turn of the switch
 }
 
-
 //For texts that change dynamically
-
-if (global.BattleMenu > 0){
+if (global.BattleMenu > MENU.SELECTION){
 	Page.TextToDraw = "Page " + string(ItemPage);
 	for ( var i = 0 ; i < array_length(global.Enemy[global.EnemyRN].Act) ; i +=2){
 		ActML.TextToDraw =  "* " + global.Enemy[global.EnemyRN].Act[i];
@@ -113,7 +113,6 @@ if (global.BattleMenu > 0){
 	ActMR.TextLength = string_length(ActMR.TextToDraw);
 	ActML.TextLength = string_length(ActML.TextToDraw);
 }
-
 
 //init every frame, make evey menu invisible
 if global.Manager.state == BATTLE_STATE.PLAYER {
@@ -132,22 +131,22 @@ if global.Manager.state == BATTLE_STATE.PLAYER {
 
 //make certain manu visible according to menu status
 switch (global.BattleMenu){ 
-	case 0:
+	case MENU.SELECTION:
 	if (global.bulletboard.current_l < 40 || global.bulletboard.current_r > 600){
 	PlayerDialogue.visible = true;
 	}
 	break;
-	case 1: //Fight choosing targets
+	case MENU.FIGHT: //Fight choosing targets
 	Fight.visible = true;
 	break;
-	case 2: //Act choosing targets
+	case MENU.ACT: //Act choosing targets
 	Act.visible = true;
 	break;
-	case 2.5: //Act options
+	case MENU.ACT_SELECTION: //Act options
 	ActML.visible = true;
 	ActMR.visible = true;
 	break;
-	case 3:
+	case MENU.ITEM:
 	if array_length(global.Item) > 4{
 		Page.visible = true
 	}
@@ -160,7 +159,7 @@ switch (global.BattleMenu){
 		ItemR_2.visible = true;
 	}
 	break;
-	case 4:
+	case MENU.MERCY:
 	Mercy.visible = true;
 	break;
 }
@@ -170,49 +169,51 @@ if select_key && global.UISelection > -1 {
 	
 	switch global.BattleMenu { 
 		
-		case 0: // advance to each function, FIGHT, ACT, ITEM, MERCY
+		case MENU.SELECTION: // advance to each function, FIGHT, ACT, ITEM, MERCY
 		audio_play_sound(snd_select, 20, false);
+		
 		global.BattleMenu = (global.UISelection + 1); //math
+		
 		BelowUIReference = global.UISelection; //memorize the previous selection
 		global.UISelection = 0; //Can select enemy 
 		
 		if (array_length(global.Item) < 1 && global.BattleMenu == 3){ 
-			global.BattleMenu = 0;
+			global.BattleMenu = MENU.SELECTION;
 			global.UISelection = 2;
 			exit;
 		}// prevent entering item if don't hold items
 		break;
 		
-		case 1: //From selecting enemy to Target Field
+		case MENU.FIGHT: //From selecting enemy to Target Field
 		EnemySelectionReference = global.UISelection; //remember the selection
 		global.EnemyRN = EnemySelectionReference; //target enemy with local variable
 		scr_CreateTarget(global.PlayerWeapon);
-		global.BattleMenu = 1.5; // TARGET FIELD
+		global.BattleMenu = MENU.HIDE; // TARGET FIELD
 		global.UISelection = -1; // disable select
 		break;
 		
-		case 2: //From selecting enemy to act
+		case MENU.ACT: //From selecting enemy to act
 		EnemySelectionReference = global.UISelection; //remember the selection
 		global.EnemyRN = EnemySelectionReference; //target enemy with local variable
-		global.BattleMenu = 2.5; // ACT options
+		global.BattleMenu = MENU.ACT_SELECTION; // ACT options
 		global.UISelection = 0; // Can select acts
 		break;
 		
-		case 2.5: //Act commands
+		case MENU.ACT_SELECTION: //Act commands
 		with (global.Enemy[global.EnemyRN]){ //execute enemy's user event
 			event_user(global.UISelection);
 		}
-		global.BattleMenu = -2; //Act Dialogue 
+		global.BattleMenu = MENU.HIDE; //Act Dialogue 
 		global.UISelection = -1; // disable select
 		break;
 		
-		case 3: //Item
-		global.BattleMenu = -2; //Item Dialogue 
+		case MENU.ITEM: //Item
+		global.BattleMenu = MENU.HIDE; //Item Dialogue 
 		scr_useItem(); //script for using item, determine which item to be used in this script
 		break;
 		
-		case 4: //Mercy
-		global.BattleMenu = -2; //Spare and Flee dialogue
+		case MENU.MERCY: //Mercy
+		global.BattleMenu = MENU.HIDE; //Spare and Flee dialogue
 		if (global.UISelection == 0){
 			scr_Spare();
 		}else{
@@ -224,15 +225,19 @@ if select_key && global.UISelection > -1 {
 
 //quitting menu
 if quit_key && global.UISelection > -1{
-	if (global.BattleMenu = 1 || global.BattleMenu = 2 || global.BattleMenu = 3 || global.BattleMenu = 4){
-		global.BattleMenu = 0;
+	if (global.BattleMenu = MENU.FIGHT || global.BattleMenu = MENU.ACT || global.BattleMenu = MENU.ITEM || global.BattleMenu = MENU.MERCY){
+		global.BattleMenu = MENU.SELECTION;
 		global.UISelection = BelowUIReference;
 		ItemPage = 1;
 		PlayerDialogue.TextLength = 0;
 		PlayerDialogue.IsWriting = true;
 		PlayerDialogue.CurrentDelay = 0;
-	}else if (global.BattleMenu > 0){
-		global.BattleMenu -= 0.5;
+	}else if (global.BattleMenu > MENU.SELECTION){
+		switch global.BattleMenu {
+			case MENU.ACT_SELECTION:
+			global.BattleMenu = MENU.ACT;
+			break;
+		}
 		global.UISelection = EnemySelectionReference;
 	}
 }

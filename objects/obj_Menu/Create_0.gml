@@ -1,13 +1,15 @@
 enum MENU {
+	SETUP = -1, // -1
 	SELECTION, //0
 	FIGHT, //1
 	ACT, //2
 	ITEM, //3
 	MERCY, //4
 	HIDE, //5
+	ACT_SELECTION, //6
 }
 
-global.BattleMenu = -1; // init Menu variable 
+global.BattleMenu = MENU.SETUP; // init Menu variable 
 global.UISelection = 0; //Selection for UI
 global.EnemyRN = 0; // this track which Enemy is selected at the moment
 

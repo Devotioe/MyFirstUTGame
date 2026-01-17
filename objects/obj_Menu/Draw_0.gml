@@ -6,9 +6,6 @@ var down_key = keyboard_check_pressed(vk_down);
 var select_key = keyboard_check_pressed(vk_enter) || keyboard_check_pressed(ord("Z"));
 var quit_key = keyboard_check_pressed(vk_shift) || keyboard_check_pressed(ord("X"));
 
-
-	
-
 //draw the buttons
 for ( var i = 0 ; i < 4 ; i ++ ){ //every frame button will reset
 	draw_sprite(ButtonSprite[i], 0, ButtonPosi_X[i] , 430);
@@ -17,50 +14,53 @@ for ( var i = 0 ; i < 4 ; i ++ ){ //every frame button will reset
 //Menu navigation
 if (global.UISelection > -1){ //-1 means can't select menu
 	
-	if (global.BattleMenu > -1 && global.BattleMenu <= 4){ //make sure the button will be highlighted in player turn
+	var snd_move = snd_movemenu;
+	
+	if (global.BattleMenu > MENU.SETUP && global.BattleMenu <= MENU.MERCY){ //make sure the button will be highlighted in player turn
 		for ( var i = 0 ; i < 4 ; i ++ ){ //every frame button will reset
 			draw_sprite(ButtonSprite[BelowUIReference], 1, ButtonPosi_X[BelowUIReference] , 430);
 		}	
 	}
 		
-	if (global.BattleMenu == 0){ // Main Menu
+	if (global.BattleMenu == MENU.SELECTION){ // Main Menu
 		
 		if right_key { 
 			global.UISelection += 1;
-			audio_play_sound(snd_movemenu, 20, false);
+			audio_play_sound(snd_move, 20, false);
 			if (global.UISelection > 3){
 				global.UISelection = 0;
 			}
 		}
 		if left_key {
 			global.UISelection -= 1;
-			audio_play_sound(snd_movemenu, 20, false);
+			audio_play_sound(snd_move, 20, false);
 			if (global.UISelection < 0){
 				global.UISelection = 3;
 			}
 		}
 		global.UISelection = clamp(global.UISelection, 0, 3); //clamping the buttons
 		BelowUIReference = global.UISelection;	
-		if (!instance_exists(obj_BulletSpawner)){ //Draw the soul if not in fight
+		
+		if (global.Manager.state == BATTLE_STATE.PLAYER){ //Draw the soul if not in fight
 			draw_sprite(spr_ourheart, 0, ButtonPosi_X[global.UISelection] + 17, 452);
 		}
 	}
 	
-	if (global.BattleMenu == 1 || global.BattleMenu == 2){ //Fight and Act, Choose Enemy
+	if (global.BattleMenu == MENU.FIGHT || global.BattleMenu == MENU.ACT){ //Fight and Act, Choose Enemy
 		if up_key {
-			audio_play_sound(snd_movemenu, 20, false);
+			audio_play_sound(snd_move, 20, false);
 			global.UISelection -= 1;
 		}
 		if down_key {
-			audio_play_sound(snd_movemenu, 20, false);
+			audio_play_sound(snd_move, 20, false);
 			global.UISelection += 1;
 		}
 		global.UISelection = clamp(global.UISelection, 0, array_length(global.Enemy) - 1);
 	}
 		
-	if (global.BattleMenu == 3){ //Item Page
+	if (global.BattleMenu == MENU.ITEM){ //Item Page
 		if (right_key){
-			audio_play_sound(snd_movemenu, 20, false);
+			audio_play_sound(snd_move, 20, false);
 			if (global.UISelection == 1 || global.UISelection == 3){ //check if on left row
 				if array_length(global.Item) > 4{ //if have more than 4 items, can advance page
 					if ItemPage == 1 {
@@ -83,7 +83,7 @@ if (global.UISelection > -1){ //-1 means can't select menu
 				}
 		}
 		if (left_key){
-			audio_play_sound(snd_movemenu, 20, false);
+			audio_play_sound(snd_move, 20, false);
 			if (global.UISelection == 0 || global.UISelection == 2){
 				if array_length(global.Item) > 4{
 					switch ItemPage {
@@ -111,13 +111,13 @@ if (global.UISelection > -1){ //-1 means can't select menu
 		if (up_key){
 			if (global.UISelection == 2 || global.UISelection == 3){
 				global.UISelection -= 2;
-				audio_play_sound(snd_movemenu, 20, false);
+				audio_play_sound(snd_move, 20, false);
 			}
 		}
 		if (down_key){
 			if (global.UISelection == 0 || global.UISelection == 1){
 				global.UISelection += 2;
-				audio_play_sound(snd_movemenu, 20, false);
+				audio_play_sound(snd_move, 20, false);
 			}
 		}
 			
@@ -130,38 +130,38 @@ if (global.UISelection > -1){ //-1 means can't select menu
 		
 }
 		
-	if (global.BattleMenu == 2.5){ //Act Command
+	if (global.BattleMenu == MENU.ACT_SELECTION){ //Act Command
 		if up_key {
 			if global.UISelection != 0 || global.UISelection != 1{
 				global.UISelection -= 2;
-				audio_play_sound(snd_movemenu, 1 ,false);
+				audio_play_sound(snd_move, 1 ,false);
 			}
 		}
 		if down_key {
 			if global.UISelection != array_length(global.Enemy[global.EnemyRN].Act) -1 || global.UISelection != array_length(global.Enemy[global.EnemyRN].Act) - 2{
 				global.UISelection -= 2;
-				audio_play_sound(snd_movemenu, 1 ,false);
+				audio_play_sound(snd_move, 1 ,false);
 			}
 		}
 		if right_key && global.UISelection %2 = 0 {
 			global.UISelection += 1;
-			audio_play_sound(snd_movemenu, 1 ,false);
+			audio_play_sound(snd_move, 1 ,false);
 		}
 		if left_key && global.UISelection %2 != 0 {
 			global.UISelection -= 1;
-			audio_play_sound(snd_movemenu, 1 ,false);
+			audio_play_sound(snd_move, 1 ,false);
 		}
 		
 		global.UISelection = clamp(global.UISelection, 0, array_length(global.Enemy[global.EnemyRN].Act) -1);
 	}
 		
-	if (global.BattleMenu == 4){ //Mercy Menu
+	if (global.BattleMenu == MENU.MERCY){ //Mercy Menu
 		if up_key {
-			audio_play_sound(snd_movemenu, 20, false);
+			audio_play_sound(snd_move, 20, false);
 			global.UISelection -= 1;
 		}
 		if down_key {
-			audio_play_sound(snd_movemenu, 20, false);
+			audio_play_sound(snd_move, 20, false);
 			global.UISelection += 1;
 		}
 
@@ -172,11 +172,12 @@ if (global.UISelection > -1){ //-1 means can't select menu
 			global.UISelection =0;
 		}
 }
+		
 	//Drawing Soul//
-	if (global.BattleMenu == 1 || global.BattleMenu ==2 || global.BattleMenu == 4){ 
+	if (global.BattleMenu == MENU.FIGHT || global.BattleMenu == MENU.ACT || global.BattleMenu == MENU.MERCY){ 
 		draw_sprite(spr_ourheart, 0, 60, 286 + 36 * global.UISelection);		
 	}
-	else if (global.BattleMenu > 0){ //For Act and Item grid selection
+	else if (global.BattleMenu > MENU.SELECTION){ //For Act and Item grid selection
 		draw_sprite(spr_ourheart, 0, 70 + (250*(global.UISelection%2)), 290 + (32*floor(global.UISelection/2)));
 	}
 	////////////////
