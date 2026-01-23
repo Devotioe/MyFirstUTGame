@@ -186,9 +186,9 @@ if (global.UISelection > -1){ //-1 means can't select menu
 
 //Other information draws
 //HP, NAME, LV
-var UI_font = fnt_eng_Battle_UI;
+var UI_font = fnt_Battle_UI;
 var DefaultColor = c_white;
-var UI_hpfont = fnt_eng_Battle_HPfont;
+var UI_hpfont = fnt_Battle_HPfont;
 
 var hp_maxwidth = global.PlayerMaxHp * 1.25;
 var hp_width = global.PlayerHp * 1.25;

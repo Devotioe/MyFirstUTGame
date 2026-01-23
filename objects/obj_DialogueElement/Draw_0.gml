@@ -59,13 +59,13 @@ for (var i = 0; i < TextLength; i++) {
 	//SWITCHING LANGUAGES
 	switch global.lang {
 		case "eng":
-		draw_set_font(fnt_eng_Battle_Normal);
+		draw_set_font(fnt_Normal);
 		break;
 		case "ch":
-		draw_set_font(fnt_ch_Battle_Normal);
+		draw_set_font(fnt_Normal);
 		break;
 		default:
-		draw_set_font(fnt_eng_Battle_Normal);
+		draw_set_font(fnt_Normal);
 		break;
 	}
 	// New line, use "}&" to include the & symbol otherwise it gets cancelled out

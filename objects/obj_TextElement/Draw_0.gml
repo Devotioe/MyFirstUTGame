@@ -1,5 +1,6 @@
 // Colour and font
 var colour = c_white;
+var font = fnt_Normal
 
 var advance = keyboard_check_pressed(ord("Z")) || keyboard_check_pressed(vk_enter);
 var skip = keyboard_check_pressed(ord("X"));
@@ -12,18 +13,17 @@ var sentence_y = 0;
 var line_spacing = 35;
 var letter_spacing = 15;
 
-switch global.lang {
-	case "eng":
-	letter_spacing = 16;
-	break;
-	case "ch":
-	letter_spacing = 35;
-	break;
-	default:
-	letter_spacing = 15;
-	break;
-}
+//For Bubbles
+var x_offset = 40;
+var y_offset = 8;
 
+if IsSpeechBubble {
+	colour = c_black
+	line_spacing = 18;
+	letter_spacing = 9;
+	font = fnt_Battle_Normal_Bubble
+	draw_sprite(spr_Bubble, 0, x - x_offset, y - y_offset)
+}
 
 // Draws every letter that it has so far
 for (var i = 0; i < TextLength; i++) {
@@ -46,14 +46,14 @@ for (var i = 0; i < TextLength; i++) {
 		if string_char_at(TextToDraw, i + 2) == "D"
 			colour = DefaultColour;
 		i += 2;
-	}
+}
+
+draw_set_color(colour);
+draw_set_font(font);
 	
-	draw_set_color(colour);
-	draw_set_font(fnt_eng_Battle_Normal);
-	
-	// New line, use "}&" to include the & symbol otherwise it gets cancelled out
-	// USAGE: "89 Snowdin Lane&Underground }& Co"
-	
+// New line, use "}&" to include the & symbol otherwise it gets cancelled out
+// USAGE: "89 Snowdin Lane&Underground }& Co"
+
 	if (string_char_at(TextToDraw, i + 1) == "&" && string_char_at(TextToDraw, i) != "}") {
 		sentence_x = 0;
 		sentence_y += line_spacing;
@@ -97,7 +97,7 @@ if IsWriting {
 		CurrentDelay = 0;
 		TextLength += 1;
 		if (string_char_at(TextToDraw, TextLength) != " " && string_char_at(TextToDraw, TextLength) != "." && string_char_at(TextToDraw, TextLength) != "*" && CurrentDelay = 0){
-			switch (Talker[TalkerNum]){	//speak sound
+			switch (Talker){	//speak sound
 			case "Sans" :
 			audio_play_sound(snd_txtsans, 20, false);
 			break;
@@ -146,7 +146,6 @@ else { // can only advance when not writing
 			}
 			IsWriting = true; 
 			NumInQueue += 1;
-			TalkerNum += 1;
 		}
 	}
 }

@@ -1,6 +1,6 @@
 {
   "$GMFont":"",
-  "%Name":"fnt_eng_Battle_Normal",
+  "%Name":"fnt_Battle_Normal",
   "AntiAlias":1,
   "applyKerning":0,
   "ascender":34,
@@ -2127,7 +2127,7 @@
   "last":0,
   "lineHeight":44,
   "maintainGms1Font":false,
-  "name":"fnt_eng_Battle_Normal",
+  "name":"fnt_Battle_Normal",
   "parent":{
     "name":"Fonts",
     "path":"folders/Fonts.yy",
@@ -2136,6 +2136,7 @@
   "ranges":[
     {"lower":32,"upper":127,},
     {"lower":9647,"upper":9647,},
+    {"lower":65292,"upper":65292,},
   ],
   "regenerateBitmap":false,
   "resourceType":"GMFont",

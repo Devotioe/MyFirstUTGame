@@ -1,3 +1,12 @@
+function AddDialogue (_text) {
+	var text = _text;
+	if !is_array(TextInQueue){
+		TextInQueue = []
+	}
+	array_push(TextInQueue, text)
+}
+
+
 TextToDraw = "";
 
 TextInQueue = -1
@@ -20,8 +29,10 @@ DefaultColour = c_white;
 
 IsSpeechBubble = false;
 
-Talker = array_create(20, "Normal");
-
-TalkerNum = 0;
+Talker = "Normal";
 
 AdvanceCoolDown = 0;
+
+spr_Bubble = spr_blconwdshrt_0;
+
+
