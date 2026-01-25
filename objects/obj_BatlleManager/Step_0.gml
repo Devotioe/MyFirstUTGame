@@ -1,4 +1,5 @@
 switch state {
+	
 	case BATTLE_STATE.ACTION:
 	if !instance_exists(global.Menu.ActionText){
 		state = BATTLE_STATE.DIALOGUE;
@@ -20,6 +21,7 @@ switch state {
 		if !instance_exists(Dialogue){
 			state = BATTLE_STATE.BATTLE
 			instance_create_depth(0,0,99,obj_atk_Test_1)
+			SetBattleBox()
 		}
 	}
 	//var ready = true;
@@ -42,6 +44,9 @@ switch state {
 			global.BattleMenu = MENU.SELECTION
 			global.UISelection = global.Menu.BelowUIReference;
 			global.soul.visible = false;
+			global.Menu.PlayerDialogue.TextLength = 0;
+			global.Menu.PlayerDialogue.IsWriting = true;
 		}
+		
 	break;
 }

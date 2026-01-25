@@ -1,12 +1,9 @@
 function CheckIfIamKilled(){
 	
-	if instance_exists(obj_TargetField){
-		obj_TargetField.destroyed = true;
-	}
-	instance_destroy(obj_TargetBar);
+
 	
 	if (MyHp > 0){ //if alive, set to battle phase
-		SetBattleBox()
+		
 		//with global.Enemy[global.EnemyRN]{
 		//	event_user(15) // check for dialogue
 		//}

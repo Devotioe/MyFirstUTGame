@@ -28,6 +28,8 @@ if global.PriorityBar >= global.BarCount && !attacked {
 	alarm[0] = 5; 
 }
 
+
+//for animation
 if destroyed {
 	if image_xscale > 0 {
 		image_xscale -= 0.1;
