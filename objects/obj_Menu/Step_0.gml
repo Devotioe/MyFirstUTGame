@@ -202,7 +202,6 @@ if select_key && global.UISelection > -1 {
 			event_user(global.UISelection);
 		}
 		global.BattleMenu = MENU.HIDE; //Act Dialogue 
-		show_debug_message(global.BattleMenu)
 		global.UISelection = -1; // disable select
 		
 		global.Manager.state = BATTLE_STATE.ACTION;

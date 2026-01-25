@@ -2,10 +2,12 @@ function scr_Flee(){
 	var sound = snd_escaped;
 	var _x = 60;
 	var _y = 286 + 36 * global.UISelection;
-	global.Enemy[0].ActionText = instance_create_depth(obj_Menu.box_basicshift, 270, -1, obj_TextElement);
-	global.Enemy[0].ActionText.CanAdvance = false;
+	var _inst = instance_create_depth(global.Menu.box_basicshift, 270, -1, obj_TextElement);
+	global.Menu.ActionText = _inst;
 	
-	global.Enemy[0].ActionText.TextToDraw = choose(
+	_inst.CanAdvance = false;
+	
+	_inst.TextToDraw = choose(
 	    "* Strategic retreating...",
 	    "* Is not worth my time.",
 		"* Not for now.",

@@ -1,13 +1,17 @@
+TextToDraw = "";
+
 function AddDialogue (_text) {
 	var text = _text;
-	if !is_array(TextInQueue){
-		TextInQueue = []
+	if TextToDraw == "" {
+		TextToDraw = text;
+	}else{
+		if !is_array(TextInQueue){
+			TextInQueue = []
+		}
+		array_push(TextInQueue, text)
 	}
-	array_push(TextInQueue, text)
 }
 
-
-TextToDraw = "";
 
 TextInQueue = -1
 

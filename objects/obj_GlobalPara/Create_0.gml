@@ -12,7 +12,7 @@ global.PlayerMaxHp = 92;
 global.PlayerLv = 19;
 global.PlayerHp = 92;
 global.PlayerDef = 2;
-global.PlayerAtk = 100;
+global.PlayerAtk = 10;
 global.PlayerName = "Chara"
 
 global.PlayerArmor = "Bandage";

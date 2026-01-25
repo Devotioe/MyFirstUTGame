@@ -3,8 +3,10 @@ function scr_Spare(){ //spare once will spare all possible enemies
 	var allspared = true;
 	var sound = snd_vaporized;
 	var enemyCounts = array_length(global.Enemy);
-	global.Enemy[0].ActionText = instance_create_depth(obj_Menu.box_basicshift, 270, -1, obj_TextElement);
-	global.Enemy[0].ActionText.CanAdvance = false;
+	
+	var _inst = instance_create_depth(global.Menu.box_basicshift, 270, -1, obj_TextElement);
+	global.Menu.ActionText = _inst;
+	_inst.CanAdvance = false;
 	
 	for (var i = 0 ; i < enemyCounts ; i ++){
 		if (global.Enemy[i].CanSpare == true){
@@ -32,22 +34,20 @@ function scr_Spare(){ //spare once will spare all possible enemies
 		}//check if every enemy is spared
 		
 		if allspared {
-			global.Enemy[0].ActionText.TextToDraw = "* You won!&* You earned 0 EXP and " + string(global.GoldToEarn) + " GOLD!";
+			_inst.TextToDraw = "* You won!&* You earned 0 EXP and " + string(global.GoldToEarn) + " GOLD!";
 			var handler = instance_create_depth(0, 0, 99, obj_WinHandler);
 			handler.allspared = true;
 		}
 		
 		else{
-			global.Enemy[0].ActionText.CanAdvance = true;
-			global.Enemy[0].ReadyForDialogue = true;
-			global.Enemy[0].ActionText.TextToDraw = "";
+			_inst.CanAdvance = true;
+			_inst.TextToDraw = "";
 		}
 
 	
 	}else{
-		global.Enemy[0].ActionText.CanAdvance = true;
-		global.Enemy[0].ReadyForDialogue = true;
-		global.Enemy[0].ActionText.TextToDraw = "";
+		_inst.CanAdvance = true;
+		_inst.TextToDraw = "";
 	}
 
 }

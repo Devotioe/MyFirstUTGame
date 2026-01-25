@@ -1,7 +1,6 @@
 enum BATTLE_STATE {
 	PLAYER,
 	ACTION,
-	ATTACK,
 	DIALOGUE,
 	BATTLE,
 }
@@ -11,3 +10,5 @@ enum ATTACK {
 }
 
 state = BATTLE_STATE.PLAYER;
+
+event = 0;
