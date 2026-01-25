@@ -1,6 +1,6 @@
 {
   "$GMFont":"",
-  "%Name":"fnt_Battle_Normal_Dialogue",
+  "%Name":"fnt_Battle_Normal_Bubble",
   "AntiAlias":1,
   "applyKerning":0,
   "ascender":13,
@@ -117,7 +117,7 @@
   "last":0,
   "lineHeight":15,
   "maintainGms1Font":false,
-  "name":"fnt_Battle_Normal_Dialogue",
+  "name":"fnt_Battle_Normal_Bubble",
   "parent":{
     "name":"Fonts",
     "path":"folders/Fonts.yy",

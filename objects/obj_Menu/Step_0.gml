@@ -115,7 +115,6 @@ if (global.BattleMenu > MENU.SELECTION){
 }
 
 //init every frame, make evey menu invisible
-if global.Manager.state == BATTLE_STATE.PLAYER {
 	PlayerDialogue.visible = false;
 	Fight.visible = false;
 	Act.visible = false;
@@ -127,7 +126,6 @@ if global.Manager.state == BATTLE_STATE.PLAYER {
 	ItemR_2.visible = false;
 	Page.visible = false;
 	Mercy.visible = false;
-}
 
 //make certain manu visible according to menu status
 switch (global.BattleMenu){ 
@@ -204,6 +202,7 @@ if select_key && global.UISelection > -1 {
 			event_user(global.UISelection);
 		}
 		global.BattleMenu = MENU.HIDE; //Act Dialogue 
+		show_debug_message(global.BattleMenu)
 		global.UISelection = -1; // disable select
 		
 		global.Manager.state = BATTLE_STATE.ACTION;

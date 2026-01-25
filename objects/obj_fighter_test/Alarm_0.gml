@@ -19,12 +19,13 @@ if (MyHp > 0){ //if alive, set to battle phase
 }
 
 else{//enemy dies
-	var allkilled = true;
+	
 	killed = true;
 	global.ExpToEarn += EXP;
 	
 	array_push(global.EnemyGrave, self); //push to grave for later deletion
 	
+	var allkilled = true;
 	for (var i = 0 ; i < array_length(global.Enemy) ; i ++){
 		if (global.Enemy[i].killed == false){
 			allkilled = false;

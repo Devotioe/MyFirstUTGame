@@ -1,6 +1,6 @@
 if (event == 0){
 	CreateBubbleDialogue(50, 100)
-	dialogue.TextToDraw = "1 Test 1";
+	dialogue.TextToDraw = "'cause i won't show&mercy from now on.";
 	dialogue.AddDialogue("1 Test 2")
 	dialogue.AddDialogue("1 Test 3")
 	event = 0.5;
@@ -13,7 +13,7 @@ if (event == 0.5){
 }
 
 if (event == 1){
-	CreateBubbleDialogue(50, 150)
+	CreateBubbleDialogue(50, 200)
 	dialogue.TextToDraw = "2 Test 1";
 	dialogue.AddDialogue("1 Test 2")
 	dialogue.AddDialogue("2 Test 3")

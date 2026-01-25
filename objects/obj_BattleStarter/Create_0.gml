@@ -1,9 +1,9 @@
+global.Manager = instance_create_depth(0, 0, -99, obj_BatlleManager);
 
-
-var playerfirst = true;
+var state = global.Manager.state;
 
 #region //create UI
-if (playerfirst == true){ //init box border and soul posi
+if (state == BATTLE_STATE.PLAYER){ //init box border and soul posi
 		bulletboard_init_border_l = 30; //init the size of box
 		bulletboard_init_border_r = 610;
 		bulletboard_init_border_u = 250;

@@ -51,3 +51,6 @@ item_total_2 = 0;
 
 EcData = scr_searchEcounterData()
 _CanFlee = EcData.CanFlee;
+
+ActionText = noone;
+

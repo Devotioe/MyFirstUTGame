@@ -1,10 +1,13 @@
 enum BATTLE_STATE {
-	START,
 	PLAYER,
 	ACTION,
+	ATTACK,
 	DIALOGUE,
-	OPPONENT,
-	END,
+	BATTLE,
 }
 
-state = 0;
+enum ATTACK {
+	
+}
+
+state = BATTLE_STATE.PLAYER;

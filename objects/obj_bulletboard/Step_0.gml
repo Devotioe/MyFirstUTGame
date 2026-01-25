@@ -18,7 +18,7 @@ if (current_u > global.bulletboard_border_u){
 	current_u -= abs((global.bulletboard_border_u - current_u)) / expand_spd ;
 }
 if (current_u < global.bulletboard_border_u){
-	current_u += abs((global.bulletboard_border_u - current_u)) / expand_spd5 ;
+	current_u += abs((global.bulletboard_border_u - current_u)) / expand_spd ;
 }
 
 

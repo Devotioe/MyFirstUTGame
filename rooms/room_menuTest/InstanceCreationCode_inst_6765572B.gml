@@ -1,0 +1,19 @@
+
+bulletboard_init_border_l = 30; //init the size of box
+bulletboard_init_border_r = 610;
+bulletboard_init_border_u = 250;
+bulletboard_init_border_b = 390; //init the size of box
+soul_init_posi_x = 52;
+soul_init_posi_y = 442;
+
+
+
+global.bulletboard = instance_create_depth(320, 300, 0 , obj_bulletboard) //spawn bullet board
+global.bulletboard_border_l = bulletboard_init_border_l; //sizing bullet board
+global.bulletboard_border_r = bulletboard_init_border_r; //sizing bullet board
+global.bulletboard_border_u = bulletboard_init_border_u;
+global.bulletboard_border_b = bulletboard_init_border_b;
+ 
+
+global.soul = instance_create_depth(0,0,-9,obj_soul);
+global.soul.visible = false;
