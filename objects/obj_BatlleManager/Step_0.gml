@@ -21,7 +21,6 @@ switch state {
 		if !instance_exists(Dialogue){
 			state = BATTLE_STATE.BATTLE
 			instance_create_depth(0,0,99,obj_atk_Test_1)
-			SetBattleBox()
 		}
 	}
 	//var ready = true;
@@ -37,7 +36,7 @@ switch state {
 	
 	case BATTLE_STATE.BATTLE:
 	
-		if !instance_exists(obj_atk_Test_1){
+		if !instance_exists(obj_atk_Parent){
 			state = BATTLE_STATE.PLAYER
 			instance_create_depth(0,0,99,obj_atk_Test_1)
 			scr_SetDialogueBox()

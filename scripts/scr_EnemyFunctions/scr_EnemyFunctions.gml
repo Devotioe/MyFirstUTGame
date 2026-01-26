@@ -1,12 +1,6 @@
 function CheckIfIamKilled(){
-	
-
-	
 	if (MyHp > 0){ //if alive, set to battle phase
-		
-		//with global.Enemy[global.EnemyRN]{
-		//	event_user(15) // check for dialogue
-		//}
+		//return false;
 	}
 	else{//enemy dies	
 		killed = true;
@@ -14,6 +8,7 @@ function CheckIfIamKilled(){
 		audio_play_sound(sound, 1, false);
 		global.ExpToEarn += EXP;
 		array_push(global.EnemyGrave, self); //push to grave for later deletion	
+		//return true;
 	}
 }
 
@@ -26,7 +21,7 @@ function CheckIfEveryKilled(){
 			break;
 		}
 	}//check if every enemy is killed
-		
+	
 	if allkilled {
 		var _inst = instance_create_depth(global.Menu.box_basicshift, 270, -1, obj_TextElement);
 		global.Menu.ActionText = _inst;
@@ -35,7 +30,12 @@ function CheckIfEveryKilled(){
 		
 		var handler = instance_create_depth(0, 0, 99, obj_WinHandler);
 		handler.allkilled = true;
+		return true;
 	
+	}else{
+		global.Manager.state = BATTLE_STATE.DIALOGUE
+		SetBattleBox();	
+		return false;
 	}
 	
 }

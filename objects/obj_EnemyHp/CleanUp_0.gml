@@ -5,4 +5,4 @@ if instance_exists(obj_TargetField){
 }
 instance_destroy(obj_TargetBar);
 
-global.Manager.state = BATTLE_STATE.DIALOGUE
+
