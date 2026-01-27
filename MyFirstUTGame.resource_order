@@ -38,6 +38,7 @@
     {"name":"obj_GlobalPara","order":2,"path":"objects/obj_GlobalPara/obj_GlobalPara.yy",},
     {"name":"obj_Menu","order":5,"path":"objects/obj_Menu/obj_Menu.yy",},
     {"name":"obJ_Music","order":3,"path":"objects/obJ_Music/obJ_Music.yy",},
+    {"name":"obj_NormalEnemy_Parent","order":2,"path":"objects/obj_NormalEnemy_Parent/obj_NormalEnemy_Parent.yy",},
     {"name":"obj_Slice","order":7,"path":"objects/obj_Slice/obj_Slice.yy",},
     {"name":"obj_SoulFlee","order":9,"path":"objects/obj_SoulFlee/obj_SoulFlee.yy",},
     {"name":"obj_TargetBar","order":3,"path":"objects/obj_TargetBar/obj_TargetBar.yy",},

@@ -7,6 +7,7 @@ switch state {
 	break;
 
 	case BATTLE_STATE.DIALOGUE:
+	SetBattleBox();
 	_x = global.Enemy[0].x + 100 
 	_y = global.Enemy[0].y - 20
 	

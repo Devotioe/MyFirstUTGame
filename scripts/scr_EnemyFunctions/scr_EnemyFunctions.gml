@@ -26,15 +26,13 @@ function CheckIfEveryKilled(){
 		var _inst = instance_create_depth(global.Menu.box_basicshift, 270, -1, obj_TextElement);
 		global.Menu.ActionText = _inst;
 		_inst.CanAdvance = false;
-		_inst.TextToDraw = "* You won!&* You earned "+ string(global.ExpToEarn) + " EXP and " + string(global.GoldToEarn) + " GOLD!";
+		_inst.AddDialogue("* You won!&* You earned "+ string(global.ExpToEarn) + " EXP and " + string(global.GoldToEarn) + " GOLD!");
 		
 		var handler = instance_create_depth(0, 0, 99, obj_WinHandler);
 		handler.allkilled = true;
 		return true;
 	
-	}else{
-		global.Manager.state = BATTLE_STATE.DIALOGUE
-		SetBattleBox();	
+	}else{	
 		return false;
 	}
 	

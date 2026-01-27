@@ -1,4 +1,4 @@
-var DamageWriter = instance_create_depth(x,y - 30, -12, obj_EnemyHp);
+var DamageWriter = instance_create_depth(x, y - 30, -12, obj_EnemyHp);
 
 DamageWriter.MyHp = MyHp; 
 DamageWriter.MyCurrentHp = MyHp;

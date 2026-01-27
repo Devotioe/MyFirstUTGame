@@ -1,6 +1,6 @@
+var _inst =  instance_create_depth(obj_Menu.box_basicshift, 270, -1, obj_TextElement);
+global.Menu.ActionText = _inst;
 
-ActionText = instance_create_depth(obj_Menu.box_basicshift, 270, -1, obj_TextElement);
-ActionText.TextToDraw = "* You held your breath.";
-ActionText.TextInQueue[0] = "* The Roaring Knight begged for&  mercy.";
+_inst.AddDialogue("* You held your breath.");
+_inst.AddDialogue("* The Roaring Knight begged for&  mercy.");
 CanSpare = true;
-
