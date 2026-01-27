@@ -7,6 +7,7 @@ switch state {
 	break;
 
 	case BATTLE_STATE.DIALOGUE:
+	
 	SetBattleBox();
 	_x = global.Enemy[0].x + 100 
 	_y = global.Enemy[0].y - 20
@@ -21,7 +22,7 @@ switch state {
 	if event == 0.5 {
 		if !instance_exists(Dialogue){
 			state = BATTLE_STATE.BATTLE
-			instance_create_depth(0,0,99,obj_atk_Test_1)
+			instance_create_depth(0,0,99,obbj_atk_Test_1)
 		}
 	}
 	//var ready = true;
