@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_SetBattleBox",
+  "%Name":"scr_BattleFunctions",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_SetBattleBox",
+  "name":"scr_BattleFunctions",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

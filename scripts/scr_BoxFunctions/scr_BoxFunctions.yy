@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_SetDialogueBox",
+  "%Name":"scr_BoxFunctions",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_SetDialogueBox",
+  "name":"scr_BoxFunctions",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

@@ -16,8 +16,9 @@ Siner = 0;
 DodgeAni = 0;
 
 spared = false;
-killed = false
+killed = false;
 
 event = 0;
 
 global.Manager.state = BATTLE_STATE.PLAYER;
+
