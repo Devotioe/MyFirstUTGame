@@ -204,14 +204,14 @@ if select_key && global.UISelection > -1 {
 		global.BattleMenu = MENU.HIDE; //Act Dialogue 
 		global.UISelection = -1; // disable select
 		
-		global.Manager.state = BATTLE_STATE.ACTION;
+		StateToAction()
 		break;
 		
 		case MENU.ITEM: //Item
 		global.BattleMenu = MENU.HIDE; //Item Dialogue 
 		scr_useItem(); //script for using item, determine which item to be used in this script
 		
-		global.Manager.state = BATTLE_STATE.ACTION;
+		StateToAction()
 		break;
 		
 		case MENU.MERCY: //Mercy
@@ -221,6 +221,7 @@ if select_key && global.UISelection > -1 {
 		}else{
 			scr_Flee();
 		}
+		StateToAction()
 		break;
 	}
 }

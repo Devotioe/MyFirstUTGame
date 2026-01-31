@@ -3,6 +3,7 @@ enum BATTLE_STATE {
 	ACTION,
 	DIALOGUE,
 	BATTLE,
+	OPPONENT,
 }
 
 enum ATTACK {

@@ -1,7 +1,7 @@
 function StateToBattle(){
-	global.Manager.state = BATTLE_STATE.BATTLE
+	global.Manager.state = BATTLE_STATE.BATTLE;
 	SetBattleBox()
-	global.BattleMenu = MENU.HIDE
+	global.BattleMenu = MENU.HIDE;
 	global.UISelection = -1;
 	global.soul.visible = true;
 	global.soul.x = 320;
@@ -9,12 +9,19 @@ function StateToBattle(){
 }
 
 function StateToPlayer(){
-	global.Manager.state = BATTLE_STATE.PLAYER
+	global.Manager.state = BATTLE_STATE.PLAYER;
 	SetDialogueBox()
-	global.BattleMenu = MENU.SELECTION
+	global.BattleMenu = MENU.SELECTION;
 	global.UISelection = global.Menu.BelowUIReference;
 	global.soul.visible = false;
 	global.Menu.PlayerDialogue.TextLength = 0;
 	global.Menu.PlayerDialogue.IsWriting = true;
 }
 
+function StateToDialogue(){
+	global.Manager.state = BATTLE_STATE.DIALOGUE;
+}
+
+function StateToAction(){
+	global.Manager.state = BATTLE_STATE.ACTION;	
+}

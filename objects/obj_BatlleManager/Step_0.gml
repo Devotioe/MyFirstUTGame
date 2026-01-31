@@ -7,17 +7,33 @@ switch state {
 	}
 	break;
 
+
+
+
+
 	case BATTLE_STATE.DIALOGUE:
 	
 	global.Enemy[global.EnemyRN].alarm[2] = 1;
 	
 	break;
 	
+	
+
+
+	
 	case BATTLE_STATE.BATTLE:
 	
-		if !instance_exists(obj_atk_Parent){
-			StateToPlayer()
-		}
+	if !instance_exists(obj_atk_Parent){
+		StateToPlayer()
+	}
 		
+	break;
+	
+	
+	
+	case BATTLE_STATE.OPPONENT:
+	
+	global.Enemy[global.EnemyRN].alarm[2] = 1;
+	
 	break;
 }

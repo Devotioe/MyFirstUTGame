@@ -22,3 +22,5 @@ event = 0;
 
 global.Manager.state = BATTLE_STATE.PLAYER;
 
+finished = false;
+dia_phase = false;
