@@ -8,3 +8,4 @@ global.Enemy[global.EnemyRN].alarm[0] = 1;
 
 
 
+
