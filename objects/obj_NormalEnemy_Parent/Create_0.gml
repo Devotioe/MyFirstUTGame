@@ -24,3 +24,5 @@ global.Manager.state = BATTLE_STATE.PLAYER;
 
 finished = false;
 dia_phase = false;
+
+talked = false;

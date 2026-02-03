@@ -1,30 +1,59 @@
 //Here defines the behaviour of dialogue
-
 _x = global.Enemy[0].x + 100 
 _y = global.Enemy[0].y - 20
+
+
+
+if (!talked){
+	if (event == 0){
+		event = 0.5;
+		
+		CreateBubbleDialogue(_x, _y);
+		
+		var dia = choose(
+		"random 1_1",
+		"random 1_2",
+		"random 1_3",
+		)
+		Dialogue.AddDialogue(dia);
+	}
+
+	if (event == 1){
+		event = 1.5;
+		
+		CreateBubbleDialogue(_x, _y);
+		
+		var dia = choose(
+		"random 2_1",
+		"random 2_2",
+		"random 2_3",
+		)
+		Dialogue.AddDialogue(dia);
+		
+		dia = choose(
+		"random 2_1",
+		"random 2_2",
+		"random 2_3",
+		)
+		Dialogue.AddDialogue(dia);
+	}
 	
-if event == 0 {
-	
-	CreateBubbleDialogue(_x, _y);
-	event = 0.5
-	
-	var dia = choose(
-	"random 1",
-	"random 2",
-	"random 3",
-	)
-	
-	Dialogue.AddDialogue(dia)
+}else{
+	instance_create_depth(0, 0, 99, obj_atk_Parent);
 }
 
-
-if event = 0.5 {
-	
-	if !instance_exists(Dialogue){
-		finished = true
+if (!instance_exists(Dialogue)){
+	switch event {
+		case 0.5:
+		event = 1;
+		break;
+		case 1.5:
+		talked = true;
+		event = 2
+		break;
 	}
 }
+	
+	
 
-if finished {
-	instance_create_depth(0, 0, 99, obj_atk_Parent)
-}
+
