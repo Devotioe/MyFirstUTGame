@@ -13,3 +13,5 @@ enum ATTACK {
 state = BATTLE_STATE.PLAYER;
 
 event = 0;
+
+attack_created = false;

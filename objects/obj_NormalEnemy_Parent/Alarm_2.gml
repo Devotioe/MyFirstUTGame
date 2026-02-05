@@ -2,7 +2,10 @@
 _x = global.Enemy[0].x + 100 
 _y = global.Enemy[0].y - 20
 
-
+if (global.Manager.attack_created = false){
+	instance_create_depth(0, 0, 99, obj_atk_Parent);
+	global.Manager.attack_created = true;
+}
 
 if (!talked){
 	if (event == 0){
@@ -15,6 +18,7 @@ if (!talked){
 		"random 1_2",
 		"random 1_3",
 		)
+		
 		Dialogue.AddDialogue(dia);
 	}
 
@@ -39,7 +43,7 @@ if (!talked){
 	}
 	
 }else{
-	instance_create_depth(0, 0, 99, obj_atk_Parent);
+	global.Manager.state = BATTLE_STATE.BATTLE;
 }
 
 if (!instance_exists(Dialogue)){
@@ -53,7 +57,3 @@ if (!instance_exists(Dialogue)){
 		break;
 	}
 }
-	
-	
-
-

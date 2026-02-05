@@ -26,3 +26,5 @@ finished = false;
 dia_phase = false;
 
 talked = false;
+
+attack_created = false;

@@ -1,5 +1,5 @@
 function CheckIfIamKilled(){
-	if (MyHp > 0){ //if alive, set to battle phase
+	if (MyHp > 0){
 		//return false;
 	}
 	else{//enemy dies	
