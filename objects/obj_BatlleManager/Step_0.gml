@@ -5,11 +5,8 @@ switch state {
 	if !instance_exists(global.Menu.ActionText){
 		state = BATTLE_STATE.DIALOGUE;
 	}
+	
 	break;
-
-
-
-
 
 	case BATTLE_STATE.DIALOGUE:
 	
@@ -17,8 +14,6 @@ switch state {
 	
 	break;
 	
-	
-
 
 	
 	case BATTLE_STATE.BATTLE:
@@ -31,9 +26,9 @@ switch state {
 	
 	
 	
-	case BATTLE_STATE.OPPONENT:
+	// case BATTLE_STATE.OPPONENT:
 	
-	global.Enemy[global.EnemyRN].alarm[2] = 1;
+	// global.Enemy[global.EnemyRN].alarm[2] = 1;
 	
-	break;
+	// break;
 }
