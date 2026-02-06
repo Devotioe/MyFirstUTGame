@@ -18,10 +18,3 @@ else{
 	ShakeEffect = 0.8 * global.Damage;
 	ShakeEffect = clamp(ShakeEffect, 0 , 50)
 }
-
-
-
-
-
-
-

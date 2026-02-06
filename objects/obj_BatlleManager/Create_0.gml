@@ -3,15 +3,10 @@ enum BATTLE_STATE {
 	ACTION,
 	DIALOGUE,
 	BATTLE,
-	OPPONENT,
-}
-
-enum ATTACK {
-	
 }
 
 state = BATTLE_STATE.PLAYER;
 
 event = 0;
 
-attack_created = false;
+attackCreated = false;

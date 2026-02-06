@@ -2,9 +2,9 @@
 _x = self.x + 100 
 _y = self.y - 20
 
-if (global.Manager.attack_created = false){
+if (global.Manager.attackCreated = false){
 	instance_create_depth(0, 0, 99, obj_atk_Parent);
-	global.Manager.attack_created = true;
+	global.Manager.attackCreated = true;
 }
 
 if (!talked){
