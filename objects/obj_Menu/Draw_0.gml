@@ -174,11 +174,13 @@ if (global.UISelection > -1){ //-1 means can't select menu
 }
 		
 	//Drawing Soul//
-	if (global.BattleMenu == MENU.FIGHT || global.BattleMenu == MENU.ACT || global.BattleMenu == MENU.MERCY){ 
-		draw_sprite(spr_ourheart, 0, 60, 286 + 36 * global.UISelection);		
-	}
-	else if (global.BattleMenu > MENU.SELECTION){ //For Act and Item grid selection
-		draw_sprite(spr_ourheart, 0, 70 + (250*(global.UISelection%2)), 290 + (32*floor(global.UISelection/2)));
+	if (global.BattleMenu != MENU.HIDE){
+		if (global.BattleMenu == MENU.FIGHT || global.BattleMenu == MENU.ACT || global.BattleMenu == MENU.MERCY){ 
+			draw_sprite(spr_ourheart, 0, 60, 286 + 36 * global.UISelection);		
+		}
+		else if (global.BattleMenu > MENU.SELECTION){ //For Act and Item grid selection
+			draw_sprite(spr_ourheart, 0, 70 + (250*(global.UISelection%2)), 290 + (32*floor(global.UISelection/2)));
+		}
 	}
 	////////////////
 	
@@ -189,10 +191,8 @@ if (global.UISelection > -1){ //-1 means can't select menu
 var UI_font = fnt_Battle_UI;
 var DefaultColor = c_white;
 var UI_hpfont = fnt_Battle_HPfont;
-
 var hp_maxwidth = global.PlayerMaxHp * 1.25;
 var hp_width = global.PlayerHp * 1.25;
-
 
 draw_set_color(DefaultColor);
 
@@ -204,14 +204,9 @@ draw_text(30 , 400, string(global.PlayerName)+"   LV " + string(global.PlayerLv)
 draw_set_font(UI_hpfont); //hp
 draw_text(225 , 405, "HP");
 
-
-
 //HP BAR
 draw_set_color(c_red);
 draw_rectangle(255, 400, 255 + hp_maxwidth, 420, false)
 
 draw_set_color(c_yellow);
 draw_rectangle(255, 400, 255 + hp_width, 420, false )
-
-
-

@@ -4,8 +4,8 @@ function scr_Flee(){
 	var _y = 286 + 36 * global.UISelection;
 	var _inst = instance_create_depth(global.Menu.box_basicshift, 270, -1, obj_TextElement);
 	global.Menu.ActionText = _inst;
-	
 	_inst.CanAdvance = false;
+	_inst.CanSkip = false;
 	
 	_inst.TextToDraw = choose(
 	    "* Strategic retreating...",

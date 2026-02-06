@@ -23,5 +23,7 @@ function StateToDialogue(){
 }
 
 function StateToAction(){
+	global.UISelection = -1;
+	global.BattleMenu = MENU.HIDE;
 	global.Manager.state = BATTLE_STATE.ACTION;	
 }

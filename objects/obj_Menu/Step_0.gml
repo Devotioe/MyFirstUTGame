@@ -1,7 +1,6 @@
 var select_key = keyboard_check_pressed(vk_enter) || keyboard_check_pressed(ord("Z"));
 var quit_key = keyboard_check_pressed(vk_shift) || keyboard_check_pressed(ord("X"));
 
-
 //setup
 if (global.BattleMenu = MENU.SETUP){
 	global.PriorityBar = 0;
@@ -201,21 +200,15 @@ if select_key && global.UISelection > -1 {
 		with (global.Enemy[global.EnemyRN]){ //execute enemy's user event
 			event_user(global.UISelection);
 		}
-		global.BattleMenu = MENU.HIDE; //Act Dialogue 
-		global.UISelection = -1; // disable select
-		
 		StateToAction()
 		break;
 		
 		case MENU.ITEM: //Item
-		global.BattleMenu = MENU.HIDE; //Item Dialogue 
 		scr_useItem(); //script for using item, determine which item to be used in this script
-		
 		StateToAction()
 		break;
 		
 		case MENU.MERCY: //Mercy
-		global.BattleMenu = MENU.HIDE; //Spare and Flee dialogue
 		if (global.UISelection == 0){
 			scr_Spare();
 		}else{

@@ -1,8 +1,7 @@
-//Here defines the behaviour of an emeny after taking damage.
+//Here defines the behaviour before DIALOGUE
 CheckIfIamKilled();
 
 if (CheckIfEveryKilled() == false) {
-	alarm[2] = 1;
 	global.Manager.state = BATTLE_STATE.DIALOGUE;
 }
 	

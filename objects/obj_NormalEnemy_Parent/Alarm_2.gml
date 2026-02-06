@@ -1,6 +1,6 @@
 //Here defines the behaviour of dialogue
-_x = global.Enemy[0].x + 100 
-_y = global.Enemy[0].y - 20
+_x = self.x + 100 
+_y = self.y - 20
 
 if (global.Manager.attack_created = false){
 	instance_create_depth(0, 0, 99, obj_atk_Parent);
@@ -8,6 +8,7 @@ if (global.Manager.attack_created = false){
 }
 
 if (!talked){
+	
 	if (event == 0){
 		event = 0.5;
 		

@@ -1,8 +1,9 @@
 switch state {
 	
 	case BATTLE_STATE.ACTION:
+	
 	if !instance_exists(global.Menu.ActionText){
-		state = BATTLE_STATE.DIALOGUE;
+		global.Enemy[0].alarm[0] = 1;
 	}
 	break;
 
