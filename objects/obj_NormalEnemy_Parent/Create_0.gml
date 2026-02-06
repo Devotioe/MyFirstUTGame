@@ -12,6 +12,7 @@ checked = false;
 dodge = false;
 
 ShakeEffect = 0;
+ShakeDelay = 0;
 Siner = 0;
 DodgeAni = 0;
 

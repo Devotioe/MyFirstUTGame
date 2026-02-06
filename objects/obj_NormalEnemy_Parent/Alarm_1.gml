@@ -15,6 +15,6 @@ if (global.Damage <= 0){
 else{
 	MyHp -= global.Damage;
 	audio_play_sound(snd_damage, 20, false);
-	ShakeEffect = 0.8 * global.Damage;
+	ShakeEffect = round(0.3 * global.Damage);
 	ShakeEffect = clamp(ShakeEffect, 0 , 50)
 }
