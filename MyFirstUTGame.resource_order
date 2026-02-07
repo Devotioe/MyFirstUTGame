@@ -23,8 +23,8 @@
   "ResourceOrderSettings":[
     {"name":"fnt_Battle_HPfont","order":3,"path":"fonts/fnt_Battle_HPfont/fnt_Battle_HPfont.yy",},
     {"name":"fnt_Battle_Normal_Bubble","order":2,"path":"fonts/fnt_Battle_Normal_Bubble/fnt_Battle_Normal_Bubble.yy",},
+    {"name":"fnt_Battle_Normal","order":5,"path":"fonts/fnt_Battle_Normal/fnt_Battle_Normal.yy",},
     {"name":"fnt_Battle_UI","order":4,"path":"fonts/fnt_Battle_UI/fnt_Battle_UI.yy",},
-    {"name":"fnt_Normal","order":1,"path":"fonts/fnt_Normal/fnt_Normal.yy",},
     {"name":"obj_atk_Parent","order":2,"path":"objects/obj_atk_Parent/obj_atk_Parent.yy",},
     {"name":"obj_atk_Test_2","order":1,"path":"objects/obj_atk_Test_2/obj_atk_Test_2.yy",},
     {"name":"obj_BatlleManager","order":12,"path":"objects/obj_BatlleManager/obj_BatlleManager.yy",},

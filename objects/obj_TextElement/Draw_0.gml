@@ -1,6 +1,6 @@
 // Colour and font
 var colour = c_white;
-var font = fnt_Normal
+var font = fnt_Battle_Normal
 
 var advance = keyboard_check_pressed(ord("Z")) || keyboard_check_pressed(vk_enter);
 var skip = keyboard_check_pressed(ord("X"));
