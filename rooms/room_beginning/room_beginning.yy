@@ -21,6 +21,7 @@
     {"name":"inst_2F21E259","path":"rooms/room_beginning/room_beginning.yy",},
     {"name":"inst_18318713","path":"rooms/room_beginning/room_beginning.yy",},
     {"name":"inst_1326C39B","path":"rooms/room_beginning/room_beginning.yy",},
+    {"name":"inst_66377B04","path":"rooms/room_beginning/room_beginning.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -44,6 +45,7 @@
         {"$GMRInstance":"v4","%Name":"inst_37D2E202","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_37D2E202","objectId":{"name":"obj_Candydisk","path":"objects/obj_Candydisk/obj_Candydisk.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":140.0,"y":300.0,},
         {"$GMRInstance":"v4","%Name":"inst_2F21E259","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2F21E259","objectId":{"name":"obj_Candydisk","path":"objects/obj_Candydisk/obj_Candydisk.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":340.0,"y":320.0,},
         {"$GMRInstance":"v4","%Name":"inst_18318713","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_18318713","objectId":{"name":"obj_Candydisk","path":"objects/obj_Candydisk/obj_Candydisk.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":480.0,"y":300.0,},
+        {"$GMRInstance":"v4","%Name":"inst_66377B04","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_66377B04","objectId":{"name":"obj_OverworldMenu","path":"objects/obj_OverworldMenu/obj_OverworldMenu.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":40.0,"y":480.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"Tiles_1","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Tiles_1","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":40,"SerialiseWidth":50,"TileCompressedData":[
           352,27,28,27,28,27,28,27,28,27,28,7,8,27,28,27,28,27,7,8,7,8,7,8,7,8,7,8,7,8,7,8,7,8,7,8,7,7,8,7,8,7,

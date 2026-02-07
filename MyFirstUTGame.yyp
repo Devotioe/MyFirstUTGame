@@ -87,6 +87,7 @@
     {"id":{"name":"obJ_Music","path":"objects/obJ_Music/obJ_Music.yy",},},
     {"id":{"name":"obj_NormalEnemy_Parent","path":"objects/obj_NormalEnemy_Parent/obj_NormalEnemy_Parent.yy",},},
     {"id":{"name":"obj_Overworld_DialogueBox","path":"objects/obj_Overworld_DialogueBox/obj_Overworld_DialogueBox.yy",},},
+    {"id":{"name":"obj_OverworldMenu","path":"objects/obj_OverworldMenu/obj_OverworldMenu.yy",},},
     {"id":{"name":"obj_Player_Camera","path":"objects/obj_Player_Camera/obj_Player_Camera.yy",},},
     {"id":{"name":"obj_Player","path":"objects/obj_Player/obj_Player.yy",},},
     {"id":{"name":"obj_RoomTransistor","path":"objects/obj_RoomTransistor/obj_RoomTransistor.yy",},},
