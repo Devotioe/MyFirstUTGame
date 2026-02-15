@@ -19,4 +19,6 @@ enum OVERWORLD_MENU{
 
 state = OVERWORLD_MENU.SELECTION;
 
+SelctionReference = 0;
+
 prevSel = 0;
