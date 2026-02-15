@@ -53,6 +53,7 @@ fnt_normal = fnt_Battle_Normal;
 fnt_UI = fnt_Battle_UI;
 
 if (opened){
+	obj_Player.frozen = true;
 	
 	if (setup == false){
 		global.UISelection = 0;
@@ -79,12 +80,29 @@ if (opened){
 	    draw_rectangle(stats_l_border , stats_t_border, stats_r_border,stats_b_border, false);
 		draw_set_color(c_black);
 	    draw_rectangle(stats_l_border + border_width, stats_t_border + border_width, stats_r_border - border_width, stats_b_border - border_width, false);
+		
+		draw_set_color(c_white);
+		//Name
+		draw_text(stats_l_border + border_width + 20, stats_t_border + border_width + 20, "\"" + string(global.PlayerName +"\""));
+		
+		//LV HP
+		draw_text(stats_l_border + border_width + 20, stats_t_border + border_width + 70, "LV " + string(global.PlayerLv));
+		draw_text(stats_l_border + border_width + 20, stats_t_border + border_width + 100, "HP " + string(global.PlayerHp) + "/" + string(global.PlayerMaxHp));
+		
+		//ATK DEF
+		draw_text(stats_l_border + border_width + 20, stats_t_border + border_width + 140, "AT " + string(global.PlayerAtk));
+		draw_text(stats_l_border + border_width + 20, stats_t_border + border_width + 170, "DF " + string(global.PlayerDef));
+		
+		
+		//ARMOR WEAPON
+		
+		//GOLD
+		
 		break;
 	
 		case OVERWORLD_MENU.ITEM:
 		//ITEM MENU
 		var itemCounts = array_length(global.Item);
-		
 		draw_set_color(c_white);
 	    draw_rectangle(items_l_border , items_t_border, items_r_border, items_b_border, false);
 		draw_set_color(c_black);
