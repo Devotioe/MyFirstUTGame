@@ -11,6 +11,9 @@ var snd_choose = snd_select;
 
 var key_up = keyboard_check_pressed(vk_up);
 var key_down = keyboard_check_pressed(vk_down);
+var key_right = keyboard_check_pressed(vk_right);
+var key_left = keyboard_check_pressed(vk_left);
+
 var key_advance = keyboard_check_pressed(ord("Z")) || keyboard_check_pressed(vk_enter);
 var key_quit = keyboard_check_pressed(ord("X")) || keyboard_check_pressed(vk_shift);
 
@@ -53,9 +56,11 @@ fnt_normal = fnt_Battle_Normal;
 fnt_UI = fnt_Battle_UI;
 
 if (opened){
+	
 	obj_Player.frozen = true;
 	
 	if (setup == false){
+		audio_play_sound(snd_choose, 1, false);
 		global.UISelection = 0;
 		state = OVERWORLD_MENU.SELECTION;
 		obj_Player.frozen = true;
@@ -67,6 +72,7 @@ if (opened){
 	draw_rectangle(sts_l_border, sts_t_border, sts_r_border, sts_b_border, false);
 	draw_set_color(c_black);
 	draw_rectangle(sts_l_border + border_width, sts_t_border + border_width, sts_r_border - border_width, sts_b_border - border_width, false);
+	
 	//MAIN MENU
 	draw_set_color(c_white);
 	draw_rectangle(main_l_border , main_t_border, main_r_border, main_b_border, false);
@@ -111,6 +117,9 @@ if (opened){
 		for (var i = 0 ; i < itemCounts ; i ++){
 			draw_text(items_l_border + border_width + text_offset + 50, items_t_border + border_width + text_offset + i * 40, string(global.Item[i]));
 		}
+		draw_text(items_l_border + 60, items_b_border - 50, "Use")
+		draw_text(items_l_border + 150, items_b_border - 50, "Info")
+		draw_text(items_l_border + 250, items_b_border - 50, "Drop")
 		break;
 	}
 	
@@ -142,11 +151,19 @@ if (opened){
 	draw_text(main_l_border + border_width + text_offset + main_offset, main_t_border + border_width + text_offset + 80, "CELL");
 	
 	
-	if (key_up){
+	if (key_up && ItemSelected != true){
 		prevSel = global.UISelection;
 		global.UISelection -= 1;
 	}
-	if (key_down){
+	if (key_down && ItemSelected != true){
+		prevSel = global.UISelection;
+		global.UISelection += 1;
+	}
+	if (key_left && ItemSelected == true){
+		prevSel = global.UISelection;
+		global.UISelection -= 1;
+	}
+	if (key_right && ItemSelected == true){
 		prevSel = global.UISelection;
 		global.UISelection += 1;
 	}
@@ -158,37 +175,73 @@ if (opened){
 		break;
 		
 		case OVERWORLD_MENU.STAT:
-		global.UISelection = -1;
+		global.UISelection = 0;
 		
 		break;
 		case OVERWORLD_MENU.ITEM:
-		global.UISelection = clamp(global.UISelection, 0 , array_length(global.Item) - 1);
-		draw_sprite(spr_ourheart, 0, items_l_border + border_width + 25, items_t_border + border_width + text_offset + global.UISelection * 40 + 15)
+		if (ItemSelected == true){
+			global.UISelection = clamp(global.UISelection, 0, 2);
+			switch (global.UISelection){
+				case 0:
+				draw_sprite(spr_ourheart, 0, items_l_border + 30, items_b_border - 30);
+				break;
+				case 1:
+				draw_sprite(spr_ourheart, 0, items_l_border + 130, items_b_border - 30);
+				break;
+				case 2:
+				draw_sprite(spr_ourheart, 0, items_l_border + 220, items_b_border - 30);
+				break;
+				
+			}
+		}
+		else{
+			global.UISelection = clamp(global.UISelection, 0 , array_length(global.Item) - 1);
+			draw_sprite(spr_ourheart, 0, items_l_border + border_width + 25, items_t_border + border_width + text_offset + global.UISelection * 40 + 15)
+		}
 		break;
 	}
-		
-	if (prevSel != global.UISelection){
-		audio_play_sound(snd_move, 1, false);
-		prevSel = global.UISelection;
-	}
 	
+	if (key_left || key_right || key_down || key_up){
+		if (prevSel != global.UISelection){
+			audio_play_sound(snd_move, 1, false);
+			prevSel = global.UISelection;
+		}
+	}
 	
 	if (key_advance){
 		if (state == OVERWORLD_MENU.SELECTION){
 			SelctionReference = global.UISelection;
 			state = global.UISelection + 1;
 			audio_play_sound(snd_choose, 1, false);
+			exit;
+		}
+		if (state == OVERWORLD_MENU.ITEM && ItemSelected != true){
+			ItemSelected = true;
+			ItemSelectionReference = global.UISelection;
+			audio_play_sound(snd_choose, 1, false);
+			global.UISelection = 0;
+			exit;
 		}
 	}
 	if (key_quit){
-		if (state != OVERWORLD_MENU.SELECTION){
+		if (state != OVERWORLD_MENU.SELECTION && ItemSelected != true){
 			global.UISelection = SelctionReference;
 			state = OVERWORLD_MENU.SELECTION;
-		}else{
-			opened = false;
-			setup = false;
-			obj_Player.frozen = false;
-			global.UISelection = -1;
+			exit;
+		}
+		else{
+			if (state == OVERWORLD_MENU.ITEM){
+				global.UISelection = ItemSelectionReference;
+				ItemSelected = false;
+				exit;
+			}
+			else{
+				opened = false;
+				setup = false;
+				obj_Player.frozen = false;
+				global.UISelection = 0;
+				exit;
+			}
 		}
 	}
 }

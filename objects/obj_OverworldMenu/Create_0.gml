@@ -22,3 +22,7 @@ state = OVERWORLD_MENU.SELECTION;
 SelctionReference = 0;
 
 prevSel = 0;
+
+ItemSelected = false;
+
+ItemSelectionReference = 0;
