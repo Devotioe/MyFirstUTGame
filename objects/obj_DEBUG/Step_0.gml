@@ -17,3 +17,9 @@ if debug {
 	}
 }
 
+
+if keyboard_check_pressed(vk_f10){
+	global.ItemData[$ "1"].Function();
+}
+
+//show_debug_message(global.Item)

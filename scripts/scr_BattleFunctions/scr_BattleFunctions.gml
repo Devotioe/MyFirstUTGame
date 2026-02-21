@@ -11,7 +11,7 @@ function StateToBattle(){
 function StateToPlayer(){
 	global.Manager.state = BATTLE_STATE.PLAYER;
 	SetDialogueBox()
-	global.BattleMenu = MENU.SELECTION;
+	global.BattleMenu = MENU.SETUP;
 	global.UISelection = global.Menu.BelowUIReference;
 	global.soul.visible = false;
 	global.Menu.PlayerDialogue.TextLength = 0;

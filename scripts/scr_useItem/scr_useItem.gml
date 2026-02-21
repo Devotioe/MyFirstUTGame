@@ -1,60 +1,34 @@
 function scr_useItem(){
-	
-	var StartingHp = global.PlayerHp;
-	var healed = false;
-	var ItemKeep = false
-	var _inst = instance_create_depth(global.Menu.box_basicshift, 270, -1, obj_TextElement);
-	global.Menu.ActionText = _inst;
-	_inst.CanAdvance = true;
-	
 	var ItemSelection; //selection based on page
 	
-	if (global.Menu.ItemPage == 1){
-		ItemSelection = global.UISelection;
-	}else{
-		ItemSelection = global.UISelection + 4;
-	}
-	
-	if global.Item[ItemSelection] == "SnowPiece"{
-		_inst.TextToDraw = "* You ate the Snowman Piece!&"
-		global.PlayerHp += 40;
-	}
-	if global.Item[ItemSelection] == "B.Pie"{
-		_inst.TextToDraw = "* You ate the Butterscotch Pie!&"
-		global.PlayerHp += 99;
-	}
-	if global.Item[ItemSelection] == "L.Hero"{
-		_inst.TextToDraw = "* You ate the Legendary Hero!&* Your attack increased by 4!&"
-		global.PlayerHp += 40;
-	}
-	
-	if (global.PlayerHp - StartingHp) > 0 { //healed
-		audio_play_sound(snd_heal_c, 20, false);
-		healed = true;
-	}
-	
-	if (global.PlayerHp > global.PlayerMaxHp) { // maxed out
-		_inst.TextToDraw += "* Your HP was maxed out!";
-		global.PlayerHp = global.PlayerMaxHp; // clamp the hp 
-	}else{
-		_inst.TextToDraw += "* You recovered " + string(global.PlayerHp - StartingHp)+ " HP!";
+	if (room == room_battle){
+		if (global.Menu.ItemPage == 1){
+			ItemSelection = global.UISelection;
+		}else{
+			ItemSelection = global.UISelection + 4;
+		}
 	}
 	global.UISelection = -1; // disable selection
-
 	
-		
-	if ItemKeep {
+	var _item = GetItemData(global.Item[ItemSelection])
+	_item.Function(_item);
+	if _item.Keep = true{
 		exit;
 	}
 	
-	global.Item[ItemSelection] = "";
-	for (var i = 0 ; i < array_length(global.Item) - 1 ; i ++){
-		if (global.Item[i] == ""){
-			global.Item[i] = global.Item[i+ 1];
-			global.Item[i+ 1] = "";
-		}
-	}
-	array_resize(global.Item, array_length(global.Item)-1);
+	
+	//global.Item[ItemSelection] = "";
+	
+	
+	//for (var i = 0 ; i < array_length(global.Item) - 1 ; i ++){
+	//	if (global.Item[i] == ""){
+	//		global.Item[i] = global.Item[i+ 1];
+	//		global.Item[i+ 1] = "";
+	//	}
+	//}
+	//array_resize(global.Item, array_length(global.Item)-1);
+	
+	array_delete(global.Item, ItemSelection, 1);
 
 	
 }

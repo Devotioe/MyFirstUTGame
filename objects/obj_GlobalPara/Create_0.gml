@@ -30,11 +30,12 @@ global.EnemyGrave = [];
 
 //Player Items
 global.Item = -1; //init
-global.Item[0] = ItemID[0];
-global.Item[1] = ItemID[1];
-global.Item[2] = ItemID[2];
-global.Item[3] = ItemID[2];
-global.Item[4] = ItemID[2];
+//global.Item[0] = ItemID[0];
+//global.Item[1] = ItemID[1];
+//global.Item[2] = ItemID[2];
+//global.Item[3] = ItemID[2];
+//global.Item[4] = ItemID[2];
+global.Item = [1, 2, 3, 1, 2];
 
 //Init Battle Related
 global.SoulX = 0;

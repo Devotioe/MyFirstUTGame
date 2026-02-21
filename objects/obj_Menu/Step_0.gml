@@ -5,7 +5,7 @@ var quit_key = keyboard_check_pressed(vk_shift) || keyboard_check_pressed(ord("X
 if (global.BattleMenu = MENU.SETUP){
 	global.PriorityBar = 0;
 	var enemyCounts = array_length(global.Enemy);
-	var item_count = array_length(global.Item)
+	var item_count = array_length(global.Item);
 	var item_count_l_1 = 0;
 	var item_count_r_1 = 0;
 	var item_count_l_2 = 0;
@@ -43,14 +43,14 @@ if (global.BattleMenu = MENU.SETUP){
 	ItemL_1.TextToDraw = "";
 	ItemR_1.TextToDraw = "";
 	for ( var i = 0 ; i < item_count ; i += 2 ){
-		if (i <= 2 && global.Item[i] != ""){
-			ItemL_1.TextToDraw += "* " + global.Item[i] + "&"; 
+		if (i <= 2){
+			ItemL_1.TextToDraw += "* " + GetItemData(global.Item[i]).BName + "&"; 
 			item_count_l_1 ++;
 		}
 	}
 	for ( var i = 1 ; i < item_count ; i += 2 ){
-		if (i <= 3 && global.Item[i] != ""){
-			ItemR_1.TextToDraw += "* " + global.Item[i] + "&"; 
+		if (i <= 3){
+			ItemR_1.TextToDraw += "* " + GetItemData(global.Item[i]).BName + "&"; 
 			item_count_r_1++
 		}
 	}
@@ -62,14 +62,14 @@ if (global.BattleMenu = MENU.SETUP){
 	ItemL_2.TextToDraw = "";
 	ItemR_2.TextToDraw = "";
 	for ( var i = 4 ; i < array_length(global.Item) ; i += 2 ){
-		if (i <= 6 && global.Item[i] != ""){
-			ItemL_2.TextToDraw += "* " + global.Item[i] + "&"; 
+		if (i <= 6){
+			ItemL_2.TextToDraw += "* " + GetItemData(global.Item[i]).BName + "&"; 
 			item_count_l_2 ++;
 		}
 	}
 	for ( var i = 5 ; i < array_length(global.Item) ; i += 2 ){
-		if (i <= 7 && global.Item[i] != ""){
-			ItemR_2.TextToDraw += "* " + global.Item[i] + "&"; 
+		if (i <= 7){
+			ItemR_2.TextToDraw += "* " + GetItemData(global.Item[i]).BName + "&"; 
 			item_count_r_2 ++;
 		}
 	}

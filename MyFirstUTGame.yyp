@@ -109,6 +109,7 @@
     {"id":{"name":"room_menuTest","path":"rooms/room_menuTest/room_menuTest.yy",},},
     {"id":{"name":"EncounterData","path":"scripts/EncounterData/EncounterData.yy",},},
     {"id":{"name":"EnemyData","path":"scripts/EnemyData/EnemyData.yy",},},
+    {"id":{"name":"ItemData","path":"scripts/ItemData/ItemData.yy",},},
     {"id":{"name":"scr_BattleFunctions","path":"scripts/scr_BattleFunctions/scr_BattleFunctions.yy",},},
     {"id":{"name":"scr_BoxFunctions","path":"scripts/scr_BoxFunctions/scr_BoxFunctions.yy",},},
     {"id":{"name":"scr_chooseAttack","path":"scripts/scr_chooseAttack/scr_chooseAttack.yy",},},

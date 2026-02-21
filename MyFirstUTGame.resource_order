@@ -52,6 +52,7 @@
     {"name":"room_menuTest","order":1,"path":"rooms/room_menuTest/room_menuTest.yy",},
     {"name":"EncounterData","order":1,"path":"scripts/EncounterData/EncounterData.yy",},
     {"name":"EnemyData","order":2,"path":"scripts/EnemyData/EnemyData.yy",},
+    {"name":"ItemData","order":15,"path":"scripts/ItemData/ItemData.yy",},
     {"name":"scr_BattleFunctions","order":13,"path":"scripts/scr_BattleFunctions/scr_BattleFunctions.yy",},
     {"name":"scr_BoxFunctions","order":14,"path":"scripts/scr_BoxFunctions/scr_BoxFunctions.yy",},
     {"name":"scr_chooseAttack","order":4,"path":"scripts/scr_chooseAttack/scr_chooseAttack.yy",},
