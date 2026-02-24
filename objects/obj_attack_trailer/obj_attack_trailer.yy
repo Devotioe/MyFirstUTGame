@@ -1,19 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_Opening",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_attack_trailer",
+  "eventList":[],
   "managed":true,
-  "name":"obj_Opening",
+  "name":"obj_attack_trailer",
   "overriddenProperties":[],
   "parent":{
     "name":"Trailer Stuff",
     "path":"folders/Trailer Stuff.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_atk_Parent",
+    "path":"objects/obj_atk_Parent/obj_atk_Parent.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

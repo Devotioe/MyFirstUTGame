@@ -5,7 +5,10 @@ global.Menu.ActionText = _inst;
 
 for (var i = 0 ; i < array_length(CheckDescription) ; i ++){
 	_inst.AddDialogue(CheckDescription[i]);	
+	_inst.Talker = "UI";
 }
+
+
 
 
 

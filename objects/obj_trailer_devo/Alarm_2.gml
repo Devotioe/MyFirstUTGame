@@ -13,8 +13,10 @@ if (!talked){
 		event = 0.5;
 		
 		CreateBubbleDialogue(_x, _y);
-		Dialogue.AddDialogue("to be honest,&i've never thought&you would come&this far.");
-		Dialogue.AddDialogue("well, but here we are.");
+		Dialogue.AddDialogue("to be honest,&i've been wondering&why you did all this.");
+		Dialogue.AddDialogue("i mean, what's your&ultimate goal here?");
+		Dialogue.AddDialogue("it's pretty dramatic&if you were just&sending a message.");
+		Dialogue.AddDialogue("what's the point&if no one's left&alive?");
 		Dialogue.Talker = "Sans"
 	}
 

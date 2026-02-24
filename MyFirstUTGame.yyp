@@ -65,6 +65,7 @@
     {"id":{"name":"obj_atk_Parent","path":"objects/obj_atk_Parent/obj_atk_Parent.yy",},},
     {"id":{"name":"obj_atk_Test_1","path":"objects/obj_atk_Test_1/obj_atk_Test_1.yy",},},
     {"id":{"name":"obj_atk_Test_2","path":"objects/obj_atk_Test_2/obj_atk_Test_2.yy",},},
+    {"id":{"name":"obj_attack_trailer","path":"objects/obj_attack_trailer/obj_attack_trailer.yy",},},
     {"id":{"name":"obj_BatlleManager","path":"objects/obj_BatlleManager/obj_BatlleManager.yy",},},
     {"id":{"name":"obj_BattleStarter","path":"objects/obj_BattleStarter/obj_BattleStarter.yy",},},
     {"id":{"name":"obj_bulletboard","path":"objects/obj_bulletboard/obj_bulletboard.yy",},},

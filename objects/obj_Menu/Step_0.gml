@@ -18,6 +18,7 @@ if (global.BattleMenu = MENU.SETUP){
 	PlayerDialogue.CanAdvance = false;
 	PlayerDialogue.CanSkip = false;
 	PlayerDialogue.TextLength = 0;
+	PlayerDialogue.Talker = "UI";
 	if (PlayerDialogue.IsWriting == false){
 		PlayerDialogue.IsWriting = true;
 	}
