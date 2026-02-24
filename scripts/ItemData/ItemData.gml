@@ -20,6 +20,9 @@ function ItemHeal(_hp, _item){
 	
 	if (item.ItemName = "Legendary Hero"){
 		_inst.TextToDraw += "* Your ATTACK increased by 4!&";
+		if (room == room_battle){
+			global.PlayerAtk += 4;	
+		}
 	}
 	
 	if (global.PlayerHp > global.PlayerMaxHp) { // maxed out
