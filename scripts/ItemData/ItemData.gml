@@ -4,6 +4,7 @@ function ItemHeal(_hp, _item){
 	audio_play_sound(snd_heal_c, 20, false);
 	
 	var _inst;
+	var item = _item;
 	
 	if (room == room_battle){
 		_inst = instance_create_depth(global.Menu.box_basicshift, 270, -1, obj_TextElement);
@@ -15,8 +16,12 @@ function ItemHeal(_hp, _item){
 	}
 	
 	_inst.CanAdvance = true;
-	_inst.TextToDraw = "* You used the " + string(_item.ItemName) + "!&";
-
+	_inst.TextToDraw = "* You used the " + string(item.ItemName) + "!&";
+	
+	if (item.ItemName = "Legendary Hero"){
+		_inst.TextToDraw += "* Your ATTACK increased by 4!&";
+	}
+	
 	if (global.PlayerHp > global.PlayerMaxHp) { // maxed out
 		_inst.TextToDraw += "* Your HP was maxed out!";
 		global.PlayerHp = global.PlayerMaxHp; // clamp the hp 
