@@ -7,6 +7,7 @@ function CheckIfIamKilled(){
 		var sound = snd_vaporized;
 		audio_play_sound(sound, 1, false);
 		global.ExpToEarn += EXP;
+		global.GoldToEarn += GOLD;
 		array_push(global.EnemyGrave, self); //push to grave for later deletion	
 		//return true;
 	}

@@ -1,8 +1,9 @@
 event_inherited()
 
-Act[0] = "Check";
-Act[1] = "HoldBreath";
+Def = 999
 
-CheckDescription[0] = "* You tried to check the Roaring&  Knight."
-CheckDescription[1] = "* You learned nothing."
-CheckDescription[2] = "* Probably because you watched&  the Roaring Knight No Hit video."
+Act[0] = "Check";
+Act[1] = "Threaten";
+
+CheckDescription[0] = "* Check Text 01."
+CheckDescription[1] = "* Check Text 02."

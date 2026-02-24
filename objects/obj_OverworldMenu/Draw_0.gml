@@ -78,7 +78,39 @@ if (opened){
 	draw_rectangle(main_l_border , main_t_border, main_r_border, main_b_border, false);
 	draw_set_color(c_black);
 	draw_rectangle(main_l_border + border_width, main_t_border + border_width, main_r_border - border_width, main_b_border - border_width, false);
-
+	
+	#region //TEXTS
+	
+	draw_set_font(fnt_normal);
+	
+	//Name
+    draw_set_color(c_white);
+    draw_text(sts_l_border + border_width + text_offset, sts_t_border + border_width + text_offset, string(global.PlayerName));
+	
+	
+	draw_set_font(fnt_UI);
+	//LV
+	draw_text(sts_l_border + border_width + text_offset, sts_t_border + border_width + text_offset + 30, "LV " + string(global.PlayerLv));
+	//HP
+	draw_text(sts_l_border + border_width + text_offset, sts_t_border + border_width + text_offset + 60, "HP " + string(global.PlayerHp) + "/" + string(global.PlayerMaxHp));
+	//GOLD
+	draw_text(sts_l_border + border_width + text_offset, sts_t_border + border_width + text_offset + 90, "G  " + string(global.PlayerGold));
+	
+	
+	var main_offset = 40 //This is for the space of drawing soul
+	
+	draw_set_font(fnt_normal);
+	//ITEM
+	if (array_length(global.Item) == 0){
+		draw_set_color(c_gray);
+	}
+	draw_text(main_l_border + border_width + text_offset + main_offset, main_t_border + border_width + text_offset + 0, "ITEM");
+	draw_set_color(c_white);
+	//STAT
+	draw_text(main_l_border + border_width + text_offset + main_offset, main_t_border + border_width + text_offset + 40, "STAT");
+	//CELL
+	draw_text(main_l_border + border_width + text_offset + main_offset, main_t_border + border_width + text_offset + 80, "CELL");
+	
 	switch (state){
 		case OVERWORLD_MENU.STAT:
 		//STAT MENU
@@ -123,34 +155,9 @@ if (opened){
 		break;
 	}
 	
+	#endregion
 	
-	draw_set_font(fnt_normal);
-	
-	//Name
-    draw_set_color(c_white);
-    draw_text(sts_l_border + border_width + text_offset, sts_t_border + border_width + text_offset, string(global.PlayerName));
-	
-	
-	draw_set_font(fnt_UI);
-	//LV
-	draw_text(sts_l_border + border_width + text_offset, sts_t_border + border_width + text_offset + 30, "LV " + string(global.PlayerLv));
-	//HP
-	draw_text(sts_l_border + border_width + text_offset, sts_t_border + border_width + text_offset + 60, "HP " + string(global.PlayerHp) + "/" + string(global.PlayerMaxHp));
-	//GOLD
-	draw_text(sts_l_border + border_width + text_offset, sts_t_border + border_width + text_offset + 90, "G  " + string(global.PlayerGold));
-	
-	
-	var main_offset = 40 //This is for the space of drawing soul
-	
-	draw_set_font(fnt_normal);
-	//ITEM
-	draw_text(main_l_border + border_width + text_offset + main_offset, main_t_border + border_width + text_offset + 0, "ITEM");
-	//STAT
-	draw_text(main_l_border + border_width + text_offset + main_offset, main_t_border + border_width + text_offset + 40, "STAT");
-	//CELL
-	draw_text(main_l_border + border_width + text_offset + main_offset, main_t_border + border_width + text_offset + 80, "CELL");
-	
-	
+	//SELECTION
 	if (key_up && ItemSelected != true){
 		prevSel = global.UISelection;
 		global.UISelection -= 1;
@@ -201,7 +208,7 @@ if (opened){
 		break;
 	}
 	
-	if (key_left || key_right || key_down || key_up){
+	if (key_left || key_right || key_down || key_up){ //Sound
 		if (prevSel != global.UISelection){
 			audio_play_sound(snd_move, 1, false);
 			prevSel = global.UISelection;

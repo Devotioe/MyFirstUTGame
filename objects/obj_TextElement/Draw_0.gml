@@ -21,7 +21,7 @@ if IsSpeechBubble {
 	colour = c_black
 	line_spacing = 18;
 	letter_spacing = 9;
-	font = fnt_Battle_Normal_Bubble
+	font = fnt_Battle_Normal_Bubble;
 	draw_sprite(spr_Bubble, 0, x - x_offset, y - y_offset)
 }
 
@@ -96,21 +96,24 @@ if IsWriting {
 	if (CurrentDelay >= TextDelay) {
 		CurrentDelay = 0;
 		TextLength += 1;
-		if (string_char_at(TextToDraw, TextLength) != " " && string_char_at(TextToDraw, TextLength) != "." && string_char_at(TextToDraw, TextLength) != "*" && CurrentDelay = 0){
-			switch (Talker){	//speak sound
-			case "Sans" :
-			audio_play_sound(snd_txtsans, 20, false);
-			break;
+		if !Silence{
+			if (string_char_at(TextToDraw, TextLength) != " " && string_char_at(TextToDraw, TextLength) != "." && string_char_at(TextToDraw, TextLength) != "*" && CurrentDelay = 0){
+				switch (Talker){	//speak sound
+				case "Sans" :
+				audio_play_sound(snd_txtsans, 20, false);
+				break;
 				
-			case "Normal" :
-			if (instance_exists(obj_Menu)){
-				audio_play_sound(SND_TXT2, 20, false);
-			}else{
+				case "Normal" :
 				audio_play_sound(SND_TXT1, 20, false)
-			}
-			break;
-			default : //NO SOUND
-			break;
+				break;
+				
+				case "UI":
+				audio_play_sound(SND_TXT2, 20, false);
+				break;
+				
+				default : //NO SOUND
+				break;
+				}
 			}
 		}
 		// Puts half a second of delay inbetween sentences.

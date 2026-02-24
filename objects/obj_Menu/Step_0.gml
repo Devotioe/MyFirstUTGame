@@ -143,7 +143,7 @@ switch (global.BattleMenu){
 	ActML.visible = true;
 	ActMR.visible = true;
 	break;
-	case MENU.ITEM:
+	case MENU.INVENTORY:
 	if array_length(global.Item) > 4{
 		Page.visible = true
 	}
@@ -203,7 +203,7 @@ if select_key && global.UISelection > -1 {
 		StateToAction()
 		break;
 		
-		case MENU.ITEM: //Item
+		case MENU.INVENTORY: //Item
 		var ItemSelection; //selection based on page
 
 		if (global.Menu.ItemPage == 1){
@@ -234,7 +234,7 @@ if select_key && global.UISelection > -1 {
 
 //quitting menu
 if quit_key && global.UISelection > -1{
-	if (global.BattleMenu = MENU.FIGHT || global.BattleMenu = MENU.ACT || global.BattleMenu = MENU.ITEM || global.BattleMenu = MENU.MERCY){
+	if (global.BattleMenu = MENU.FIGHT || global.BattleMenu = MENU.ACT || global.BattleMenu = MENU.INVENTORY || global.BattleMenu = MENU.MERCY){
 		global.BattleMenu = MENU.SELECTION;
 		global.UISelection = BelowUIReference;
 		ItemPage = 1;

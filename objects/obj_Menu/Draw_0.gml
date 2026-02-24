@@ -58,7 +58,7 @@ if (global.UISelection > -1){ //-1 means can't select menu
 		global.UISelection = clamp(global.UISelection, 0, array_length(global.Enemy) - 1);
 	}
 		
-	if (global.BattleMenu == MENU.ITEM){ //Item Page
+	if (global.BattleMenu == MENU.INVENTORY){ //Item Page
 		if (right_key){
 			audio_play_sound(snd_move, 20, false);
 			if (global.UISelection == 1 || global.UISelection == 3){ //check if on left row

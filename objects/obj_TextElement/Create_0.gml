@@ -39,4 +39,6 @@ AdvanceCoolDown = 0;
 
 spr_Bubble = spr_blconwdshrt_0;
 
+Silence = false;
+
 

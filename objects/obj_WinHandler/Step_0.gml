@@ -1,4 +1,4 @@
-key_advance = keyboard_check_pressed(ord("Z") || keyboard_check_pressed(vk_enter) || keyboard_check_pressed(ord("z")))
+var key_advance = keyboard_check_pressed(ord("Z") || keyboard_check_pressed(vk_enter) || keyboard_check_pressed(ord("z")))
 
 EndBattle()
 

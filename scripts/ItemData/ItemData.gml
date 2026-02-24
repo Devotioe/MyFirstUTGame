@@ -44,7 +44,7 @@ function GetItemData(_id){
 	return global.ItemData[$ myID];
 }
 
-function Item(_name, _bname, _desc, _func) constructor {
+function ItemStruct (_name, _bname, _desc, _func) constructor {
 	ItemName = _name;
 	BName = _bname;
 	Description = _desc;
@@ -53,7 +53,7 @@ function Item(_name, _bname, _desc, _func) constructor {
 }
 
 global.ItemData = {
-	"1" : new Item ("Legendary Hero", "L.Hero","* Sandwich shaped like a sword.&* Increases ATTACK when eaten.", function(_me){ ItemHeal(40, _me); }),
-	"2" : new Item ("Butterscotch Pie", "B.Pie", "* Butterscotch-cinnamon pie, one slice.", function(_me){ ItemHeal(99, _me); }),
-	"3" : new Item ("Snowman Piece", "SnowPiece", "* Please take this to the ends of the earth.", function(_me){ ItemHeal(45, _me); }),
+	"1" : new ItemStruct ("Legendary Hero", "L.Hero","* Sandwich shaped like a sword.&* Increases ATTACK when eaten.", function(_me){ ItemHeal(40, _me); }),
+	"2" : new ItemStruct ("Butterscotch Pie", "B.Pie", "* Butterscotch-cinnamon pie, one slice.", function(_me){ ItemHeal(99, _me); }),
+	"3" : new ItemStruct ("Snowman Piece", "SnowPiece", "* Please take this to the ends of the earth.", function(_me){ ItemHeal(45, _me); }),
 }

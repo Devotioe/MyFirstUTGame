@@ -1,9 +1,4 @@
 ItemID[0] = "SnowPiece"
-ItemID[1] = "B.Pie";
-ItemID[2] = "L.Hero";
-
-
-
 global.OverworldMusic = noone;
 global.BattleMusic = noone;
 
@@ -29,12 +24,7 @@ global.EnemyGrave = [];
 //Grave for enemy that is waiting for destruction
 
 //Player Items
-global.Item = -1; //init
-//global.Item[0] = ItemID[0];
-//global.Item[1] = ItemID[1];
-//global.Item[2] = ItemID[2];
-//global.Item[3] = ItemID[2];
-//global.Item[4] = ItemID[2];
+global.Item = -1;
 global.Item = [1, 2, 3, 1, 2];
 
 //Init Battle Related

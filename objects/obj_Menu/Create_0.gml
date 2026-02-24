@@ -3,7 +3,7 @@ enum MENU {
 	SELECTION, //0
 	FIGHT, //1
 	ACT, //2
-	ITEM, //3
+	INVENTORY, //3
 	MERCY, //4
 	HIDE, //5
 	ACT_SELECTION, //6
