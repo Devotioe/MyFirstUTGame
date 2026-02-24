@@ -27,7 +27,7 @@ function ItemHeal(_hp, _item){
 	global.PlayerHp = clamp(global.PlayerHp, 0, global.PlayerMaxHp);
 }
 
-function ItemEquip(_itemID){
+function ItemEquip(_id){
 	audio_play_sound(snd_heal_c, 1, false);
 }
 
