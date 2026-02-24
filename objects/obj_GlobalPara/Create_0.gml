@@ -10,7 +10,7 @@ global.BattleMusic = noone;
 //Player Stats Related 
 global.PlayerMaxHp = 92;
 global.PlayerLv = 19;
-global.PlayerHp = 92;
+global.PlayerHp = 1;
 global.PlayerDef = 2;
 global.PlayerAtk = 80;
 global.PlayerName = "Chara"

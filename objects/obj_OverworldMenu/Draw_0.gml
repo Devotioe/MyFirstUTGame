@@ -117,9 +117,9 @@ if (opened){
 		for (var i = 0 ; i < itemCounts ; i ++){
 			draw_text(items_l_border + border_width + text_offset + 50, items_t_border + border_width + text_offset + i * 40, GetItemData(global.Item[i]).ItemName);
 		}
-		draw_text(items_l_border + 60, items_b_border - 50, "Use")
-		draw_text(items_l_border + 150, items_b_border - 50, "Info")
-		draw_text(items_l_border + 250, items_b_border - 50, "Drop")
+		draw_text(items_l_border + 60, items_b_border - 50, "USE")
+		draw_text(items_l_border + 150, items_b_border - 50, "INFO")
+		draw_text(items_l_border + 250, items_b_border - 50, "DROP")
 		break;
 	}
 	

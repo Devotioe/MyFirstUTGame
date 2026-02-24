@@ -3,8 +3,10 @@ function ItemHeal(_hp, _item){
 	global.PlayerHp += _hp;
 	audio_play_sound(snd_heal_c, 20, false);
 	
+	var _inst;
+	
 	if (room == room_battle){
-		var _inst = instance_create_depth(global.Menu.box_basicshift, 270, -1, obj_TextElement);
+		_inst = instance_create_depth(global.Menu.box_basicshift, 270, -1, obj_TextElement);
 		global.Menu.ActionText = _inst;
 	}
 	else{
