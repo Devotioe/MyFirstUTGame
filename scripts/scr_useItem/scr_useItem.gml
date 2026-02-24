@@ -1,21 +1,12 @@
-function scr_useItem(){
-	var ItemSelection; //selection based on page
+function scr_useItem(_item, _index){
 	
-	if (room == room_battle){
-		if (global.Menu.ItemPage == 1){
-			ItemSelection = global.UISelection;
-		}else{
-			ItemSelection = global.UISelection + 4;
-		}
-	}
-	global.UISelection = -1; // disable selection
+	var item = _item;
+	var index = _index;
 	
-	var _item = GetItemData(global.Item[ItemSelection])
-	_item.Function(_item);
-	if _item.Keep = true{
+	item.Function(item);
+	if item.Keep = true{
 		exit;
 	}
-	
 	
 	//global.Item[ItemSelection] = "";
 	
@@ -28,7 +19,7 @@ function scr_useItem(){
 	//}
 	//array_resize(global.Item, array_length(global.Item)-1);
 	
-	array_delete(global.Item, ItemSelection, 1);
+	array_delete(global.Item, index, 1);
 
 	
 }

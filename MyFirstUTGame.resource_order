@@ -65,6 +65,7 @@
     {"name":"mus_mysterious","order":2,"path":"sounds/mus_mysterious/mus_mysterious.yy",},
     {"name":"mus_testfight_2","order":1,"path":"sounds/mus_testfight_2/mus_testfight_2.yy",},
     {"name":"snd_escaped","order":1,"path":"sounds/snd_escaped/snd_escaped.yy",},
+    {"name":"snd_item","order":3,"path":"sounds/snd_item/snd_item.yy",},
     {"name":"snd_vaporized","order":2,"path":"sounds/snd_vaporized/snd_vaporized.yy",},
     {"name":"spr_blconwdshrt_0","order":1,"path":"sprites/spr_blconwdshrt_0/spr_blconwdshrt_0.yy",},
     {"name":"spr_heartgtfo","order":2,"path":"sprites/spr_heartgtfo/spr_heartgtfo.yy",},

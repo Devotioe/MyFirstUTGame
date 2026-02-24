@@ -26,3 +26,17 @@ prevSel = 0;
 ItemSelected = false;
 
 ItemSelectionReference = 0;
+
+function Use(index){
+	var item = GetItemData(global.Item[index]);
+	scr_useItem(item, index);
+}
+
+function Drop(index){
+	array_delete(global.Item, index, 1);
+	show_debug_message(global.Item)
+}
+
+function Info(index){
+	
+}

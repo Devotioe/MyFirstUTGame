@@ -115,7 +115,7 @@ if (opened){
 	    draw_rectangle(items_l_border + border_width, items_t_border + border_width, items_r_border - border_width, items_b_border - border_width, false);
 		draw_set_colour(c_white)
 		for (var i = 0 ; i < itemCounts ; i ++){
-			draw_text(items_l_border + border_width + text_offset + 50, items_t_border + border_width + text_offset + i * 40, string(global.Item[i]));
+			draw_text(items_l_border + border_width + text_offset + 50, items_t_border + border_width + text_offset + i * 40, GetItemData(global.Item[i]).ItemName);
 		}
 		draw_text(items_l_border + 60, items_b_border - 50, "Use")
 		draw_text(items_l_border + 150, items_b_border - 50, "Info")
@@ -179,7 +179,7 @@ if (opened){
 		
 		break;
 		case OVERWORLD_MENU.ITEM:
-		if (ItemSelected == true){
+		if (ItemSelected == true){ //Bottom
 			global.UISelection = clamp(global.UISelection, 0, 2);
 			switch (global.UISelection){
 				case 0:
@@ -194,7 +194,7 @@ if (opened){
 				
 			}
 		}
-		else{
+		else{ //Item Selecting
 			global.UISelection = clamp(global.UISelection, 0 , array_length(global.Item) - 1);
 			draw_sprite(spr_ourheart, 0, items_l_border + border_width + 25, items_t_border + border_width + text_offset + global.UISelection * 40 + 15)
 		}
@@ -211,6 +211,9 @@ if (opened){
 	if (key_advance){
 		if (state == OVERWORLD_MENU.SELECTION){
 			SelctionReference = global.UISelection;
+			if (global.UISelection + 1 == OVERWORLD_MENU.ITEM && array_length(global.Item) == 0){
+				exit;
+			}
 			state = global.UISelection + 1;
 			audio_play_sound(snd_choose, 1, false);
 			exit;
@@ -221,6 +224,28 @@ if (opened){
 			audio_play_sound(snd_choose, 1, false);
 			global.UISelection = 0;
 			exit;
+		}
+		if (state == OVERWORLD_MENU.ITEM && ItemSelected == true){
+
+			
+			switch (global.UISelection){
+				
+				case 0:
+				Use(ItemSelectionReference);
+				break;
+				case 1:
+				Info(ItemSelectionReference);
+				break;
+				case 2:
+				Drop(ItemSelectionReference);
+				break;
+			}
+			
+			ItemSelected = false;
+			opened = false;
+			setup = false;
+			obj_Player.frozen = false;
+			global.UISelection = 0;
 		}
 	}
 	if (key_quit){

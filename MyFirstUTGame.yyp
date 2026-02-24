@@ -139,6 +139,7 @@
     {"id":{"name":"snd_escaped","path":"sounds/snd_escaped/snd_escaped.yy",},},
     {"id":{"name":"snd_heal_c","path":"sounds/snd_heal_c/snd_heal_c.yy",},},
     {"id":{"name":"snd_hurt1","path":"sounds/snd_hurt1/snd_hurt1.yy",},},
+    {"id":{"name":"snd_item","path":"sounds/snd_item/snd_item.yy",},},
     {"id":{"name":"snd_movemenu","path":"sounds/snd_movemenu/snd_movemenu.yy",},},
     {"id":{"name":"snd_select","path":"sounds/snd_select/snd_select.yy",},},
     {"id":{"name":"snd_slash","path":"sounds/snd_slash/snd_slash.yy",},},

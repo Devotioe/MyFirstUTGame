@@ -3,8 +3,15 @@ function ItemHeal(_hp, _item){
 	global.PlayerHp += _hp;
 	audio_play_sound(snd_heal_c, 20, false);
 	
-	var _inst = instance_create_depth(global.Menu.box_basicshift, 270, -1, obj_TextElement);
-	global.Menu.ActionText = _inst;
+	if (room == room_battle){
+		var _inst = instance_create_depth(global.Menu.box_basicshift, 270, -1, obj_TextElement);
+		global.Menu.ActionText = _inst;
+	}
+	else{
+		CreateOverworldDialogue();
+		_inst = Dialogue;
+	}
+	
 	_inst.CanAdvance = true;
 	_inst.TextToDraw = "* You used the " + string(_item.ItemName) + "!&";
 
@@ -20,8 +27,6 @@ function ItemHeal(_hp, _item){
 
 function ItemEquip(_itemID){
 	audio_play_sound(snd_heal_c, 1, false);
-	global.PlayerHp += _hp;
-	global.PlayerHp = clamp(global.PlayerHp, 0, global.PlayerMaxHp);
 }
 
 function GetItemData(_id){
@@ -38,7 +43,7 @@ function Item(_name, _bname, _desc, _func) constructor {
 }
 
 global.ItemData = {
-	"1" : new Item ("Legendary Hero", "L.Hero", "* Sandwich shaped like a sword.&* Increases ATTACK when eaten.", function(_me){ ItemHeal(40, _me); }),
+	"1" : new Item ("Legendary Hero", "L.Hero","* Sandwich shaped like a sword.&* Increases ATTACK when eaten.", function(_me){ ItemHeal(40, _me); }),
 	"2" : new Item ("Butterscotch Pie", "B.Pie", "* Butterscotch-cinnamon pie, one slice.", function(_me){ ItemHeal(99, _me); }),
 	"3" : new Item ("Snowman Piece", "SnowPiece", "* Please take this to the ends of the earth.", function(_me){ ItemHeal(45, _me); }),
 }

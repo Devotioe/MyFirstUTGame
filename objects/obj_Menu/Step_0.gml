@@ -204,7 +204,20 @@ if select_key && global.UISelection > -1 {
 		break;
 		
 		case MENU.ITEM: //Item
-		scr_useItem(); //script for using item, determine which item to be used in this script
+		var ItemSelection; //selection based on page
+
+		if (global.Menu.ItemPage == 1){
+			ItemSelection = global.UISelection;
+		}
+		else{
+			ItemSelection = global.UISelection + 4;
+		}
+		
+		global.UISelection = -1; //reset
+		
+		var item = GetItemData(global.Item[ItemSelection]);
+		
+		scr_useItem(item, ItemSelection); //script for using item, determine which item to be used in this script
 		StateToAction()
 		break;
 		

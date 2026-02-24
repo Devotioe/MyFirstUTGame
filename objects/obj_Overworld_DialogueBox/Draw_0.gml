@@ -19,6 +19,7 @@ if !instance_exists(obj_TextElement){
 }else{ //make sure the text stay in box
 	obj_TextElement.x = textbox_x + text_x_offset;
 	obj_TextElement.y = textbox_y + text_y_offset;
+	obj_Player.frozen = true;
 }
 
 
