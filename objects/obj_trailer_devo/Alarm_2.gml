@@ -7,21 +7,31 @@ if (global.Manager.attackCreated = false){
 	global.Manager.attackCreated = true;
 }
 
+
 if (!talked){
 	
 	if (event == 0){
 		event = 0.5;
-		
 		CreateBubbleDialogue(_x, _y);
-		Dialogue.Talker = "Devo"
-		Dialogue.AddDialogue("to be honest,&i've been wondering&why you did all this.");
-		Dialogue.AddDialogue("i mean, what's your&ultimate goal here?");
-		Dialogue.AddDialogue("it's pretty dramatic&if you were just&sending a message.");
-		Dialogue.AddDialogue("what's the point&if no one's left&alive?");
+		Dialogue.Talker = "Devo";
+		Dialogue.AddDialogue("after the last time we&met. things went down&pretty fast.");
+		Dialogue.AddDialogue("honestly,&it felt hopeless.");
 		
 	}
+	
+	if (event == 1){
+		event = 1.5;
+		CreateBubbleDialogue(_x, _y);
+		Dialogue.Talker = "Devo";
+		Dialogue.AddDialogue("that being said,&[REDACTED] tried her&best to cheer&everyone up, but...");
+		Dialogue.AddDialogue("one day,&she went missing.");
+		Dialogue.AddDialogue("and when i found her...");
+	}
 
-}else{
+
+}
+
+else{
 	global.Manager.state = BATTLE_STATE.BATTLE;
 }
 
@@ -29,7 +39,12 @@ if (!instance_exists(Dialogue)){
 	switch event {
 		case 0.5:
 		event = 1;
-		talked = true
+		talked = true;
+		break;
+		
+		case 1.5:
+		event = 2;
+		talked = true;
 		break;
 	}
 }

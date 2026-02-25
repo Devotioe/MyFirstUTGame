@@ -4,4 +4,3 @@ if (alp >= 1) && event == 2{
 	//audio_sound_set_track_position(music, 58);
 	instance_destroy(self);
 }
-

@@ -42,6 +42,7 @@
     {"name":"obj_EnemyCreator","order":2,"path":"objects/obj_EnemyCreator/obj_EnemyCreator.yy",},
     {"name":"obj_fighter_test_1","order":1,"path":"objects/obj_fighter_test_1/obj_fighter_test_1.yy",},
     {"name":"obj_GlobalPara","order":2,"path":"objects/obj_GlobalPara/obj_GlobalPara.yy",},
+    {"name":"obj_hold","order":11,"path":"objects/obj_hold/obj_hold.yy",},
     {"name":"obj_Menu","order":5,"path":"objects/obj_Menu/obj_Menu.yy",},
     {"name":"obJ_Music","order":3,"path":"objects/obJ_Music/obJ_Music.yy",},
     {"name":"obj_NormalEnemy_Parent","order":2,"path":"objects/obj_NormalEnemy_Parent/obj_NormalEnemy_Parent.yy",},

@@ -1,6 +1,7 @@
 global.OverworldMusic = noone;
 global.BattleMusic = noone;
 
+
 //Player Stats Related 
 global.PlayerMaxHp = 92;
 global.PlayerLv = 19;

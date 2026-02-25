@@ -32,7 +32,7 @@ switch (Talker){
 	if (IsSpeechBubble){
 		font = fnt_devo_bubble;	
 		line_spacing = 20;
-		letter_spacing = 9;
+		letter_spacing = 8;
 	}
 	break;
 	

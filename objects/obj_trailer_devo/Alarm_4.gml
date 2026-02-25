@@ -2,3 +2,5 @@
 event_inherited();
 
 dodge = 1;
+
+talked = false;

@@ -88,6 +88,7 @@
     {"id":{"name":"obj_fighter_test_1","path":"objects/obj_fighter_test_1/obj_fighter_test_1.yy",},},
     {"id":{"name":"obj_fighter_test","path":"objects/obj_fighter_test/obj_fighter_test.yy",},},
     {"id":{"name":"obj_GlobalPara","path":"objects/obj_GlobalPara/obj_GlobalPara.yy",},},
+    {"id":{"name":"obj_hold","path":"objects/obj_hold/obj_hold.yy",},},
     {"id":{"name":"obj_Interaction","path":"objects/obj_Interaction/obj_Interaction.yy",},},
     {"id":{"name":"obj_Menu","path":"objects/obj_Menu/obj_Menu.yy",},},
     {"id":{"name":"obJ_Music","path":"objects/obJ_Music/obJ_Music.yy",},},
