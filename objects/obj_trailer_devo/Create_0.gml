@@ -3,8 +3,8 @@ event_inherited();
 
 dodger = 0;
 
-CheckDescription[0] = "* ___ 1 ATK 1 DEF&* The weakest enemy.&* Can't use any magical item.";
-CheckDescription[1] = "* Something about him seems&  different. Don't let your guard&  down.";
+CheckDescription[0] = "* [REDACTED] 1 ATK 1 DEF&* The weakest enemy.&* Can't use any magical item.";
+CheckDescription[1] = "* Something about him feels&  off. Don't let your guard&  down.";
 
 bounce = 1;
 siner = 0

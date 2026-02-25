@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"mus_trailer_fight",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":2,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":96.05225,
+  "exportDir":"",
+  "name":"mus_trailer_fight",
+  "parent":{
+    "name":"Trailer Stuff",
+    "path":"folders/Trailer Stuff.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":48000,
+  "soundFile":"mus_trailer_fight.mp3",
+  "volume":1.0,
+}

@@ -1,22 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_attack_trailer",
+  "%Name":"obj_bullet_trailer",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":1,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_attack_trailer",
+  "name":"obj_bullet_trailer",
   "overriddenProperties":[],
   "parent":{
     "name":"Trailer Stuff",
     "path":"folders/Trailer Stuff.yy",
   },
   "parentObjectId":{
-    "name":"obj_atk_Parent",
-    "path":"objects/obj_atk_Parent/obj_atk_Parent.yy",
+    "name":"obj_bullet_Parent",
+    "path":"objects/obj_bullet_Parent/obj_bullet_Parent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -35,7 +33,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_s_bonestab_v_0",
+    "path":"sprites/spr_s_bonestab_v_0/spr_s_bonestab_v_0.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

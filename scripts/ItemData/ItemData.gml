@@ -15,6 +15,7 @@ function ItemHeal(_hp, _item){
 		_inst = Dialogue;
 	}
 	
+	_inst.Talker = "UI";
 	_inst.CanAdvance = true;
 	_inst.TextToDraw = "* You used the " + string(item.ItemName) + "!&";
 	

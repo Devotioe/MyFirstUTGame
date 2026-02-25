@@ -28,7 +28,7 @@ global.EnemyData = {
 		GOLD : 20,
 	},
 	"999" : { //Devo Trailer
-		MyName : "___",
+		MyName : "[REDACTED]",
 		MyMaxHp : 100,
 		MyAtk : 5,
 		MyDef : 9999999,

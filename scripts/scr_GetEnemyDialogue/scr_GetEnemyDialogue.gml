@@ -10,7 +10,7 @@ function GetEnemyDialogue(){
 		case 3:
 		
 		case 999:
-		return("* ___ stands his ground.");
+		return("* [REDACTED] stands his ground.");
 		
 		default:
 		return("* But nobody came.") // Failsafe

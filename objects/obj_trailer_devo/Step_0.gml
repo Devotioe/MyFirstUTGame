@@ -3,7 +3,7 @@ event_inherited();
 
 if (dodge > 0) {
     
-    dodger += 0.037; 
+    dodger += 0.05; 
    
     
     x = xstart - round((125 * sin(dodger)));
@@ -13,4 +13,5 @@ if (dodge > 0) {
         dodger = 0; 
         x = xstart; 
     }
+	
 }

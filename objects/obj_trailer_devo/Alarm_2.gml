@@ -3,7 +3,7 @@ _x = self.x + 100
 _y = self.y - 20
 
 if (global.Manager.attackCreated = false){
-	instance_create_depth(0, 0, 99, obj_atk_Parent);
+	instance_create_depth(0, 0, 99, obj_attack_trailer);
 	global.Manager.attackCreated = true;
 }
 
