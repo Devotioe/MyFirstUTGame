@@ -1,7 +1,7 @@
 // Colour and font
 var colour = c_white;
 var font = fnt_Battle_Normal
-
+var sound = SND_TXT1;
 var advance = keyboard_check_pressed(ord("Z")) || keyboard_check_pressed(vk_enter);
 var skip = keyboard_check_pressed(ord("X"));
 
@@ -18,11 +18,42 @@ var x_offset = 40;
 var y_offset = 8;
 
 if IsSpeechBubble {
+	draw_sprite(spr_Bubble, 0, x - x_offset, y - y_offset)
 	colour = c_black
+}
+
+switch (Talker){
+	
+	case "Devo" :
+	font = fnt_devo;
+	line_spacing = 26;
+	letter_spacing = 16;
+	sound = snd_txtsans;
+	if (IsSpeechBubble){
+		font = fnt_devo_bubble;	
+		line_spacing = 20;
+		letter_spacing = 9;
+	}
+	break;
+	
+	case "Sans" :
+	sound = snd_txtsans;
+	break;
+				
+	case "Normal" :
+	font = fnt_Battle_Normal_Bubble;
 	line_spacing = 18;
 	letter_spacing = 9;
-	font = fnt_Battle_Normal_Bubble;
-	draw_sprite(spr_Bubble, 0, x - x_offset, y - y_offset)
+	sound = SND_TXT1
+	break;
+				
+	case "UI":
+	font = fnt_Battle_Normal
+	sound = SND_TXT2;
+	break;
+	
+	default : 
+	break;
 }
 
 // Draws every letter that it has so far
@@ -46,14 +77,14 @@ for (var i = 0; i < TextLength; i++) {
 		if string_char_at(TextToDraw, i + 2) == "D"
 			colour = DefaultColour;
 		i += 2;
-}
-
-draw_set_color(colour);
-draw_set_font(font);
+	}
 	
-// New line, use "}&" to include the & symbol otherwise it gets cancelled out
-// USAGE: "89 Snowdin Lane&Underground }& Co"
-
+	draw_set_color(colour);
+	draw_set_font(font);
+	
+	// New line, use "}&" to include the & symbol otherwise it gets cancelled out
+	// USAGE: "89 Snowdin Lane&Underground }& Co"
+	
 	if (string_char_at(TextToDraw, i + 1) == "&" && string_char_at(TextToDraw, i) != "}") {
 		sentence_x = 0;
 		sentence_y += line_spacing;
@@ -73,6 +104,7 @@ draw_set_font(font);
 	// Draw the letters with the correct spacing, as defined above
 	draw_text(x + sentence_x, y + sentence_y, string_char_at(TextToDraw, i + 1));
 	sentence_x += letter_spacing; //each letter space after original X every frame
+
 }
 
 if IsWriting{ //quit writing before entering the next block
@@ -98,22 +130,15 @@ if IsWriting {
 		TextLength += 1;
 		if !Silence{
 			if (string_char_at(TextToDraw, TextLength) != " " && string_char_at(TextToDraw, TextLength) != "." && string_char_at(TextToDraw, TextLength) != "*" && CurrentDelay = 0){
-				switch (Talker){	//speak sound
-				case "Sans" :
-				audio_play_sound(snd_txtsans, 20, false);
-				break;
 				
-				case "Normal" :
-				audio_play_sound(SND_TXT1, 20, false)
-				break;
-				
-				case "UI":
-				audio_play_sound(SND_TXT2, 20, false);
-				break;
-				
-				default : //NO SOUND
-				break;
+				if (SoundCD > 0){
+					SoundCD -= 1;
 				}
+				else {
+					audio_play_sound(sound, 1, false)
+					SoundCD = 1;
+				}
+				
 			}
 		}
 		// Puts half a second of delay inbetween sentences.

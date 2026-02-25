@@ -3,7 +3,7 @@ _inst2 = -1;
 
 played = false
 
-_inst.Talker = "Sans"
+_inst.Talker = "Devo"
 _inst.AddDialogue("* if anything is gonna happen to change&  that.");
 _inst.AddDialogue("* it's about to.");
 _inst.AddDialogue("* and trust me, it's not really my style&  to solve things this way.");
@@ -21,7 +21,7 @@ _inst.AddDialogue("* they deserve much more, don't they?");
 _inst.AddDialogue("* heh. it might not even pay off, but...");
 _inst.AddDialogue("* too late or not...");
 
-music = audio_play_sound(mus_trailer_fight, 1, true);
+// smusic = audio_play_sound(mus_trailer_fight, 1, true);
 
 event = 0;
 alp = 99;

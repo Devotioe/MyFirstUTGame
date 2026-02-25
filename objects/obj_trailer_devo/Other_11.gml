@@ -2,13 +2,5 @@ var _inst =  instance_create_depth(obj_Menu.box_basicshift, 270, -1, obj_TextEle
 global.Menu.ActionText = _inst;
 _inst.Talker = "UI";
 
-
-
-for (var i = 0 ; i < array_length(CheckDescription) ; i ++){
-	_inst.AddDialogue(CheckDescription[i]);	
-}
-
-
-
-
-
+_inst.AddDialogue("* I mentioned something about&  hypocrisy.")
+_inst.AddDialogue("* [REDACTED] slowly shook his head.")

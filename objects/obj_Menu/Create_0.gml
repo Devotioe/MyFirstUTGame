@@ -36,6 +36,18 @@ ItemR_2 = instance_create_depth(box_basicshift + 300, 270, _depth, obj_TextEleme
 Mercy = instance_create_depth(box_basicshift+ 30, 270, _depth, obj_TextElement);
 Page = instance_create_depth(box_basicshift + 450, 345, _depth, obj_TextElement);
 
+PlayerDialogue.Talker = "UI";
+Fight.Talker = "UI";
+Act.Talker = "UI";
+ActML.Talker = "UI";
+ActMR.Talker = "UI";
+ItemL_1.Talker = "UI";
+ItemR_1.Talker = "UI";
+ItemL_2.Talker = "UI";
+ItemR_2.Talker = "UI";
+Mercy.Talker = "UI";
+Page.Talker = "UI";
+
 ButtonPosi_X[0] = 32;
 ButtonPosi_X[1]	= 185;
 ButtonPosi_X[2]	= 345;

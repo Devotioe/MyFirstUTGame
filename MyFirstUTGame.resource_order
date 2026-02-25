@@ -26,6 +26,8 @@
     {"name":"fnt_Battle_Normal_Bubble","order":2,"path":"fonts/fnt_Battle_Normal_Bubble/fnt_Battle_Normal_Bubble.yy",},
     {"name":"fnt_Battle_Normal","order":5,"path":"fonts/fnt_Battle_Normal/fnt_Battle_Normal.yy",},
     {"name":"fnt_Battle_UI","order":4,"path":"fonts/fnt_Battle_UI/fnt_Battle_UI.yy",},
+    {"name":"fnt_devo_bubble","order":7,"path":"fonts/fnt_devo_bubble/fnt_devo_bubble.yy",},
+    {"name":"fnt_devo","order":6,"path":"fonts/fnt_devo/fnt_devo.yy",},
     {"name":"obj_atk_Parent","order":2,"path":"objects/obj_atk_Parent/obj_atk_Parent.yy",},
     {"name":"obj_atk_Test_2","order":1,"path":"objects/obj_atk_Test_2/obj_atk_Test_2.yy",},
     {"name":"obj_attack_trailer","order":5,"path":"objects/obj_attack_trailer/obj_attack_trailer.yy",},

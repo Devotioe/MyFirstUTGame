@@ -62,6 +62,8 @@
     {"id":{"name":"fnt_Battle_Normal_Bubble","path":"fonts/fnt_Battle_Normal_Bubble/fnt_Battle_Normal_Bubble.yy",},},
     {"id":{"name":"fnt_Battle_Normal","path":"fonts/fnt_Battle_Normal/fnt_Battle_Normal.yy",},},
     {"id":{"name":"fnt_Battle_UI","path":"fonts/fnt_Battle_UI/fnt_Battle_UI.yy",},},
+    {"id":{"name":"fnt_devo_bubble","path":"fonts/fnt_devo_bubble/fnt_devo_bubble.yy",},},
+    {"id":{"name":"fnt_devo","path":"fonts/fnt_devo/fnt_devo.yy",},},
     {"id":{"name":"obj_atk_Parent","path":"objects/obj_atk_Parent/obj_atk_Parent.yy",},},
     {"id":{"name":"obj_atk_Test_1","path":"objects/obj_atk_Test_1/obj_atk_Test_1.yy",},},
     {"id":{"name":"obj_atk_Test_2","path":"objects/obj_atk_Test_2/obj_atk_Test_2.yy",},},

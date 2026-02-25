@@ -41,4 +41,4 @@ spr_Bubble = spr_blconwdshrt_0;
 
 Silence = false;
 
-
+SoundCD = 0;

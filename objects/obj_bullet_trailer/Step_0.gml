@@ -1,4 +1,6 @@
-x -= 6;
+
+
+x -= spd;
 
 if x <= 0 {
 	instance_destroy(self)	
