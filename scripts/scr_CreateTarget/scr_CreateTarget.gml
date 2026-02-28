@@ -8,7 +8,7 @@ function scr_CreateTarget(_Weapon){
 	
 	global.BarCount = 0;
 	
-	instance_create_depth(320, 320, -1, obj_TargetField); // Create Target
+	var field = instance_create_depth(320, 320, -1, obj_TargetField); // Create Target
 	
 	var Bar_StartX = choose (0, 680);
 	

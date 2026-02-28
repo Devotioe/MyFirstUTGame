@@ -1,21 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_Candydisk",
+  "%Name":"obj_InteractObjects_Parent",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_Candydisk",
+  "name":"obj_InteractObjects_Parent",
   "overriddenProperties":[],
   "parent":{
     "name":"Overworld",
     "path":"folders/Objects/Overworld.yy",
   },
   "parentObjectId":{
-    "name":"obj_InteractObjects_Parent",
-    "path":"objects/obj_InteractObjects_Parent/obj_InteractObjects_Parent.yy",
+    "name":"obJ_Collision",
+    "path":"objects/obJ_Collision/obJ_Collision.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -34,10 +33,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_candydish",
-    "path":"sprites/spr_candydish/spr_candydish.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

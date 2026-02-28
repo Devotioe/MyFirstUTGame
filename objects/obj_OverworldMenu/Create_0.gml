@@ -35,14 +35,14 @@ function Use(index){
 function Drop(index){
 	var item = GetItemData(global.Item[index]);
 	array_delete(global.Item, index, 1);
-	CreateOverworldDialogue();
+	Dialogue = CreateOverworldDialogue();
 	var _inst = Dialogue;
 	_inst.AddDialogue("* The " + string(item.ItemName) + "&  was thrown away.")
 }
 
 function Info(index){
 	var item = GetItemData(global.Item[index]);
-	CreateOverworldDialogue();
+	Dialogue = CreateOverworldDialogue();
 	var _inst = Dialogue;
 	_inst.AddDialogue(item.Description);
 }

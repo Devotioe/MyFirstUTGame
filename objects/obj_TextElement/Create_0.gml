@@ -12,6 +12,11 @@ function AddDialogue (_text) {
 	}
 }
 
+function AddLine(_text) {
+	var text = _text
+	TextToDraw += text;
+}
+
 
 TextInQueue = -1
 

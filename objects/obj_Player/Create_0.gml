@@ -26,3 +26,7 @@ Prev_X = 0;
 Prev_Y = 0;
 
 now_sprite = 0;
+
+global.overworldmenu = instance_create_depth(0, 0, -9999, obj_OverworldMenu);
+global.debug = instance_create_depth(0, 0, 999, obj_DEBUG);
+global.constantfunction = instance_create_depth(0, 0, 999, obj_constantfunction);

@@ -17,11 +17,6 @@ var letter_spacing = 15;
 var x_offset = 40;
 var y_offset = 8;
 
-if IsSpeechBubble {
-	draw_sprite(spr_Bubble, 0, x - x_offset, y - y_offset)
-	colour = c_black
-}
-
 switch (Talker){
 	
 	case "Devo" :
@@ -41,10 +36,15 @@ switch (Talker){
 	break;
 				
 	case "Normal" :
-	font = fnt_Battle_Normal_Bubble;
-	line_spacing = 18;
-	letter_spacing = 9;
+	font = fnt_Battle_Normal;
+	line_spacing = 35;
+	letter_spacing = 15;
 	sound = SND_TXT1
+	if (IsSpeechBubble){
+		font = fnt_Battle_Normal_Bubble;	
+		line_spacing = 20;
+		letter_spacing = 10;
+	}
 	break;
 				
 	case "UI":
@@ -54,6 +54,11 @@ switch (Talker){
 	
 	default : 
 	break;
+}
+
+if IsSpeechBubble {
+	draw_sprite(spr_Bubble, 0, x - x_offset, y - y_offset)
+	colour = c_black
 }
 
 // Draws every letter that it has so far

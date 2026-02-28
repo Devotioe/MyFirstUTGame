@@ -12,7 +12,7 @@ if (!talked){
 	
 	if (event == 0){
 		event = 0.5;
-		CreateBubbleDialogue(_x, _y);
+		Dialogue = CreateBubbleDialogue(_x, _y);
 		Dialogue.Talker = "Devo";
 		Dialogue.AddDialogue("after the last time we&met. things went down&pretty fast.");
 		Dialogue.AddDialogue("honestly,&it felt hopeless.");
@@ -21,7 +21,7 @@ if (!talked){
 	
 	if (event == 1){
 		event = 1.5;
-		CreateBubbleDialogue(_x, _y);
+		Dialogue = CreateBubbleDialogue(_x, _y);
 		Dialogue.Talker = "Devo";
 		Dialogue.AddDialogue("that being said,&[REDACTED] tried her&best to cheer&everyone up, but...");
 		Dialogue.AddDialogue("one day,&she went missing.");

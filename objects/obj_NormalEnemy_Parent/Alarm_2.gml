@@ -12,7 +12,7 @@ if (!talked){
 	if (event == 0){
 		event = 0.5;
 		
-		CreateBubbleDialogue(_x, _y);
+		Dialogue = CreateBubbleDialogue(_x, _y);
 		
 		var dia = choose(
 		"random 1_1",
@@ -26,7 +26,7 @@ if (!talked){
 	if (event == 1){
 		event = 1.5;
 		
-		CreateBubbleDialogue(_x, _y);
+		Dialogue = CreateBubbleDialogue(_x, _y);
 		
 		var dia = choose(
 		"random 2_1",

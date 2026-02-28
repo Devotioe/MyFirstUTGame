@@ -1,6 +1,24 @@
 global.OverworldMusic = noone;
 global.BattleMusic = noone;
 
+enum MENU {
+	SETUP = -1, // -1
+	SELECTION, //0
+	FIGHT, //1
+	ACT, //2
+	INVENTORY, //3
+	MERCY, //4
+	HIDE, //5
+	ACT_SELECTION, //6
+}
+
+enum BATTLE_STATE {
+	PLAYER,
+	ACTION,
+	DIALOGUE,
+	BATTLE,
+}
+
 
 //Player Stats Related 
 global.PlayerMaxHp = 92;
@@ -23,7 +41,7 @@ global.inbattle = false;
 global.EnemyGrave = [];
 //Grave for enemy that is waiting for destruction
 
-global.Item = [1, 2, 3, 1, 2];
+global.Item = [1, 2, 3, 1, 2, 3, 1];
 
 //Init Battle Related
 global.SoulX = 0;
