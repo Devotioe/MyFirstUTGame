@@ -142,6 +142,7 @@
     {"id":{"name":"Battle_Soul","path":"sounds/Battle_Soul/Battle_Soul.yy",},},
     {"id":{"name":"CutNoise","path":"sounds/CutNoise/CutNoise.yy",},},
     {"id":{"name":"mus_battle","path":"sounds/mus_battle/mus_battle.yy",},},
+    {"id":{"name":"mus_cycles","path":"sounds/mus_cycles/mus_cycles.yy",},},
     {"id":{"name":"mus_cymbal","path":"sounds/mus_cymbal/mus_cymbal.yy",},},
     {"id":{"name":"mus_deepwind","path":"sounds/mus_deepwind/mus_deepwind.yy",},},
     {"id":{"name":"mus_knight_fight","path":"sounds/mus_knight_fight/mus_knight_fight.yy",},},
@@ -204,8 +205,8 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"room_beginning","path":"rooms/room_beginning/room_beginning.yy",},},
     {"roomId":{"name":"room_trailer","path":"rooms/room_trailer/room_trailer.yy",},},
+    {"roomId":{"name":"room_beginning","path":"rooms/room_beginning/room_beginning.yy",},},
     {"roomId":{"name":"room_dialoguetest","path":"rooms/room_dialoguetest/room_dialoguetest.yy",},},
     {"roomId":{"name":"room_hallway_0","path":"rooms/room_hallway_0/room_hallway_0.yy",},},
     {"roomId":{"name":"room_hallway_final","path":"rooms/room_hallway_final/room_hallway_final.yy",},},

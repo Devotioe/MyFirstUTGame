@@ -23,7 +23,7 @@ _inst.AddDialogue("* honestly, i'm scared.");
 _inst.AddDialogue("* but...");
 _inst.AddDialogue("* i've been doing nothing for long&  enough.");
 
-music = audio_play_sound(mus_trailer_fight, 1, true);
+//music = audio_play_sound(mus_trailer_fight, 1, true);
 
 event = 0;
 alp = 99;
