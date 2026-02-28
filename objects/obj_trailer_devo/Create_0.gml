@@ -26,6 +26,8 @@ movearm = 0;
 facetype = 0;
 deadtest = 0;
 
+dodge_destination = xstart - 125;
+dodge_origin = xstart;
 
 spr_head = spr_trailer_devo_head
 spr_torso = spr_trailer_devo_torso

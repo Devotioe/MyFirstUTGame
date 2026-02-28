@@ -25,6 +25,7 @@ function CheckIfEveryKilled(){
 	
 	if allkilled {
 		global.Menu.ActionText = CreateActionText(); 
+		
 		var _inst = global.Menu.ActionText;
 		_inst.CanAdvance = false;
 		_inst.AddDialogue("* You won!&* You earned "+ string(global.ExpToEarn) + " EXP and " + string(global.GoldToEarn) + " GOLD!");
