@@ -7,8 +7,8 @@ function ItemHeal(_hp, _item){
 	var item = _item;
 	
 	if (room == room_battle){
-		_inst = instance_create_depth(global.Menu.box_basicshift, 270, -1, obj_TextElement);
-		global.Menu.ActionText = _inst;
+		CreateActionText();
+		_inst = ActionText;
 	}
 	else{
 		CreateOverworldDialogue();

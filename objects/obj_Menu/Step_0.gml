@@ -217,7 +217,6 @@ if select_key && global.UISelection > -1 {
 		global.UISelection = -1; //reset
 		
 		var item = GetItemData(global.Item[ItemSelection]);
-		
 		scr_useItem(item, ItemSelection); //script for using item, determine which item to be used in this script
 		StateToAction()
 		break;
