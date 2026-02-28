@@ -55,6 +55,7 @@
     {"name":"obj_trailer_devo","order":6,"path":"objects/obj_trailer_devo/obj_trailer_devo.yy",},
     {"name":"obj_WinHandler","order":10,"path":"objects/obj_WinHandler/obj_WinHandler.yy",},
     {"name":"room_beginning","order":2,"path":"rooms/room_beginning/room_beginning.yy",},
+    {"name":"room_gameover","order":6,"path":"rooms/room_gameover/room_gameover.yy",},
     {"name":"room_hallway_0","order":3,"path":"rooms/room_hallway_0/room_hallway_0.yy",},
     {"name":"room_hallway_final","order":1,"path":"rooms/room_hallway_final/room_hallway_final.yy",},
     {"name":"room_menuTest","order":1,"path":"rooms/room_menuTest/room_menuTest.yy",},

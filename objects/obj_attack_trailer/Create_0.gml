@@ -3,5 +3,5 @@ event_inherited();
 
 duration = 300;
 
-val = 5;
+val = 3;
 cd = val;

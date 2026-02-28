@@ -142,12 +142,15 @@ if IsWriting {
 			}
 		}
 		// Puts half a second of delay inbetween sentences.
-		if (string_char_at(TextToDraw, TextLength) == "." || string_char_at(TextToDraw, TextLength) == "?" || string_char_at(TextToDraw, TextLength) == "!") {
-				CurrentDelay = -30;
+		if (string_char_at(TextToDraw, TextLength) == "?" || string_char_at(TextToDraw, TextLength) == "!") {
+			CurrentDelay = -30;
+		}
+		if (string_char_at(TextToDraw, TextLength) == "." && string_char_at(TextToDraw, TextLength + 1) != "."){
+			CurrentDelay = -30;
 		}
 		// Slight pause in the middle of a sentence.
 		if (string_char_at(TextToDraw, TextLength) == ",")|| string_char_at(TextToDraw, TextLength) == "，" {
-				CurrentDelay = -15;
+			CurrentDelay = -15;
 		}
 	}
 }

@@ -1,7 +1,7 @@
 // Inherit the parent event
 event_inherited();
 
-spd = random(10)
+spd = random(20)
 
 if spd <= 5{
 	spd = 6	
