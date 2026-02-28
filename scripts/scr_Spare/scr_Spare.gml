@@ -4,8 +4,8 @@ function scr_Spare(){ //spare once will spare all possible enemies
 	var sound = snd_vaporized;
 	var enemyCounts = array_length(global.Enemy);
 	
-	var _inst = instance_create_depth(global.Menu.box_basicshift, 270, -1, obj_TextElement);
-	global.Menu.ActionText = _inst;
+	global.Menu.ActionText = CreateActionText()
+	var _inst = global.Menu.ActionText;
 	_inst.CanAdvance = false;
 	
 	for (var i = 0 ; i < enemyCounts ; i ++){

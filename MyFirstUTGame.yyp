@@ -20,7 +20,7 @@
     {"$GMFolder":"","%Name":"Battle","folderPath":"folders/Objects/Battle.yy","name":"Battle","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Bullets","folderPath":"folders/Objects/Battle/Bullets.yy","name":"Bullets","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Enemies","folderPath":"folders/Objects/Battle/Enemies.yy","name":"Enemies","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"Player","folderPath":"folders/Objects/Battle/Player.yy","name":"Player","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Player","folderPath":"folders/Objects/Battle/Enemies/Player.yy","name":"Player","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"System","folderPath":"folders/Objects/Battle/System.yy","name":"System","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Overworld","folderPath":"folders/Objects/Overworld.yy","name":"Overworld","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Cutscenes","folderPath":"folders/Objects/Overworld/Cutscenes.yy","name":"Cutscenes","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -205,8 +205,8 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"room_trailer","path":"rooms/room_trailer/room_trailer.yy",},},
     {"roomId":{"name":"room_beginning","path":"rooms/room_beginning/room_beginning.yy",},},
+    {"roomId":{"name":"room_trailer","path":"rooms/room_trailer/room_trailer.yy",},},
     {"roomId":{"name":"room_dialoguetest","path":"rooms/room_dialoguetest/room_dialoguetest.yy",},},
     {"roomId":{"name":"room_hallway_0","path":"rooms/room_hallway_0/room_hallway_0.yy",},},
     {"roomId":{"name":"room_hallway_final","path":"rooms/room_hallway_final/room_hallway_final.yy",},},

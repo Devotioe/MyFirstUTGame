@@ -24,8 +24,8 @@ function CheckIfEveryKilled(){
 	}//check if every enemy is killed
 	
 	if allkilled {
-		var _inst = instance_create_depth(global.Menu.box_basicshift, 270, -1, obj_TextElement);
-		global.Menu.ActionText = _inst;
+		global.Menu.ActionText = CreateActionText(); 
+		var _inst = global.Menu.ActionText;
 		_inst.CanAdvance = false;
 		_inst.AddDialogue("* You won!&* You earned "+ string(global.ExpToEarn) + " EXP and " + string(global.GoldToEarn) + " GOLD!");
 		

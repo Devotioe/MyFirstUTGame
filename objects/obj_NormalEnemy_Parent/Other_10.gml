@@ -1,5 +1,4 @@
 global.Menu.ActionText = CreateActionText();
-
 var _inst = global.Menu.ActionText;
 
 _inst.Talker = "UI";

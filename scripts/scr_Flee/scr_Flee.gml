@@ -2,8 +2,8 @@ function scr_Flee(){
 	var sound = snd_escaped;
 	var _x = 60;
 	var _y = 286 + 36 * global.UISelection;
-	var _inst = instance_create_depth(global.Menu.box_basicshift, 270, -1, obj_TextElement);
-	global.Menu.ActionText = _inst;
+	global.Menu.ActionText = CreateActionText();
+	var _inst = global.Menu.ActionText;
 	_inst.CanAdvance = false;
 	_inst.CanSkip = false;
 	
