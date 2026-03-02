@@ -9,6 +9,7 @@ switch state {
 
 	case BATTLE_STATE.DIALOGUE:
 	global.Enemy[global.EnemyRN].alarm[2] = 1;
+	global.soul.frozen = true;
 	break;
 	
 	
