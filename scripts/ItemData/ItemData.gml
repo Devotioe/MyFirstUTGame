@@ -9,13 +9,15 @@ function ItemHeal(_hp, _item){
 	if (room == room_battle){
 		global.Menu.ActionText = CreateActionText();
 		_inst = global.Menu.ActionText;
+		_inst.Talker = "UI";
 	}
 	else{
 		Dialogue = CreateOverworldDialogue();
 		_inst = Dialogue;
+		_inst.Talker = "Normal";
 	}
 	
-	_inst.Talker = "UI";
+	
 	_inst.CanAdvance = true;
 	_inst.AddDialogue("* You used the " + string(item.ItemName) + "!&");
 	

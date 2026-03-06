@@ -210,9 +210,9 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"room_beginning","path":"rooms/room_beginning/room_beginning.yy",},},
     {"roomId":{"name":"room_trailer","path":"rooms/room_trailer/room_trailer.yy",},},
     {"roomId":{"name":"room_trailer2_1","path":"rooms/room_trailer2_1/room_trailer2_1.yy",},},
-    {"roomId":{"name":"room_beginning","path":"rooms/room_beginning/room_beginning.yy",},},
     {"roomId":{"name":"room_dialoguetest","path":"rooms/room_dialoguetest/room_dialoguetest.yy",},},
     {"roomId":{"name":"room_hallway_0","path":"rooms/room_hallway_0/room_hallway_0.yy",},},
     {"roomId":{"name":"room_hallway_final","path":"rooms/room_hallway_final/room_hallway_final.yy",},},

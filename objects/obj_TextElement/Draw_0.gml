@@ -136,13 +136,13 @@ if IsWriting {
 		if !Silence{
 			if (string_char_at(TextToDraw, TextLength) != " " && string_char_at(TextToDraw, TextLength) != "." && string_char_at(TextToDraw, TextLength) != "*" && CurrentDelay = 0){
 				
-				if (SoundCD > 0){
-					SoundCD -= 1;
-				}
-				else {
-					audio_play_sound(sound, 1, false)
-					SoundCD = 1;
-				}
+				//if (SoundCD > 0){
+				//	SoundCD -= 1;
+				//}
+				//else {
+				audio_play_sound(sound, 1, false)
+				//	SoundCD = 1;
+				//}
 				
 			}
 		}
