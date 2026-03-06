@@ -1,3 +1,4 @@
+draw_set_alpha(1);
 switch bounce {
 	case 1:
 	x_freq = 6;

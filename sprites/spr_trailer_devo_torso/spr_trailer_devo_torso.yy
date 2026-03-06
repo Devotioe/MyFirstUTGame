@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"Trailer Stuff",
-    "path":"folders/Trailer Stuff.yy",
+    "name":"Trailer1",
+    "path":"folders/Trailer Stuff/Trailer1.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

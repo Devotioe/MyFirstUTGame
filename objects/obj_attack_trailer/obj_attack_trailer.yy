@@ -11,8 +11,8 @@
   "name":"obj_attack_trailer",
   "overriddenProperties":[],
   "parent":{
-    "name":"Trailer Stuff",
-    "path":"folders/Trailer Stuff.yy",
+    "name":"Trailer1",
+    "path":"folders/Trailer Stuff/Trailer1.yy",
   },
   "parentObjectId":{
     "name":"obj_atk_Parent",

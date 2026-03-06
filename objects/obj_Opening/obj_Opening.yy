@@ -12,8 +12,8 @@
   "name":"obj_Opening",
   "overriddenProperties":[],
   "parent":{
-    "name":"Trailer Stuff",
-    "path":"folders/Trailer Stuff.yy",
+    "name":"Trailer1",
+    "path":"folders/Trailer Stuff/Trailer1.yy",
   },
   "parentObjectId":null,
   "persistent":false,

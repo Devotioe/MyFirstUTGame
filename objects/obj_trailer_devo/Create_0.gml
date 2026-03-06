@@ -6,6 +6,7 @@ dodger = 0;
 CheckDescription[0] = "* [REDACTED] 1 ATK 1 DEF&* The weakest enemy.&* Can't use any magical item.";
 CheckDescription[1] = "* Something about him feels off.&* Don't let your guard down.";
 
+instance_create_depth(0, 0, -999999, obj_flicker);
 
 Act[1] = "Call out";
 
