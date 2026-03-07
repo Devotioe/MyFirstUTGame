@@ -17,9 +17,8 @@ else{
 	}else{
 		
 		//second chance of flicker
-		dice = round(random(2)) + 1;
-		show_debug_message(dice)
-		if (dice > 2){
+		dice = round(irandom(2))
+		if (dice > 1){
 			counter = flicker_last;
 			return;
 		}

@@ -86,6 +86,7 @@ for (var i = 0; i < TextLength; i++) {
 	
 	draw_set_color(colour);
 	draw_set_font(font);
+	draw_set_alpha(Alpha);
 	
 	// New line, use "}&" to include the & symbol otherwise it gets cancelled out
 	// USAGE: "89 Snowdin Lane&Underground }& Co"
@@ -111,6 +112,8 @@ for (var i = 0; i < TextLength; i++) {
 	sentence_x += letter_spacing; //each letter space after original X every frame
 
 }
+
+draw_set_alpha(1);
 
 if IsWriting{ //quit writing before entering the next block
 	if (skip || keyboard_check(ord("C"))){

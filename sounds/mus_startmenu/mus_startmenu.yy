@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"mus_cycles",
+  "%Name":"mus_startmenu",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -12,7 +12,7 @@
   "conversionMode":0,
   "duration":59.19347,
   "exportDir":"",
-  "name":"mus_cycles",
+  "name":"mus_startmenu",
   "parent":{
     "name":"music",
     "path":"folders/Sounds/music.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"mus_cycles.ogg",
+  "soundFile":"mus_startmenu.mp3",
   "volume":1.0,
 }

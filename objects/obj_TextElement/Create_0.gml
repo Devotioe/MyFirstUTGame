@@ -17,6 +17,7 @@ function AddLine(_text) {
 	TextToDraw += text;
 }
 
+Alpha = 1;
 
 TextInQueue = -1
 

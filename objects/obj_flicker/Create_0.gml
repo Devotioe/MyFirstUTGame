@@ -1,5 +1,5 @@
 depth = -1000000;
-cd_value = 180;
+cd_value = 300;
 cd = cd_value;
 
 alpha = 0.3;
