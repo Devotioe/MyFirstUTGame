@@ -9,6 +9,8 @@ moving = false
 spd = 3; // this line defines the speed how fast
 
 
+Camera = instance_create_depth(0, 0, 0, obj_Player_Camera);
+
 frozen = false;
 
 running = false;
@@ -25,8 +27,6 @@ AlertMark = 0;
 Prev_X = 0;
 Prev_Y = 0;
 
-now_sprite = 0;
+now_sprite = spr_mainchara_d;
 
 global.overworldmenu = instance_create_depth(0, 0, -9999, obj_OverworldMenu);
-global.debug = instance_create_depth(0, 0, 999, obj_DEBUG);
-global.constantfunction = instance_create_depth(0, 0, 999, obj_constantfunction);

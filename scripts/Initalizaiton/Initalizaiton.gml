@@ -60,5 +60,7 @@ global.MusicData = ds_map_create();
 var mus = global.MusicData
 ds_map_add(mus, room_beginning, mus_deepwind);
 ds_map_add(mus, room_hallway_0, mus_mysterious);
+ds_map_add(mus, room_start_menu, mus_startmenu);
+
 
 

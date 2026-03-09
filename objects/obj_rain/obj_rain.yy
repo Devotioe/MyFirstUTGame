@@ -1,19 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_Opening",
+  "%Name":"obj_rain",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_Opening",
+  "name":"obj_rain",
   "overriddenProperties":[],
   "parent":{
-    "name":"Trailer1",
-    "path":"folders/Trailer Stuff/Trailer1.yy",
+    "name":"Trailer2",
+    "path":"folders/Trailer Stuff/Trailer2.yy",
   },
   "parentObjectId":null,
   "persistent":false,

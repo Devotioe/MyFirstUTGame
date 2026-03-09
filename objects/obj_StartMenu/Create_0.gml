@@ -7,6 +7,8 @@ Trailer2 = instance_create_depth(300, 300, -1, obj_TextElement);
 
 Credit = instance_create_depth(300, 400, -1, obj_TextElement);
 
+Credit_Context = instance_create_depth(20, 100, -1, obj_TextElement);
+
 Start.AddDialogue("Start");
 Start.TextLength = string_length(Start.TextToDraw);
 Start.IsWriting = false;
@@ -27,6 +29,13 @@ Credit.TextLength = string_length(Credit.TextToDraw);
 Credit.IsWriting = false;
 Credit.CanAdvance = false;
 
+Credit_Context.AddDialogue("Project Owner - Devo&Coder - Devo&Art - Devo&Writer - Devo&Music -&The Murderer Menu by BenyiC03& & &UNDERTALE by Toby Fox }& Temmie Chang");
+Credit_Context.TextLength = string_length(Credit_Context.TextToDraw);
+Credit_Context.IsWriting = false;
+Credit_Context.CanAdvance = false;
+Credit_Context.Silence = true;
+Credit_Context.visible = false;
+
 setup = false;
 
 prevSel = 0;
@@ -41,4 +50,8 @@ obj_TextElement.Alpha = 0;
 
 global.UISelection = 0;
 
-Music = audio_play_sound(mus_startmenu, 1, true);
+global.Music = instance_create_depth(0, 0, 999, obJ_Music);
+global.debug = instance_create_depth(0, 0, 999, obj_DEBUG);
+global.constantfunction = instance_create_depth(0, 0, 999, obj_constantfunction);
+
+state = 0;
