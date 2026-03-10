@@ -19,7 +19,7 @@ enum BATTLE_STATE {
 	BATTLE,
 }
 
-
+global.player = -1
 //Player Stats Related 
 global.PlayerMaxHp = 92;
 global.PlayerLv = 19;

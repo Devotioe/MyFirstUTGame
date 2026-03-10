@@ -5,14 +5,15 @@ var text_x_offset = 30;
 var text_y_offset = 20;
 
 //Draw Box
-//draw_set_color(c_white)
-//draw_rectangle(textbox_x , textbox_y, textbox_x + 580, textbox_y + 150, false)
-//draw_set_color(c_black)
-//draw_rectangle(textbox_x + 5, textbox_y + 5, textbox_x + 575, textbox_y + 145, false)
-draw_set_alpha(0.5)
-draw_set_color(c_black)
+draw_set_color(c_white)
 draw_rectangle(textbox_x , textbox_y, textbox_x + 580, textbox_y + 150, false)
-draw_set_alpha(1)
+draw_set_color(c_black)
+draw_rectangle(textbox_x + 5, textbox_y + 5, textbox_x + 575, textbox_y + 145, false)
+
+//draw_set_alpha(0.75)
+//draw_set_color(c_black)
+//draw_rectangle(textbox_x , textbox_y, textbox_x + 580, textbox_y + 150, false)
+//draw_set_alpha(1)
 //var x1 = camera_get_view_x(view_camera[0]);
 //var y1 = camera_get_view_y(view_camera[0]) + 320;
 //var x2 = camera_get_view_x(view_camera[0]) + 640;

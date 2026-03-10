@@ -9,3 +9,9 @@ if keyboard_check_pressed(vk_f4){
 	}
 }
 
+var cd = 0;
+
+if keyboard_check(vk_escape) {
+	game_end();
+	
+}
