@@ -16,10 +16,10 @@ if (opened){
 	if key_down {
 		global.UISelection += 1;
 	}
-	if (key_left && side == 1){
+	if (key_left && side == 1 && array_length(global.Item) > 0){
 		side = 0;	
 	}
-	if (key_right && side == 0){
+	if (key_right && side == 0 && array_length(MyInventory) > 0){
 		side = 1;	
 	}
 	if (side == 0){
@@ -53,6 +53,9 @@ if (opened){
 				Message = 1;	
 			}
 			break;
+		}
+		if array_length(global.Item) == 0 or array_length(MyInventory) == 0{
+			SwitchSide()	
 		}
 	}
 }

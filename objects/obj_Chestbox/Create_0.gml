@@ -12,3 +12,11 @@ prevSel = 0;
 
 
 Message = 0;
+
+function SwitchSide(){
+	if side == 0 {
+		side = 1;	
+	}else{
+		side = 0;	
+	}
+}

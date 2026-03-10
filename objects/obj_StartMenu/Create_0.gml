@@ -1,11 +1,13 @@
+var _x = 100;
 
-Start = instance_create_depth(300, 100, -1, obj_TextElement);
 
-Trailer1 = instance_create_depth(300, 200, -1, obj_TextElement);
+Start = instance_create_depth(_x, 100, -1, obj_TextElement);
 
-Trailer2 = instance_create_depth(300, 300, -1, obj_TextElement);
+Trailer1 = instance_create_depth(_x, 200, -1, obj_TextElement);
 
-Credit = instance_create_depth(300, 400, -1, obj_TextElement);
+Trailer2 = instance_create_depth(_x, 300, -1, obj_TextElement);
+
+Credit = instance_create_depth(_x, 400, -1, obj_TextElement);
 
 Credit_Context = instance_create_depth(20, 100, -1, obj_TextElement);
 
@@ -29,7 +31,11 @@ Credit.TextLength = string_length(Credit.TextToDraw);
 Credit.IsWriting = false;
 Credit.CanAdvance = false;
 
-Credit_Context.AddDialogue("Project Owner - Devo&Coder - Devo&Art - Devo&Writer - Devo&Music -&The Murderer Menu by BenyiC03& & &UNDERTALE by Toby Fox }& Temmie Chang");
+Credit_Context.AddDialogue("A Game by Devo");
+Credit_Context.AddLine("&Inspired by UNDERTALE }& UTDR Community")
+Credit_Context.AddLine("&Programming }& Art }& Story }& &Character Design by Devo")
+Credit_Context.AddLine("&Music used :&\"The Murderer Menu\" by BenyiC03");
+Credit_Context.AddLine("& &UNDERTALE by Toby Fox }& Temmie Chang")
 Credit_Context.TextLength = string_length(Credit_Context.TextToDraw);
 Credit_Context.IsWriting = false;
 Credit_Context.CanAdvance = false;
