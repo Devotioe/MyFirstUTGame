@@ -5,7 +5,7 @@ opened = false;
 
 side = 0;
 
-MyInventory = ["1", "2", "4", "3", "4", "1"];
+MyInventory = [2, 3];
 
 prevSel = 0;
 

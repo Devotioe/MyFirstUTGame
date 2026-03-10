@@ -41,7 +41,7 @@ global.inbattle = false;
 global.EnemyGrave = [];
 //Grave for enemy that is waiting for destruction
 
-global.Item = [1, 2, 3, 1, 2, 3, 1];
+global.Item = [1];
 
 //Init Battle Related
 global.SoulX = 0;
