@@ -45,8 +45,8 @@ if opened {
 	}
 	
 	draw_set_font(fnt_Battle_Normal)
-	draw_text(middle - 200, t_border + 10, "INVENTORY")
-	draw_text(middle + 140, t_border + 10, "BOX")
+	draw_text(middle - 220, t_border + 10, "INVENTORY")
+	draw_text(middle + 130, t_border + 10, "BOX")
 	
 	draw_line(middle, t_border + 20, middle, b_border - 50);
 	
