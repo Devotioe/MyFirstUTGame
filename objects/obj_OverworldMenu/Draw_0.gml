@@ -85,16 +85,16 @@ if (opened){
 	
 	//Name
     draw_set_color(c_white);
-    draw_text(sts_l_border + border_width + text_offset, sts_t_border + border_width + text_offset, string(global.PlayerName));
+    draw_text(sts_l_border + border_width + text_offset, sts_t_border + border_width + text_offset - 10, + string(global.PlayerName));
 	
 	
 	draw_set_font(fnt_UI);
 	//LV
-	draw_text(sts_l_border + border_width + text_offset, sts_t_border + border_width + text_offset + 30, "LV " + string(global.PlayerLv));
+	draw_text(sts_l_border + border_width + text_offset, sts_t_border + border_width + text_offset + 20, "LV " + string(global.PlayerLv));
 	//HP
-	draw_text(sts_l_border + border_width + text_offset, sts_t_border + border_width + text_offset + 60, "HP " + string(global.PlayerHp) + "/" + string(global.PlayerMaxHp));
+	draw_text(sts_l_border + border_width + text_offset, sts_t_border + border_width + text_offset + 50, "HP " + string(global.PlayerHp) + "/" + string(global.PlayerMaxHp));
 	//GOLD
-	draw_text(sts_l_border + border_width + text_offset, sts_t_border + border_width + text_offset + 90, "G  " + string(global.PlayerGold));
+	draw_text(sts_l_border + border_width + text_offset, sts_t_border + border_width + text_offset + 80, "G  " + string(global.PlayerGold));
 	
 	
 	var main_offset = 40 //This is for the space of drawing soul
