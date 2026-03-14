@@ -14,7 +14,7 @@ function AddDialogue (_text) {
 
 function AddLine(_text) {
 	var text = _text
-	TextToDraw += text;
+	TextToDraw += "&" + text;
 }
 
 Alpha = 1;

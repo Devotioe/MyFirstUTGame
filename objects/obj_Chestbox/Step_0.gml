@@ -10,28 +10,36 @@ var key_quit = keyboard_check_pressed(ord("X")) || keyboard_check_pressed(vk_shi
 
 if (opened){
 	obj_Player.frozen = true
+	
 	if key_up {
 		global.UISelection -= 1;
 	}
+	
 	if key_down {
 		global.UISelection += 1;
 	}
+	
 	if (key_left && side == 1 && array_length(global.Item) > 0){
-		side = 0;	
+		side = 0;
 	}
+	
 	if (key_right && side == 0 && array_length(MyInventory) > 0){
 		side = 1;	
 	}
+	
+	
 	if (side == 0){
 		global.UISelection = clamp(global.UISelection, 0, array_length(global.Item) - 1);
 	}else{
 		global.UISelection = clamp(global.UISelection, 0, array_length(MyInventory) - 1);
 	}
+	
 	if (key_quit){
 		depth = -y;
 		opened = false;
 		obj_Player.frozen = false;
 	}
+	
 	if (key_advance){
 		Message = 0;
 		switch (side){

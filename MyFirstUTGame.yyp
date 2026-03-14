@@ -119,6 +119,7 @@
     {"id":{"name":"obj_trailer_devo","path":"objects/obj_trailer_devo/obj_trailer_devo.yy",},},
     {"id":{"name":"obj_trailer_opening","path":"objects/obj_trailer_opening/obj_trailer_opening.yy",},},
     {"id":{"name":"obj_WinHandler","path":"objects/obj_WinHandler/obj_WinHandler.yy",},},
+    {"id":{"name":"room_attacktest","path":"rooms/room_attacktest/room_attacktest.yy",},},
     {"id":{"name":"room_battle","path":"rooms/room_battle/room_battle.yy",},},
     {"id":{"name":"room_beginning","path":"rooms/room_beginning/room_beginning.yy",},},
     {"id":{"name":"room_dialoguetest","path":"rooms/room_dialoguetest/room_dialoguetest.yy",},},
@@ -227,6 +228,7 @@
     {"roomId":{"name":"room_menuTest","path":"rooms/room_menuTest/room_menuTest.yy",},},
     {"roomId":{"name":"room_battle","path":"rooms/room_battle/room_battle.yy",},},
     {"roomId":{"name":"room_gameover","path":"rooms/room_gameover/room_gameover.yy",},},
+    {"roomId":{"name":"room_attacktest","path":"rooms/room_attacktest/room_attacktest.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

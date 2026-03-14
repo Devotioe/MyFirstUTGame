@@ -91,7 +91,7 @@ if (global.BattleMenu = MENU.SETUP){
 			break;
 		}
 	}
-	Mercy.TextToDraw += "* Spare~D&"
+	Mercy.TextToDraw += "* Spare~D &"
 	if (_CanFlee == true){ //can flee or not
 		Mercy.TextToDraw += "* Flee"
 	}
@@ -115,17 +115,17 @@ if (global.BattleMenu > MENU.SELECTION){
 }
 
 //init every frame, make evey menu invisible
-	PlayerDialogue.visible = false;
-	Fight.visible = false;
-	Act.visible = false;
-	ActML.visible = false;
-	ActMR.visible = false;
-	ItemL_1.visible = false;
-	ItemR_1.visible = false;
-	ItemL_2.visible = false;
-	ItemR_2.visible = false;
-	Page.visible = false;
-	Mercy.visible = false;
+PlayerDialogue.visible = false;
+Fight.visible = false;
+Act.visible = false;
+ActML.visible = false;
+ActMR.visible = false;
+ItemL_1.visible = false;
+ItemR_1.visible = false;
+ItemL_2.visible = false;
+ItemR_2.visible = false;
+Page.visible = false;
+Mercy.visible = false;
 
 //make certain manu visible according to menu status
 switch (global.BattleMenu){ 

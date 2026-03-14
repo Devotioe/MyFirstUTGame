@@ -69,6 +69,7 @@
     {"name":"obj_trailer_devo","order":6,"path":"objects/obj_trailer_devo/obj_trailer_devo.yy",},
     {"name":"obj_trailer_opening","order":5,"path":"objects/obj_trailer_opening/obj_trailer_opening.yy",},
     {"name":"obj_WinHandler","order":10,"path":"objects/obj_WinHandler/obj_WinHandler.yy",},
+    {"name":"room_attacktest","order":9,"path":"rooms/room_attacktest/room_attacktest.yy",},
     {"name":"room_beginning","order":2,"path":"rooms/room_beginning/room_beginning.yy",},
     {"name":"room_gameover","order":6,"path":"rooms/room_gameover/room_gameover.yy",},
     {"name":"room_hallway_0","order":3,"path":"rooms/room_hallway_0/room_hallway_0.yy",},

@@ -5,6 +5,13 @@ if (!setup){
 	}
 }
 
+if (Credit_Context.visible == true){
+	Credit_Context.y -= 1;	
+	if (Credit_Context.y < -650){
+		Credit_Context.y = 480
+	}
+}
+
 var key_up = keyboard_check_pressed(vk_up);
 var key_down = keyboard_check_pressed(vk_down);
 var key_right = keyboard_check_pressed(vk_right);

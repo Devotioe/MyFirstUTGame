@@ -9,7 +9,7 @@ Trailer2 = instance_create_depth(_x, 300, -1, obj_TextElement);
 
 Credit = instance_create_depth(_x, 400, -1, obj_TextElement);
 
-Credit_Context = instance_create_depth(20, 100, -1, obj_TextElement);
+Credit_Context = instance_create_depth(20, 480, -1, obj_TextElement);
 
 Start.AddDialogue("Start");
 Start.TextLength = string_length(Start.TextToDraw);
@@ -31,11 +31,21 @@ Credit.TextLength = string_length(Credit.TextToDraw);
 Credit.IsWriting = false;
 Credit.CanAdvance = false;
 
-Credit_Context.AddDialogue("A Game by Devo");
-Credit_Context.AddLine("&Inspired by UNDERTALE }& UTDR Community")
-Credit_Context.AddLine("&Programming }& Art }& Story }& &Character Design by Devo")
-Credit_Context.AddLine("&Music used :&\"The Murderer Menu\" by BenyiC03");
-Credit_Context.AddLine("& &UNDERTALE by Toby Fox }& Temmie Chang")
+Credit_Context.AddDialogue("A Game based on UNDERTALE by ~YDevo~D ");
+Credit_Context.AddLine("Inspired by UNDERTALE }& UTDR Community")
+Credit_Context.AddLine(" ")
+Credit_Context.AddLine("[Directed By]&~YDevo~D ")
+Credit_Context.AddLine("[Programming]&~YDevo~D ")
+Credit_Context.AddLine("[Art }& Character Design]&~YDevo~D ")
+Credit_Context.AddLine("[Story }& Script]&~YDevo~D ")
+Credit_Context.AddLine(" ");
+Credit_Context.AddLine("[Music By]");
+Credit_Context.AddLine("\"The Murderer Menu\" by ~YBenyiC03~D ");
+Credit_Context.AddLine("\"THANATOS - CYCLES\" by ~YShade~D ")
+Credit_Context.AddLine(" ");
+Credit_Context.AddLine("UNDERTALE by ~YToby Fox~D }& ~YTemmie Chang~D ")
+Credit_Context.AddLine(" ")
+Credit_Context.AddLine("And ~YYOU~D for playing")
 Credit_Context.TextLength = string_length(Credit_Context.TextToDraw);
 Credit_Context.IsWriting = false;
 Credit_Context.CanAdvance = false;
