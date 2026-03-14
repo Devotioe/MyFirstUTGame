@@ -1,3 +1,13 @@
+var key_up = keyboard_check_pressed(vk_up);
+var key_down = keyboard_check_pressed(vk_down);
+var key_right = keyboard_check_pressed(vk_right);
+var key_left = keyboard_check_pressed(vk_left);
+
+var key_advance = keyboard_check_pressed(ord("Z")) || keyboard_check_pressed(vk_enter);
+var key_quit = keyboard_check_pressed(ord("X")) || keyboard_check_pressed(vk_shift)
+
+
+var _key_advance = keyboard_check(ord("Z")) || keyboard_check(vk_enter)
 if (!setup){
 	obj_TextElement.Alpha += 0.05;
 	if obj_TextElement.Alpha >= 1 {
@@ -6,19 +16,19 @@ if (!setup){
 }
 
 if (Credit_Context.visible == true){
-	Credit_Context.y -= 1;	
-	if (Credit_Context.y < -650){
+	var spd = 1;
+	
+	if _key_advance {
+		spd = 5	
+	}
+	
+	Credit_Context.y -= spd;
+	if (Credit_Context.y < -750){
 		Credit_Context.y = 480
 	}
 }
 
-var key_up = keyboard_check_pressed(vk_up);
-var key_down = keyboard_check_pressed(vk_down);
-var key_right = keyboard_check_pressed(vk_right);
-var key_left = keyboard_check_pressed(vk_left);
-
-var key_advance = keyboard_check_pressed(ord("Z")) || keyboard_check_pressed(vk_enter);
-var key_quit = keyboard_check_pressed(ord("X")) || keyboard_check_pressed(vk_shift);
+;
 
 if state == 0 {
 	if key_up {
@@ -62,30 +72,32 @@ if state == 0 {
 }
 
 if key_advance {
-	switch (global.UISelection){
-		case 0:
-		global.player = instance_create_depth(0, 0, -9, obj_Player);
-		scr_RoomTransition(100, 200, room_beginning, obj_Player.now_sprite);
-		global.UISelection = -1;
-		break;
-		case 1:
-		audio_stop_all()
-		room_goto(room_trailer)
-		break;
+	if state == 0{
+		switch (global.UISelection){
+			case 0:
+			global.player = instance_create_depth(0, 0, -9, obj_Player);
+			scr_RoomTransition(100, 200, room_beginning, obj_Player.now_sprite);
+			global.UISelection = -1;
+			break;
+			case 1:
+			audio_stop_all()
+			room_goto(room_trailer)
+			break;
 				
-		case 2:
-		global.player = instance_create_depth(0, 0, -9, obj_Player);
-		scr_RoomTransition(100, 200, room_trailer2_1, obj_Player.now_sprite);
-		global.UISelection = -1;
-		break;
+			case 2:
+			global.player = instance_create_depth(0, 0, -9, obj_Player);
+			scr_RoomTransition(100, 200, room_trailer2_1, obj_Player.now_sprite);
+			global.UISelection = -1;
+			break;
 		
-		case 3:
-		for (var i = 0 ; i < array_length(Selections) ; i ++){
-			Selections[i].visible = false;
+			case 3:
+			for (var i = 0 ; i < array_length(Selections) ; i ++){
+				Selections[i].visible = false;
+			}
+			Credit_Context.visible = true;
+			Credit_Context.y = 480
+			state = 1;
 		}
-		Credit_Context.visible = true;
-		Credit_Context.y = 480
-		state = 1;
 	}
 }
 

@@ -126,7 +126,14 @@ if (opened){
 		//LV HP
 		draw_text(stats_l_border + border_width + 20, stats_t_border + border_width + 70, "LV " + string(global.PlayerLv));
 		draw_text(stats_l_border + border_width + 20, stats_t_border + border_width + 100, "HP " + string(global.PlayerHp) + "/" + string(global.PlayerMaxHp));
-		
+		var hp_maxwidth = global.PlayerMaxHp ;
+		var hp_width = global.PlayerHp ;
+		//HP BAR
+		draw_set_color(c_red);
+		draw_rectangle(stats_l_border + border_width + 130, stats_t_border + border_width + 107, stats_l_border + border_width + 130 + hp_maxwidth, stats_t_border + border_width + 127, false)
+		draw_set_color(c_yellow);
+		draw_rectangle(stats_l_border + border_width + 130, stats_t_border + border_width + 107, stats_l_border + border_width + 130 + hp_width, stats_t_border + border_width + 127, false )
+		draw_set_colour(c_white)
 		//ATK DEF
 		draw_text(stats_l_border + border_width + 20, stats_t_border + border_width + 140, "AT " + string(global.PlayerAtk) + "(" + string(global.WeaponATK) + ")");
 		draw_text(stats_l_border + border_width + 20, stats_t_border + border_width + 170, "DF " + string(global.PlayerDef) + "(" + string(global.ArmorDEF) + ")");

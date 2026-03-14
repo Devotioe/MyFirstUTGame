@@ -34,14 +34,16 @@ Credit.CanAdvance = false;
 Credit_Context.AddDialogue("A Game based on UNDERTALE by ~YDevo~D ");
 Credit_Context.AddLine("Inspired by UNDERTALE }& UTDR Community")
 Credit_Context.AddLine(" ")
-Credit_Context.AddLine("[Directed By]&~YDevo~D ")
-Credit_Context.AddLine("[Programming]&~YDevo~D ")
-Credit_Context.AddLine("[Art }& Character Design]&~YDevo~D ")
-Credit_Context.AddLine("[Story }& Script]&~YDevo~D ")
+Credit_Context.AddLine("[Directed By]~Y&Devo~D ")
+Credit_Context.AddLine("[Programming]~Y&Devo~D ")
+Credit_Context.AddLine("[Art }& Character Design]~Y&Devo~D ")
+Credit_Context.AddLine("[Story }& Script]~Y&Devo~D ")
 Credit_Context.AddLine(" ");
 Credit_Context.AddLine("[Music By]");
 Credit_Context.AddLine("\"The Murderer Menu\" by ~YBenyiC03~D ");
 Credit_Context.AddLine("\"THANATOS - CYCLES\" by ~YShade~D ")
+Credit_Context.AddLine("\"HYPOTHESIS\" by ~YMusicar~D ")
+Credit_Context.AddLine("\"Small Shock\" by ~YToby Fox~D ")
 Credit_Context.AddLine(" ");
 Credit_Context.AddLine("UNDERTALE by ~YToby Fox~D }& ~YTemmie Chang~D ")
 Credit_Context.AddLine(" ")
