@@ -38,7 +38,7 @@ if (global.PriorityBar > priority && ! dead){
 		BarDistance = distance_to_point(320, y);
 		
 		//Base Damage
-		global.Damage += (global.PlayerAtk - global.Enemy[global.EnemyRN].MyDef) + random(2);
+		global.Damage += (global.PlayerAtk + global.WeaponATK - global.Enemy[global.EnemyRN].MyDef) + random(2);
 		
 		
 		//Target hit Decide Damage
