@@ -12,7 +12,7 @@ function scr_CreateTarget(_Weapon){
 	
 	var Bar_StartX = choose (0, 680);
 	
-	if (Weapon == "Real Knife"){
+	if (Weapon == 5 || 6 || 9){
 		global.BarCount = 1;
 		var Bar = instance_create_depth(Bar_StartX, 320, -2, obj_TargetBar)
 		Bar.hspeed = ((Bar_StartX < 320) ? 6 : -6);

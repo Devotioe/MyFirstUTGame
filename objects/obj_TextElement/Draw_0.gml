@@ -64,29 +64,6 @@ if IsSpeechBubble {
 // Draws every letter that it has so far
 for (var i = 0; i < TextLength; i++) {
 	
-	// New line, use "}&" to include the & symbol otherwise it gets cancelled out
-	// USAGE: "89 Snowdin Lane&Underground }& Co"
-	
-	if (string_char_at(TextToDraw, i + 1) == "&"){
-		sentence_x = 0;
-		sentence_y += line_spacing;
-		i += 1;
-	}
-	
-	if (string_char_at(TextToDraw, i + 1) == "}" && string_char_at(TextToDraw, i + 2) == "&"){
-		i += 1;
-	}
-	
-	// Used for text delays. Only use this for some long or creepy sentences.
-	// USAGE: "@4You'd be dead where you stand."
-	if (string_char_at(TextToDraw, i + 1) == "@") {
-		TextDelay = 2 * real(char_next);
-		if (TextDelay < 2) {
-			TextDelay = 2;
-		}
-		i += 2;
-	}
-	
 	if string_char_at(TextToDraw, i + 1) == "~" {
 		if string_char_at(TextToDraw, i + 2) == "R"
 			colour = c_red;
@@ -104,6 +81,29 @@ for (var i = 0; i < TextLength; i++) {
 			colour = c_fuchsia;
 		if string_char_at(TextToDraw, i + 2) == "D"
 			colour = DefaultColour;
+		i += 2;
+	}
+	
+	// New line, use "}&" to include the & symbol otherwise it gets cancelled out
+	// USAGE: "89 Snowdin Lane&Underground }& Co"
+	
+	if (string_char_at(TextToDraw, i + 1) == "&"){
+		sentence_x = 0;
+		sentence_y += line_spacing;
+		i += 1;
+	}
+	
+	if (string_char_at(TextToDraw, i + 1) == "}" && string_char_at(TextToDraw, i + 2) == "&"){
+		i += 1;
+	}
+	
+	// Used for text delays. Only use this for some long or creepy sentences.
+	// USAGE: "@4You'd be dead where you stand."
+	if (string_char_at(TextToDraw, i + 1) == "@") {
+		TextDelay = 2 * real(string_char_at(TextToDraw, i + 2));
+		if (TextDelay < 2) {
+			TextDelay = 2;
+		}
 		i += 2;
 	}
 	

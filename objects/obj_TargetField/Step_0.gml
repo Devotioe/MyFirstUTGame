@@ -19,14 +19,16 @@ if (image_xscale < 1){
 
 if global.PriorityBar >= global.BarCount && !attacked {
 	if (hitbar > 0){
-		if (global.PlayerWeapon == "Stick") || (global.PlayerWeapon == "Real Knife"){ // create slice for knife
+		if (global.PlayerWeapon == 5 || global.PlayerWeapon == 6 || global.PlayerWeapon == 9){ // create slice for knife
 			var slice = instance_create_depth(global.Enemy[global.EnemyRN].x, 140, -10, obj_Slice);
 			audio_play_sound(snd_slash, 20, false);
+			show_debug_message("123")
 		}
 	}
 	attacked = true;
 	alarm[0] = 5; 
 }
+
 
 
 //for animation

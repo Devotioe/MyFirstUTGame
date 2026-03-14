@@ -13,6 +13,6 @@ global.encounterData = {
 		enemyID : [999],
 		CanFlee : false,
 		_Attacks : [obj_atk_Test_1],
-		Music : mus_cycles,
+		//Music : mus_cycles,
 	},
 }
