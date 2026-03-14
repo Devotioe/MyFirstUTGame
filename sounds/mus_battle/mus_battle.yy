@@ -6,11 +6,11 @@
     "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":1,
-  "channelFormat":0,
+  "channelFormat":1,
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":75.42857,
+  "duration":75.42858,
   "exportDir":"",
   "name":"mus_battle",
   "parent":{
@@ -20,7 +20,7 @@
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
-  "sampleRate":44100,
+  "sampleRate":48000,
   "soundFile":"mus_battle.mp3",
   "volume":1.0,
 }

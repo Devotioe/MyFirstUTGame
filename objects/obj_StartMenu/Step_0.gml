@@ -68,6 +68,13 @@ if key_advance {
 		scr_RoomTransition(100, 200, room_beginning, obj_Player.now_sprite);
 		global.UISelection = -1;
 		break;
+
+				
+		case 2:
+		global.player = instance_create_depth(0, 0, -9, obj_Player);
+		scr_RoomTransition(100, 200, room_trailer2_1, obj_Player.now_sprite);
+		global.UISelection = -1;
+		break;
 		
 		case 3:
 		for (var i = 0 ; i < array_length(Selections) ; i ++){

@@ -14,8 +14,8 @@
     "path":"folders/Objects/Overworld/Cutscenes.yy",
   },
   "parentObjectId":{
-    "name":"obj_CutsceneParent",
-    "path":"objects/obj_CutsceneParent/obj_CutsceneParent.yy",
+    "name":"obj_Cutscene_Parent",
+    "path":"objects/obj_Cutscene_Parent/obj_Cutscene_Parent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

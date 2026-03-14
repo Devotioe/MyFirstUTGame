@@ -66,6 +66,8 @@ if opened {
 	
 	}
 	
+	
+	
 	//draw_set_colour(c_red)
 	//for (var i = 0 ; i < 10 - box_items_counts ; i ++){
 	//	draw_line(middle + 50, b_border - 50 - i * gap ,  r_border - 50, b_border - 50 - i * gap);
@@ -78,9 +80,8 @@ if opened {
 	//for (var i = 0 ; i < 8 ; i ++){	
 	//	draw_line(l_border + 50, t_border + 80 + i * gap ,  middle - 50, t_border + 80 + i * gap);
 	//}
-
-	
-
 	
 }
+
+draw_set_alpha(1)
 

@@ -1,17 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_CutsceneParent",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_pickable_toyknife",
+  "eventList":[],
   "managed":true,
-  "name":"obj_CutsceneParent",
+  "name":"obj_pickable_toyknife",
   "overriddenProperties":[],
   "parent":{
-    "name":"Cutscenes",
-    "path":"folders/Objects/Overworld/Cutscenes.yy",
+    "name":"Objects",
+    "path":"folders/Objects.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_Pickables_Parent",
+    "path":"objects/obj_Pickables_Parent/obj_Pickables_Parent.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -29,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_groundknife",
+    "path":"sprites/spr_groundknife/spr_groundknife.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

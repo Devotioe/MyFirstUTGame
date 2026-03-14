@@ -1,4 +1,4 @@
-depth = -1000000;
+depth = -1000;
 cd_value = 300;
 cd = cd_value;
 

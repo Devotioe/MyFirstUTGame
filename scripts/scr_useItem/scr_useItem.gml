@@ -1,14 +1,13 @@
 function scr_useItem(_item, _index){
-	
 	var item = _item;
 	var index = _index;
 	
-	item.Function(item);
-	
-	if item.Keep = true{
-		exit;
+	if (item.Keep == false){
+		array_delete(global.Item, index, 1);
 	}
 	
-	array_delete(global.Item, index, 1);
+	item.Function(item);
+
+	
 
 }

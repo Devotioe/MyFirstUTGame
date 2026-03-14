@@ -30,3 +30,6 @@ Prev_Y = 0;
 now_sprite = spr_mainchara_d;
 
 global.overworldmenu = instance_create_depth(0, 0, -9999, obj_OverworldMenu);
+
+global.ArmorDEF = GetItemData(global.PlayerArmor).AddDEF;
+global.WeaponATK = GetItemData(global.PlayerWeapon).AddATK;

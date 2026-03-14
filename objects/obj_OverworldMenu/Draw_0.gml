@@ -49,8 +49,8 @@ var items_l_border = sts_r_border + 20;
 var items_r_border = items_l_border + items_h_length;
 var items_b_border = items_t_border + items_v_length;
 
-
-
+var weapon = GetItemData(global.PlayerWeapon);
+var armor = GetItemData(global.PlayerArmor);
 
 fnt_normal = fnt_Battle_Normal;
 fnt_UI = fnt_Battle_UI;
@@ -128,9 +128,12 @@ if (opened){
 		draw_text(stats_l_border + border_width + 20, stats_t_border + border_width + 100, "HP " + string(global.PlayerHp) + "/" + string(global.PlayerMaxHp));
 		
 		//ATK DEF
-		draw_text(stats_l_border + border_width + 20, stats_t_border + border_width + 140, "AT " + string(global.PlayerAtk));
-		draw_text(stats_l_border + border_width + 20, stats_t_border + border_width + 170, "DF " + string(global.PlayerDef));
+		draw_text(stats_l_border + border_width + 20, stats_t_border + border_width + 140, "AT " + string(global.PlayerAtk) + "(" + string(global.WeaponATK) + ")");
+		draw_text(stats_l_border + border_width + 20, stats_t_border + border_width + 170, "DF " + string(global.PlayerDef) + "(" + string(global.ArmorDEF) + ")");
 		
+		//ARMOR WEAPON
+		draw_text(stats_l_border + border_width + 20, stats_t_border + border_width + 210, "WEAPON:" + string(weapon.ItemName));
+		draw_text(stats_l_border + border_width + 20, stats_t_border + border_width + 240, "ARMOR:" + string(armor.ItemName));
 		
 		//ARMOR WEAPON
 		
@@ -219,6 +222,7 @@ if (opened){
 		if (state == OVERWORLD_MENU.SELECTION){
 			SelctionReference = global.UISelection;
 			if (global.UISelection + 1 == OVERWORLD_MENU.ITEM && array_length(global.Item) == 0){
+				audio_play_sound(snd_swallow, 20, false);
 				exit;
 			}
 			state = global.UISelection + 1;
