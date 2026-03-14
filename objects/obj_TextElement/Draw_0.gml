@@ -64,25 +64,45 @@ if IsSpeechBubble {
 // Draws every letter that it has so far
 for (var i = 0; i < TextLength; i++) {
 	
-	var char_now = string_char_at(TextToDraw, i + 1);
-	var char_next = string_char_at(TextToDraw, i + 2);
+	// New line, use "}&" to include the & symbol otherwise it gets cancelled out
+	// USAGE: "89 Snowdin Lane&Underground }& Co"
 	
-	if char_now == "~" {
-		if char_next == "R"
+	if (string_char_at(TextToDraw, i + 1) == "&"){
+		sentence_x = 0;
+		sentence_y += line_spacing;
+		i += 1;
+	}
+	
+	if (string_char_at(TextToDraw, i + 1) == "}" && string_char_at(TextToDraw, i + 2) == "&"){
+		i += 1;
+	}
+	
+	// Used for text delays. Only use this for some long or creepy sentences.
+	// USAGE: "@4You'd be dead where you stand."
+	if (string_char_at(TextToDraw, i + 1) == "@") {
+		TextDelay = 2 * real(char_next);
+		if (TextDelay < 2) {
+			TextDelay = 2;
+		}
+		i += 2;
+	}
+	
+	if string_char_at(TextToDraw, i + 1) == "~" {
+		if string_char_at(TextToDraw, i + 2) == "R"
 			colour = c_red;
-		if char_next == "O"
+		if string_char_at(TextToDraw, i + 2) == "O"
 			colour = c_orange;
-		if char_next == "Y"
+		if string_char_at(TextToDraw, i + 2) == "Y"
 			colour = c_yellow;
-		if char_next == "G"
+		if string_char_at(TextToDraw, i + 2) == "G"
 			colour = c_lime;
-		if char_next == "A"
+		if string_char_at(TextToDraw, i + 2) == "A"
 			colour = c_aqua;
-		if char_next == "B"
+		if string_char_at(TextToDraw, i + 2) == "B"
 			colour = c_blue;
-		if char_next == "P"
+		if string_char_at(TextToDraw, i + 2) == "P"
 			colour = c_fuchsia;
-		if char_next == "D"
+		if string_char_at(TextToDraw, i + 2) == "D"
 			colour = DefaultColour;
 		i += 2;
 	}
@@ -90,29 +110,6 @@ for (var i = 0; i < TextLength; i++) {
 	draw_set_color(colour);
 	draw_set_font(font);
 	draw_set_alpha(Alpha);
-	
-	// New line, use "}&" to include the & symbol otherwise it gets cancelled out
-	// USAGE: "89 Snowdin Lane&Underground }& Co"
-	if (char_now == "}" && char_next == "&"){
-		i += 1;
-	}
-	
-	if (char_now == "&"){
-		sentence_x = 0;
-		sentence_y += line_spacing;
-		i += 1;
-	}
-	
-	
-	// Used for text delays. Only use this for some long or creepy sentences.
-	// USAGE: "@4You'd be dead where you stand."
-	if (char_now == "@") {
-		TextDelay = 2 * real(char_next);
-		if (TextDelay < 2) {
-			TextDelay = 2;
-		}
-		i += 2;
-	}
 	
 	// Draw the letters with the correct spacing, as defined above
 	draw_text(x + sentence_x, y + sentence_y, string_char_at(TextToDraw, i + 1));
