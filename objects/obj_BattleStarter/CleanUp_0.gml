@@ -5,7 +5,7 @@ var EcData = scr_searchEcounterData();
 var music = EcData[$ "Music"];
 
 if (music != undefined){
-	global.BattleMusic = audio_play_sound(music, 1, false);
+	global.BattleMusic = audio_play_sound(music, 1, true);
 }
 
 

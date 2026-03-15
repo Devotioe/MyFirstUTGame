@@ -4,9 +4,10 @@ event_inherited();
 dodger = 0;
 
 CheckDescription[0] = "* [REDACTED] 1 ATK 1 DEF&* The weakest enemy.&* Can't use any magical item.";
-CheckDescription[1] = "* He is slightly shaking.&* Keep attacking.";
+CheckDescription[1] = "* He can't last long.&* Wear him out.";
 
 
+threated = false;
 
 Act[1] = "Threaten";
 

@@ -3,7 +3,7 @@ _x = self.x + 100
 _y = self.y - 20
 
 if (global.Manager.attackCreated = false){
-	instance_create_depth(0, 0, 99, obj_attack_trailer);
+	instance_create_depth(0, 0, 99, obj_trailer2_attack);
 	global.Manager.attackCreated = true;
 }
 
@@ -14,8 +14,9 @@ if (!talked){
 		event = 0.5;
 		Dialogue = CreateBubbleDialogue(_x, _y);
 		Dialogue.Talker = "Devo";
-		Dialogue.AddDialogue("after the last time we&met. things went down&pretty fast.");
-		Dialogue.AddDialogue("honestly,&it felt hopeless.");
+		Dialogue.AddDialogue("woah, you really want me&dead, don'tcha?");
+		Dialogue.AddDialogue("hey, that's fine.&i don't blame ya.");
+		Dialogue.AddDialogue("someone's gotta be&someone else's&villain in their&story, right?");
 		
 	}
 	
@@ -23,9 +24,8 @@ if (!talked){
 		event = 1.5;
 		Dialogue = CreateBubbleDialogue(_x, _y);
 		Dialogue.Talker = "Devo";
-		Dialogue.AddDialogue("that being said,&[REDACTED] tried her&best to cheer&everyone up, but...");
-		Dialogue.AddDialogue("one day,&she went missing.");
-		Dialogue.AddDialogue("and when i found her...");
+		Dialogue.AddDialogue("thanks to you.&now people are more&united than ever.");
+		Dialogue.AddDialogue("'cause someone out there&is acting deranged.");
 	}
 
 

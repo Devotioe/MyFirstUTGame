@@ -19,6 +19,6 @@ global.encounterData = {
 		enemyID : [1000],
 		CanFlee : false,
 		_Attacks : [obj_atk_Test_1],
-		Music : mus_trailer2fight_loop,
+		Music : mus_trailer2fight,
 	},
 }
