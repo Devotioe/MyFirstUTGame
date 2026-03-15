@@ -9,7 +9,7 @@ if x < 320	{
 		cd --	
 	}else{
 		cd = val
-		image_angle += 5;
+		image_angle += r_spd;
 	}	
 	
 }

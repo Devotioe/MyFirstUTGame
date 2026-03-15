@@ -1,9 +1,9 @@
 if Event == 1 {
-	obj_Player_Camera.x += 	1
+	obj_Player_Camera.y -= 	1
 	
-	if abs(obj_Player_Camera.x - 1550) < 1 {
+	if abs(obj_Player_Camera.y - 440) < 1 {
 		Event = 2	
-		obj_Player_Camera.x = 1550;
+		obj_Player_Camera.y = 440;
 	}
 }
 
@@ -18,7 +18,7 @@ if Event == 3{
 	Dialogue_1.AddDialogue("* hey, what's up?");
 	Dialogue_1.AddDialogue("* so you're the one i've been&  hearing about.");
 	Dialogue_1.AddDialogue("* huh.");
-	Dialogue_1.AddDialogue("* not gonna lie, you don't seem&  to be worth all the fuss.");
+	Dialogue_1.AddDialogue("* not gonna lie, you don't seem&  worth all the fuss.");
 	Dialogue_1.AddDialogue("* but from what i've heard...");
 	Dialogue_1.AddDialogue("* you're pretty gross.");
 	Dialogue_1.AddDialogue("* what, are you addicted to video&  games or something?");
@@ -47,9 +47,9 @@ if Event == 3{
 	Dialogue_1.AddDialogue("* kinda a bummer that i couldn't&  help her out.");
 	Dialogue_1.AddDialogue("* so, i figured that...");
 	Dialogue_1.AddDialogue("* instead of sitting there and doing&  nothing,");
-	Dialogue_1.AddDialogue("* i might as well just swing by and&  stall some time.");
-	Dialogue_1.AddDialogue("* that little spree of yours&  ain't lasting.");
-	Dialogue_1.AddDialogue("* party's over now, freak.");
+	Dialogue_1.AddDialogue("* i might as well just swing by and&  stall for some time.");
+	Dialogue_1.AddDialogue("* that little spree of yours&  ain't gonna last long.");
+	Dialogue_1.AddDialogue("* @3party's over now, freak.");
 
 	Event = 4;
 }

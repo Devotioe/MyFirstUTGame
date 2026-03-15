@@ -3,6 +3,7 @@
   "%Name":"obj_trailer2_devo_overworld",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_trailer2_devo_overworld",
@@ -32,10 +33,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_trailer2_devo_placeholder",
-    "path":"sprites/spr_trailer2_devo_placeholder/spr_trailer2_devo_placeholder.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

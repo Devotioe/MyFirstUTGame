@@ -23,7 +23,7 @@ switch (Talker){
 	font = fnt_devo;
 	line_spacing = 29;
 	letter_spacing = 15;
-	sound = snd_txtsans;
+	sound = snd_txtdevo;
 	if (IsSpeechBubble){
 		font = fnt_devo_bubble;	
 		line_spacing = 20;

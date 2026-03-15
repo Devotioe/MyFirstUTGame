@@ -6,9 +6,12 @@ spd = random(20)
 
 if spd <= 5{
 	spd = 6	
+
 }
 
-val = 2
+r_spd = 5;
+
+val = 1
 cd = val;
 
 discon = true;

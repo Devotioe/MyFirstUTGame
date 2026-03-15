@@ -3,7 +3,7 @@ event_inherited();
 
 dodger = 0;
 
-CheckDescription[0] = "* [REDACTED] 1 ATK 1 DEF&* The weakest enemy.&* Can't use any magical item.";
+CheckDescription[0] = "* [REDACTED] 1 ATK 1 DEF&* The weakest enemy.&* Can't use any magical armaments.";
 CheckDescription[1] = "* He can't last long.&* Wear him out.";
 
 
@@ -39,3 +39,5 @@ spr_torso = spr_trailer2_devob_torso
 spr_legs = spr_trailer2_devob_leg
 
 sprite = spr_trailer2_devob
+
+hittry = 0;

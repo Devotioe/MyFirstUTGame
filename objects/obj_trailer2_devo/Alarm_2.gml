@@ -10,41 +10,47 @@ if (global.Manager.attackCreated = false){
 
 if (!talked){
 	
-	if (event == 0){
-		event = 0.5;
+	if (hittry == 1){
 		Dialogue = CreateBubbleDialogue(_x, _y);
 		Dialogue.Talker = "Devo";
 		Dialogue.AddDialogue("woah, you really want me&dead, don'tcha?");
 		Dialogue.AddDialogue("hey, that's fine.&i don't blame ya.");
-		Dialogue.AddDialogue("someone's gotta be&someone else's&villain in their&story, right?");
+		Dialogue.AddDialogue("someone's gotta be the&villain in someone&else's story, right?");
 		
 	}
 	
-	if (event == 1){
-		event = 1.5;
+	if (hittry == 2){
 		Dialogue = CreateBubbleDialogue(_x, _y);
 		Dialogue.Talker = "Devo";
 		Dialogue.AddDialogue("thanks to you.&now people are more&united than ever.");
 		Dialogue.AddDialogue("'cause someone out there&is acting deranged.");
 	}
+	
+	if (hittry == 3){
+		Dialogue = CreateBubbleDialogue(_x, _y);
+		Dialogue.Talker = "Devo";
+		Dialogue.AddDialogue("i'm not even supposed to&be here, y'know.");
+		Dialogue.AddDialogue("fighting isn't my job.");
+		Dialogue.AddDialogue("but since most fighting&units ended up&as lifeless corpses...");
+		Dialogue.AddDialogue("i gotta take this shift.");
+	}
+	
+	talked = true;
 
-
-}
-
-else{
+}else if (talked && !instance_exists(Dialogue)){
 	global.Manager.state = BATTLE_STATE.BATTLE;
 }
 
-if (!instance_exists(Dialogue)){
-	switch event {
-		case 0.5:
-		event = 1;
-		talked = true;
-		break;
+//if (!instance_exists(Dialogue)){
+//	switch event {
+//		case 0.5:
+//		event = 1;
+//		talked = true;
+//		break;
 		
-		case 1.5:
-		event = 2;
-		talked = true;
-		break;
-	}
-}
+//		case 1.5:
+//		event = 2;
+//		talked = true;
+//		break;
+//	}
+//}
