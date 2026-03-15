@@ -66,5 +66,6 @@ ds_map_add(mus, room_beginning, mus_deepwind);
 ds_map_add(mus, room_hallway_0, mus_mysterious);
 ds_map_add(mus, room_start_menu, mus_startmenu);
 ds_map_add(mus, room_trailer2_1, mus_trailer2ambient);
+ds_map_add(mus, room_trailer2_2, mus_trailer2ambient);
 
 

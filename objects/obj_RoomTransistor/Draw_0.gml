@@ -15,7 +15,7 @@ if FadingBlack {
 		FadingBlack = false;
 	}
 }else{
-	alpha -= 0.065;
+	alpha -= 0.045;
 	obj_Player.visible = true;
 	if (alpha <= 0){
 		instance_destroy(self)

@@ -1,12 +1,10 @@
 // Inherit the parent event
 event_inherited();
 
+ID = "Trailer2Cutscene1";
 
 Event = 0;
 
+alarm[0] = 120;
 
-alarm[0] = 60;
-
-Seen = false;
-
-ID = "TestCutscene1";
+audio_stop_all()

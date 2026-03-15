@@ -39,8 +39,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_trailer_devo_head",
-    "path":"sprites/spr_trailer_devo_head/spr_trailer_devo_head.yy",
+    "name":"spr_trailer_devo",
+    "path":"sprites/spr_trailer_devo/spr_trailer_devo.yy",
   },
   "spriteMaskId":null,
   "visible":true,

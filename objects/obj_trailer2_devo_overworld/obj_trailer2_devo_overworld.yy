@@ -1,22 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"obj_InteractObjects_Parent",
+  "%Name":"obj_trailer2_devo_overworld",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_InteractObjects_Parent",
+  "name":"obj_trailer2_devo_overworld",
   "overriddenProperties":[],
   "parent":{
-    "name":"Parents",
-    "path":"folders/Objects/Parents.yy",
+    "name":"Trailer2",
+    "path":"folders/Trailer Stuff/Trailer2.yy",
   },
   "parentObjectId":{
-    "name":"obJ_Collision",
-    "path":"objects/obJ_Collision/obJ_Collision.yy",
+    "name":"obj_InteractObjects_Parent",
+    "path":"objects/obj_InteractObjects_Parent/obj_InteractObjects_Parent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -35,7 +32,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_trailer2_devo_placeholder",
+    "path":"sprites/spr_trailer2_devo_placeholder/spr_trailer2_devo_placeholder.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

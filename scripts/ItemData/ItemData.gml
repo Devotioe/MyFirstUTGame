@@ -144,7 +144,7 @@ global.ItemData = {
 	"3" : new Consumeable ("Snowman Piece", "SnowPiece", "* Please take this to&  the ends of the earth.", 45),
 	"4" : new Consumeable ("Monster Candy", "MnstrCndy", "* Has a distinct, non-licorice flavor.", 10),
 	"5" : new Weapon ("Toy Knife", "ToyKnife", "* Has a distinct, non-licorice flavor.", 10),
-	"6" : new Weapon ("Stick", "Stick", "* A stick&* No use for now.", 1),
+	"6" : new Weapon ("Stick", "Stick", "* A stick.&* No use for now.", 1),
 	"7" : new Armor ("Bandage", "Bandage", "* Has a distinct, non-licorice flavor.", 1),
 	"8" : new Armor ("Faded Ribbon", "Faded Ribbon", "* Has a distinct, non-licorice flavor.", 1),
 	"9" : new Weapon ("Rusty Knife", "Rusty Knife", "* A rusty knife.&* Don't get yourself tetanus.", 3),

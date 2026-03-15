@@ -75,6 +75,8 @@
     {"name":"obj_TextElement","order":1,"path":"objects/obj_TextElement/obj_TextElement.yy",},
     {"name":"obj_trailer_devo","order":6,"path":"objects/obj_trailer_devo/obj_trailer_devo.yy",},
     {"name":"obj_trailer_opening","order":5,"path":"objects/obj_trailer_opening/obj_trailer_opening.yy",},
+    {"name":"obj_trailer2_devo_overworld","order":3,"path":"objects/obj_trailer2_devo_overworld/obj_trailer2_devo_overworld.yy",},
+    {"name":"obj_Trailer2Cutscene","order":1,"path":"objects/obj_Trailer2Cutscene/obj_Trailer2Cutscene.yy",},
     {"name":"obj_WinHandler","order":10,"path":"objects/obj_WinHandler/obj_WinHandler.yy",},
     {"name":"room_attacktest","order":9,"path":"rooms/room_attacktest/room_attacktest.yy",},
     {"name":"room_beginning","order":2,"path":"rooms/room_beginning/room_beginning.yy",},
@@ -84,6 +86,7 @@
     {"name":"room_menuTest","order":1,"path":"rooms/room_menuTest/room_menuTest.yy",},
     {"name":"room_start_menu","order":8,"path":"rooms/room_start_menu/room_start_menu.yy",},
     {"name":"room_trailer","order":5,"path":"rooms/room_trailer/room_trailer.yy",},
+    {"name":"room_trailer2_2","order":1,"path":"rooms/room_trailer2_2/room_trailer2_2.yy",},
     {"name":"EncounterData","order":5,"path":"scripts/EncounterData/EncounterData.yy",},
     {"name":"EnemyData","order":6,"path":"scripts/EnemyData/EnemyData.yy",},
     {"name":"Initalizaiton","order":17,"path":"scripts/Initalizaiton/Initalizaiton.yy",},
@@ -139,5 +142,6 @@
     {"name":"spr_trailer_devo_leg","order":10,"path":"sprites/spr_trailer_devo_leg/spr_trailer_devo_leg.yy",},
     {"name":"spr_trailer_devo_torso","order":11,"path":"sprites/spr_trailer_devo_torso/spr_trailer_devo_torso.yy",},
     {"name":"spr_trailer_devo","order":8,"path":"sprites/spr_trailer_devo/spr_trailer_devo.yy",},
+    {"name":"spr_trailer2_devo_placeholder","order":4,"path":"sprites/spr_trailer2_devo_placeholder/spr_trailer2_devo_placeholder.yy",},
   ],
 }

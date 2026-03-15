@@ -17,3 +17,4 @@ mus_data = global.MusicData;
 mus_now = ds_map_find_value(mus_data, now_rm);
 
 mus_tar = ds_map_find_value(mus_data, target_rm);
+

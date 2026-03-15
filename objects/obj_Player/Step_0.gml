@@ -2,6 +2,8 @@ var right_key = keyboard_check(vk_right);
 var left_key = keyboard_check(vk_left);
 var up_key = keyboard_check(vk_up);
 var down_key = keyboard_check(vk_down);
+now_sprite = self.sprite_index
+
 
 //Make player disappear when transisting and in battle room
 if !instance_exists(obj_RoomTransistor) {
@@ -60,6 +62,8 @@ if !frozen {
 			moving = false;
 		}
 	}
+	
+	//show_debug_message(now_sprite)
 }
 
 mask_index = spr_mainchara_d

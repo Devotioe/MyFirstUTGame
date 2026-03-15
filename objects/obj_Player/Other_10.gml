@@ -3,8 +3,12 @@
 
 audio_pause_sound(global.OverworldMusic); //pause room music
 now_sprite = self.sprite_index;
+//Alertmark countdown timer
 
-audio_play_sound(Battle_Alert, 20, false); //sound
+if (ShowMark == true){
+	AlertMark = 60;
+	audio_play_sound(Battle_Alert, 20, false); //sound
+}
 global.CurrentRoom = room; //memorize current room for re-locating
 	
 //spawn soul position
@@ -19,8 +23,6 @@ Prev_Y = y;
 global.SoulX = camera_get_view_x(view_camera[0]) + 50;
 global.SoulY = camera_get_view_y(view_camera[0]) + 452;
 
-//Alertmark countdown timer
-AlertMark = 60;
 
 //Make player frozen, preventing issues
 frozen = true;

@@ -36,7 +36,7 @@ global.EnemyData = {
 		CanSpare : false,
 		CanFlee : false,
 		StartX : 320,
-		StartY : 75,
+		StartY : 130,
 		ObjRef : obj_trailer_devo,
 		EXP : 10,
 		GOLD : 20,

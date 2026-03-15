@@ -21,8 +21,8 @@ switch (Talker){
 	
 	case "Devo" :
 	font = fnt_devo;
-	line_spacing = 26;
-	letter_spacing = 16;
+	line_spacing = 29;
+	letter_spacing = 15;
 	sound = snd_txtsans;
 	if (IsSpeechBubble){
 		font = fnt_devo_bubble;	
@@ -141,15 +141,15 @@ if IsWriting {
 		CurrentDelay = 0;
 		TextLength += 1;
 		if !Silence{
-			if (string_char_at(TextToDraw, TextLength) != " " && string_char_at(TextToDraw, TextLength) != "." && string_char_at(TextToDraw, TextLength) != "*" && CurrentDelay = 0){
+			if (string_char_at(TextToDraw, TextLength) != " " && string_char_at(TextToDraw, TextLength) != "." && string_char_at(TextToDraw, TextLength) != "*" && string_char_at(TextToDraw, TextLength) != "?" && string_char_at(TextToDraw, TextLength) != "!" && CurrentDelay = 0){
 				
-				//if (SoundCD > 0){
-				//	SoundCD -= 1;
-				//}
-				//else {
-				audio_play_sound(sound, 1, false)
-				//	SoundCD = 1;
-				//}
+				if (SoundCD > 0){
+					SoundCD -= 1;
+				}
+				else {
+					audio_play_sound(sound, 1, false)
+					SoundCD = 1;
+				}
 				
 			}
 		}
@@ -157,7 +157,7 @@ if IsWriting {
 		if (string_char_at(TextToDraw, TextLength) == "?" || string_char_at(TextToDraw, TextLength) == "!") {
 			CurrentDelay = -30;
 		}
-		if (string_char_at(TextToDraw, TextLength) == "." && string_char_at(TextToDraw, TextLength + 1) != "."){
+		if (string_char_at(TextToDraw, TextLength) == "." && string_char_at(TextToDraw, TextLength + 1) != "." && string_char_at(TextToDraw, TextLength + 1) != "?" && string_char_at(TextToDraw, TextLength + 1) != "!"){
 			CurrentDelay = -30;
 		}
 		// Slight pause in the middle of a sentence.
