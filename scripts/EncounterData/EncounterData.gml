@@ -15,4 +15,10 @@ global.encounterData = {
 		_Attacks : [obj_atk_Test_1],
 		Music : mus_cycles,
 	},
+	"1000" : { //Devo trailer
+		enemyID : [1000],
+		CanFlee : false,
+		_Attacks : [obj_atk_Test_1],
+		Music : mus_trailer2fight_loop,
+	},
 }

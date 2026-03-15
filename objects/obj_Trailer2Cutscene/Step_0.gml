@@ -43,7 +43,7 @@ if Event == 3{
 	Dialogue_1.AddDialogue("* ...");
 	Dialogue_1.AddDialogue("* what is it that you want,&  really?");
 	Dialogue_1.AddDialogue("* a straight-A graduation?");
-	Dialogue_1.AddDialogue("* or you're just the kind of&  psycho adding to you streak...?");
+	Dialogue_1.AddDialogue("* or you're just the kind of&  psycho adding to your streak...?");
 	Dialogue_1.AddDialogue("* either way...");
 	Dialogue_1.AddDialogue("* that little spree of yours&  ain't lasting.");
 	Dialogue_1.AddDialogue("* party's over now, freak.");
@@ -52,7 +52,7 @@ if Event == 3{
 }
 
 if Event == 4 && !instance_exists(Dialogue_1){
-	global.encounterID = 999
+	global.encounterID = 1000;
 	with obj_Player{
 		obj_Player.ShowMark = false;
 		event_user(0) //starting battle

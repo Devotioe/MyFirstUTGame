@@ -12,6 +12,10 @@ if debug {
 		global.encounterID = 2;
 	}
 	
+	if room == room_trailer2_1{
+		global.encounterID = 1000;	
+	}
+	
 	with obj_Player{
 		event_user(0) //starting battle
 	}

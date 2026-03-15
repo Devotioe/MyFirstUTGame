@@ -23,7 +23,7 @@ global.player = -1
 //Player Stats Related 
 global.PlayerMaxHp = 48;
 global.PlayerLv = 8;
-global.PlayerHp = 8;
+global.PlayerHp = 48;
 global.PlayerDef = 1;
 global.PlayerAtk = 14;
 global.PlayerName = "ME"

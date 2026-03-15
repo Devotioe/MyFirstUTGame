@@ -1,6 +1,6 @@
 function CreateBubbleDialogue(_x, _y){
-	text_x = _x;
-	text_y = _y;
+	var text_x = _x;
+	var text_y = _y;
 	var _inst = instance_create_depth(text_x, text_y, -99, obj_TextElement);
 	_inst.IsSpeechBubble = true;
 	_inst.CanAdvance = true;
@@ -8,8 +8,8 @@ function CreateBubbleDialogue(_x, _y){
 }
 
 function CreateCutsceneBubbleDialogue(_x, _y){
-	text_x = _x;
-	text_y = _y;
+	var text_x = _x;
+	var text_y = _y;
 	var _inst = instance_create_depth(text_x, text_y, -99, obj_TextElement);
 	_inst.IsSpeechBubble = true;
 	_inst.CanAdvance = true;

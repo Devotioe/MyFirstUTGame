@@ -41,4 +41,18 @@ global.EnemyData = {
 		EXP : 10,
 		GOLD : 20,
 	},	
+	"1000" : { //Devo Trailer
+		MyName : "[REDACTED]",
+		MyMaxHp : 100,
+		MyAtk : 5,
+		MyDef : 9999999,
+		ShowBar : true,
+		CanSpare : false,
+		CanFlee : false,
+		StartX : 320,
+		StartY : 100,
+		ObjRef : obj_trailer2_devo,
+		EXP : 10,
+		GOLD : 20,
+	},	
 }
