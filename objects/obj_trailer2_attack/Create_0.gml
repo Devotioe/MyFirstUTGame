@@ -14,7 +14,7 @@ diff = obj_trailer2_devo.hittry
 
 bone_cd = 60;
 
-show_debug_message(diff);
+
 
 switch diff{
 	case 1:

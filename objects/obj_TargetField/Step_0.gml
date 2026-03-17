@@ -22,7 +22,6 @@ if global.PriorityBar >= global.BarCount && !attacked {
 		if (global.PlayerWeapon == 5 || global.PlayerWeapon == 6 || global.PlayerWeapon == 9){ // create slice for knife
 			var slice = instance_create_depth(global.Enemy[global.EnemyRN].x, 140, -10, obj_Slice);
 			audio_play_sound(snd_slash, 20, false);
-			show_debug_message("123")
 		}
 	}
 	attacked = true;
