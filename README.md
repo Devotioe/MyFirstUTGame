@@ -9,3 +9,6 @@ At first, I didn't really know how to make games, as I have no experience in mak
 The project started off at 2025/3, it was just trials and errors, figuring out how objects work, how coding works.
 Watched a lot of videos, asked a lot questions, so here I am.
 I'm still developing, and there's much I still need to learn, to explore.
+
+Game Engine : GameMaker Studio 2 
+Art : Procreate, Pixaki, Aseprite
